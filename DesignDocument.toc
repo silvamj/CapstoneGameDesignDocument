@@ -5,13 +5,13 @@
 \contentsline {subsection}{\numberline {3.2}Use Case Model}{6}
 \contentsline {subsection}{\numberline {3.3}Sequence Diagram}{7}
 \contentsline {subsection}{\numberline {3.4}UML Diagram}{8}
-\contentsline {subsection}{\numberline {3.5}State Diagram}{9}
+\contentsline {subsection}{\numberline {3.5}State Diagram}{8}
 \contentsline {section}{\numberline {4}Gameplay Design}{9}
-\contentsline {subsection}{\numberline {4.1}Controls Diagram}{11}
-\contentsline {subsection}{\numberline {4.2}Miscellaneous}{11}
-\contentsline {section}{\numberline {5}History of Work}{12}
-\contentsline {subsection}{\numberline {5.1}Work Completed}{12}
+\contentsline {subsection}{\numberline {4.1}Controls Diagram}{12}
+\contentsline {subsection}{\numberline {4.2}Miscellaneous}{12}
+\contentsline {section}{\numberline {5}History of Work}{13}
+\contentsline {subsection}{\numberline {5.1}Work Completed}{13}
 \contentsline {subsection}{\numberline {5.2}Current Status}{13}
-\contentsline {subsection}{\numberline {5.3}Future Work}{13}
+\contentsline {subsection}{\numberline {5.3}Future Work}{14}
 \contentsline {section}{\numberline {6}Timetable}{15}
-\contentsline {section}{\numberline {7}Glossary}{18}
+\contentsline {section}{\numberline {7}Glossary}{19}

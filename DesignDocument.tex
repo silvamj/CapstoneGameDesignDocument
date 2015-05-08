@@ -38,7 +38,7 @@
 
 {\large \textsc{Faculty Mentor: Dr. Jorge Reyes Silveyra}}\par 
 
-{\large \textsc{February 19th 2015}}\par
+{\large \textsc{May 15th 2015}}\par
 
 \vspace*{\drop} % Whitespace under the publisher text
 
@@ -68,7 +68,8 @@
 \listoffigures
 \end{titlepage}
 
-%\author{Madison Silva} \address{Pacific Lutheran University\\ Tacoma, WA 98447}%\email{silvamj@plu.edu}
+%\author{Madison Silva}\address{Pacific Lutheran University\\ Tacoma, WA 98447}%\email{silvamj@plu.edu}
+
 \newpage
 
 \section{Introduction}
@@ -99,24 +100,25 @@
 Scenario Name: {\bf PlayerDeath} \\
 Participating Actor Instances:        \hspace{46pt} {\bf Player: PlayerEntity
 
-					          \hspace{2.6 in}   Enemy: HostileEntity 
+					          \hspace{2.6 in}   Damager: DamageEntity 
 
-					          \hspace{2.6in}    Bullet: Projectile} \vspace{10pt}  \\ 
+					          \hspace{2.6in}    Heath: PlayerHP
+
+						\hspace{2.6in}   Shield: PlayerShield} \vspace{10pt}  \\ 
 Flow of Events: 
 \begin{enumerate} 
-\item {\bf Player} is attacked by {\bf Enemy} shooting a {\bf Bullet}.
-\item {\bf Player} is hit by {\bf Bullet}, causing the {\bf Player} HP to drop below or to 0.
-\item {\bf Player} dies.
+\item {\bf Player }collides with {\bf DamageEntity}.
       \begin{enumerate}[a.]
-       \item {\bf Player} does not have a means to revive
+       \item {\bf PlayerShield} decreases based on DamageEntity. 
+       \item {\bf PlayerHP} decreases based on DamageEntity. 
                 \begin{enumerate}[i.]
-                 \item An animation shows the explosion of the {\bf Player} sprite.
-                 \item An end game menu prompts {\bf Player} to either play again, return to main menu, or exit game.
-                \end{enumerate}
-       \item Uses item to revive.
-                \begin{enumerate}[i.]
-                \item The inventory item activates, giving the {\bf Player} another opportunity to progress in the game at reduced power and ability.
-                \item Game is returned to normal play, the item is deleted. 
+                 \item {\bf PlayerHP} is greater than zero, continue as normal.
+                 \item{\bf PlayerHP} is less than or equal to zero, {\bf Player} dies.
+                      \begin{enumerate}[1.]
+                	\item {\bf Player} is deleted.
+                	\item Explosion animation spawned in place of {\bf Player}.
+		\item An end game menu prompts {\bf Player} to either play again or return to main menu.
+		 \end{enumerate}
                 \end{enumerate}
         \end{enumerate}
 \end{enumerate}
@@ -144,18 +146,17 @@ Flow of Events:
 Scenario Name: {\bf LeavingFieldOfPlay} \\
 Participating Actor Instances:        \hspace{46pt} {\bf Player: PlayerEntity
 
-					          \hspace{2.6 in}   Enemy: HostileEntity}  \vspace{10pt}  \\ 
+					          \hspace{2.6 in}  Projectile: PlayerKiller}  \vspace{10pt}  \\ 
 Flow of Events: 
 \begin{enumerate} 
-\item {\bf Player} approaches the edge of the field of play.
+\item {\bf Player} leaves the field of play.
+\item Warning alarm sounds, warning flashes on screen.
       \begin{enumerate}[a.]
-       \item {\bf Enemy} is present on the field of play
+       \item {\bf Player} chooses to turn around and return to field of play, everything returned to normal.
+       \item {\bf Player} advances farther out of the field of play.
                 \begin{enumerate}[i.]
-                \item {\bf Player} briefly extends past the edge of the field of play and is turned around back to the field.
-                \end{enumerate}
-       \item {\bf Enemy} is not present on the field of play.
-                \begin{enumerate}[i.]
-                \item {\bf Player} advances to the next field of play corresponding to where they exit.
+                \item {\bf PlayerKiller} kills {\bf Player}.
+	     \item PlayerDeath().
                 \end{enumerate}
         \end{enumerate}
 \end{enumerate}
@@ -272,7 +273,7 @@ The sequence diagram represented in Figure \ref{PlayerDeath}  corresponds to the
 
 \begin{figure} [H]
 \centering
-\includegraphics[width=4.5in]{ClassDiagram.png}
+\includegraphics[width=7.3in]{FinalUMLHorizontal.png}
 \caption{UML Diagram} \label{UML}
 \end{figure}
 
@@ -281,7 +282,7 @@ Figure \ref{StateDia} describes the transitions between various scenes and menus
 
 \begin{figure} [H]
 \centering
-\includegraphics[width=6.1in]{StateDia.png}
+\includegraphics[width=7in]{PewPewStateDiagramFinal.png}
 \caption{State Diagram} \label{StateDia}
 \end{figure}
 
@@ -293,7 +294,15 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 \begin{itemize}
 \item Player controls: The player controls a small spaceship, and navigates through a space environment. As seen in Figure \ref{Controls}, the player will move with the WASD keys; pressing a key will cause the ship to accelerate in that direction. Acceleration speed will not be instantaneous and the player will not stop automatically, in order to simulate a sense of weight and the lack of friction in space. Shooting will be controlled by the arrow keys on the keyboard. Pressing an arrow key will cause shots to be fired in that direction. Since movement and shooting are separate, the player may move in one direction and fire in another. Usable items can be activated by pressing the spacebar. The controls are intended to transfer over to a controller relatively easily, so the player may control moving and shooting with the left and right analog stick respectively. The controls diagram is located at section 4.1 of this document.
 
-\item Player’s ship: The players ship will have it’s own hull and shield values. The shield will be a rechargeable defense that will be able to absorb a number of shots before the ship’s hull takes damage. Recharging of the shield will occur over time or with pickups. The ship’s hull is the amount of damage the ship can sustain before it explodes and the player loses. It will not regenerate automatically like the shield, but items will be able to repair it. The ship will also be able to pick up passive items that will change firing traits or heath, and it will be able to hold an active item that the player can activate with the spacebar.
+\item Player’s ship: The players ship will have it’s own health and shield values. The shield will be a rechargeable defense that will be able to absorb a number of shots before the players ship takes permanent health damage. Recharging of the shield will occur over time. The ship’s health is the amount of damage the ship can sustain before it explodes and the player loses. It will not regenerate automatically like the shield, but items will be able to restore it.
+
+\item Pick-ups:  The ship will also be able to pick up passive items that will change firing traits or speed.{\textcolor{Red}{[CHANGE]}}
+
+\item Radar: 
+
+\item Standard Shooting:
+
+\item Predictive Shooting: 
 
 \item Enemies: The main goal of enemy ships is to kill the player ship. There are two main strategies the enemies will utilize to accomplish this. Certain enemies will shoot at the player, forcing the player to dodge if they want to survive, while other enemies will attempt to ram the player to deal damage. As such, there are enemy ships that will fly around in basic patterns while shooting at the player, and there are enemy ships that will charge straight at the player to prevent them from staying still for too long. Additionally, there will be “enemy” obstacles such as asteroids that will fly on screen to force players to be aware of their surroundings. These obstacles have no set objective and can hit enemy ships as well.
 
@@ -303,13 +312,13 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 \item Items: The majority of the items in the game will provide a general bonus to the player without requiring additional action from the player. These could include upgrades like increased shield or hull capacity, increased damage, or faster ship acceleration. Additionally, there will be various items that the player can activate by pressing the Activate Item key that will provide the player with some benefit when used. For instance, a time bomb may temporarily slow down enemy ships and projectiles to allow the player to dodge them more easily.
 
-\item Bosses: Bosses will give the player a challenge before ultimately reaching a goal, item, or the next level. Bosses will shoot large amounts of projectiles to making dodging difficult for the player. Additionally, bosses will have a larger amount of health than the average enemy and will drop greater rewards. Defeating a boss will allow the player access to the next area.
+\item Bosses: Bosses will give the player a final challenge before ultimately reaching the end of the game and winning. Bosses will shoot large amounts of projectiles to making dodging difficult for the player. Additionally, the boss will have a predictive shooting projectile to increase the difficulty further. Finally, bosses will have a larger amount of health than the average enemy. Defeating a boss will end the game and display a win screen.
 
 \item Story - The Player is an explorer trying to reach the other side of the Universe to meet aliens that sent a treasure map to earth. The Player keeps in close contact with General Weathersbee who guides them to the last known location of the aliens. 
 
-\item Art/models: The art, assets and models used in this project will be simple and not sticking to one specific style. For buget reasons the assets will be obtained from the free section of the Unity store, meaning that they will most likely not match. 
+\item Art/models: The assets and models used in this project will all be free from the Unity store. We will use our own creativity to make all of the assets blend together in a cohesive way. We are using a black with star background for the main level, and then varying space themed backgrounds for the other scenes. The font Huxely is through out the game to tie the art all together.  
 
-\item Music/ sound: Sound effects and music will be retrived from the Unity store and will attempt to create the feeling of being in space. For example the laser gun will have a "pew pew pew" sound. 
+\item Music/ sound: Sound effects and music will be retrived from the Unity store and other creative commons sites. It will attempt to replicate a space environment similar to other space themed games. For example the laser gun will have a "pew pew pew" sound. 
 
 \end{itemize}
 
@@ -317,7 +326,7 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 \begin{figure} [H]
 \centering
-\includegraphics[width=6.1 in]{ControlDiagram2.png}
+\includegraphics[width=6.3 in]{ControlDiagramFinal.png}
 \caption{Controls Diagram} \label{Controls}
 \end{figure}
 
