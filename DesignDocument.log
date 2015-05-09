@@ -1,10 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.8)  8 MAY 2015 11:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.8)  8 MAY 2015 17:14
 entering extended mode
-**C:/Users/Madison/Documents/GitHub/CapstoneGameDesignDocument/DesignDocument.t
-ex
-
-(C:/Users/Madison/Documents/GitHub/CapstoneGameDesignDocument/DesignDocument.te
-x
+**C:/Users/Jake/Documents/GitHub/CapstoneGameDesignDocument/DesignDocument.tex
+(C:/Users/Jake/Documents/GitHub/CapstoneGameDesignDocument/DesignDocument.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -211,8 +208,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks30
 )
-(C:\Users\Madison\Documents\GitHub\CapstoneGameDesignDocument\DesignDocument.au
-x)
+(C:\Users\Jake\Documents\GitHub\CapstoneGameDesignDocument\DesignDocument.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
@@ -225,7 +221,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count102
 \scratchdimen=\dimen120
@@ -253,10 +250,10 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 57--57
 [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(C:\Users\Madison\Documents\GitHub\CapstoneGameDesignDocument\DesignDocument.to
-c
+(C:\Users\Jake\Documents\GitHub\CapstoneGameDesignDocument\DesignDocument.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 4.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 4.
@@ -266,10 +263,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write3
  [1]
-(C:\Users\Madison\Documents\GitHub\CapstoneGameDesignDocument\DesignDocument.lo
-f)
+(C:\Users\Jake\Documents\GitHub\CapstoneGameDesignDocument\DesignDocument.lof)
 \tf@lof=\write4
- [1]
+
+[1]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
@@ -302,16 +299,16 @@ File: UseCaseModel1.png Graphic file (type png)
 <use UseCaseModel1.png>
 Package pdftex.def Info: UseCaseModel1.png used on input line 258.
 (pdftex.def)             Requested size: 397.48499pt x 323.98914pt.
- [5] [6 <C:/Users/Madison/Documents/GitHub/CapstoneGameDesignDocument/UseCaseMo
-del1.png>]
-<PlayerDeath.png, id=39, 1059.96pt x 1475.2716pt>
+ [5] [6 <C:/Users/Jake/Documents/GitHub/CapstoneGameDesignDocument/UseCaseModel
+1.png>]
+<PlayerDeath.png, id=39, 484.209pt x 551.05875pt>
 File: PlayerDeath.png Graphic file (type png)
  <use PlayerDeath.png>
 Package pdftex.def Info: PlayerDeath.png used on input line 267.
-(pdftex.def)             Requested size: 343.28249pt x 477.7918pt.
+(pdftex.def)             Requested size: 343.28249pt x 390.69107pt.
 
-[7 <C:/Users/Madison/Documents/GitHub/CapstoneGameDesignDocument/PlayerDeath.pn
-g>] <FinalUMLHorizontal.png, id=45, 1084.05pt x 578.16pt>
+[7 <C:/Users/Jake/Documents/GitHub/CapstoneGameDesignDocument/PlayerDeath.png>]
+<FinalUMLHorizontal.png, id=44, 1084.05pt x 578.16pt>
 File: FinalUMLHorizontal.png Graphic file (type png)
 
 <use FinalUMLHorizontal.png>
@@ -322,7 +319,7 @@ Overfull \hbox (57.81622pt too wide) in paragraph at lines 276--277
  [][] 
  []
 
-<PewPewStateDiagramFinal.png, id=46, 578.16pt x 289.08pt>
+<PewPewStateDiagramFinal.png, id=45, 578.16pt x 289.08pt>
 File: PewPewStateDiagramFinal.png Graphic file (type png)
 
 <use PewPewStateDiagramFinal.png>
@@ -333,8 +330,8 @@ Overfull \hbox (36.13501pt too wide) in paragraph at lines 285--286
  [][] 
  []
 
-[8 <C:/Users/Madison/Documents/GitHub/CapstoneGameDesignDocument/FinalUMLHorizo
-ntal.png>]
+[8 <C:/Users/Jake/Documents/GitHub/CapstoneGameDesignDocument/FinalUMLHorizonta
+l.png>]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 295.
 
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
@@ -351,9 +348,8 @@ Missing character: There is no ô in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
-
-[9 <C:/Users/Madison/Documents/GitHub/CapstoneGameDesignDocument/PewPewStateDia
-gramFinal.png>]
+ [9 <C:/Users/Jake/Documents/GitHub/CapstoneGameDesignDocument/PewPewStateDiagr
+amFinal.png>]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
@@ -363,15 +359,14 @@ Missing character: There is no ù in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ò in font cmr12!
- [10]
-<ControlDiagramFinal.png, id=59, 792.71156pt x 560.8453pt>
+ [10] <ControlDiagramFinal.png, id=58, 792.71156pt x 560.8453pt>
 File: ControlDiagramFinal.png Graphic file (type png)
 
 <use ControlDiagramFinal.png>
 Package pdftex.def Info: ControlDiagramFinal.png used on input line 329.
 (pdftex.def)             Requested size: 455.30121pt x 322.13268pt.
- [11] [12 <C:/Users/Madison/Documents/GitHub/CapstoneGameDesignDocument/Control
-DiagramFinal.png>]
+ [11] [12 <C:/Users/Jake/Documents/GitHub/CapstoneGameDesignDocument/ControlDia
+gramFinal.png>]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
@@ -433,14 +428,14 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
  [13] [14]
-<TimeTableDec.png, id=73, 744.7825pt x 1275.76625pt>
+<TimeTableDec.png, id=72, 744.7825pt x 1275.76625pt>
 File: TimeTableDec.png Graphic file (type png)
  <use TimeTableDec.png>
 Package pdftex.def Info: TimeTableDec.png used on input line 436.
 (pdftex.def)             Requested size: 310.76122pt x 532.33366pt.
 
-[15] [16 <C:/Users/Madison/Documents/GitHub/CapstoneGameDesignDocument/TimeTabl
-eDec.png>]
+[15] [16 <C:/Users/Jake/Documents/GitHub/CapstoneGameDesignDocument/TimeTableDe
+c.png>]
 Underfull \hbox (badness 7291) in paragraph at lines 447--448
 []\OT1/cmr/m/n/12 Ringo, D. His-tory of Gam-ing: A Look at How It All Be-gan. P
 ub-
@@ -505,26 +500,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 484--501
  []
 
 [19]
-(C:\Users\Madison\Documents\GitHub\CapstoneGameDesignDocument\DesignDocument.au
-x) ) 
+(C:\Users\Jake\Documents\GitHub\CapstoneGameDesignDocument\DesignDocument.aux) 
+) 
 Here is how much of TeX's memory you used:
  3392 strings out of 493921
- 41715 string characters out of 3144871
+ 41682 string characters out of 3144880
  108660 words of memory out of 3000000
  6639 multiletter control sequences out of 15000+200000
  11157 words of font info for 42 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,7n,43p,1294b,371s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on DesignDocument.pdf (22 pages, 784684 bytes).
+ 27i,7n,43p,1291b,371s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on DesignDocument.pdf (22 pages, 547792 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
+ 113 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -261,7 +261,7 @@ Figure \ref{Use Case Model} shows which external actors participate in each of t
 
 \newpage
 \subsection{Sequence Diagram}
-The sequence diagram represented in Figure \ref{PlayerDeath}  corresponds to the use case PlayerDeath, and outline the process behind the player being hit with a projectile to a death state, followed by the appropriate response by the {\it GameController}. The branching paths occur if the Projectile killed the player or if they had an item that could revive them. Sequence diagrams for other use cases are functionally similar, albeit with a few differing actors and method calls.
+The sequence diagram represented in Figure \ref{PlayerDeath}  corresponds to the use case PlayerDeath, and outlines the process behind the player being hit with a projectile to a death state, followed by the appropriate response by the {\it GameController}. Health will only be subtracted if the player has no remaining shield. If the player no longer has any health or shields after taking damage, then the {\it Player} object will report its death to the {\it GameController}. Sequence diagrams for other use cases are functionally similar, albeit with a few differing actors and method calls.
 \begin{figure} [H]
 \centering
 \includegraphics[width=4.75in]{PlayerDeath.png}
