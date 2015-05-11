@@ -72,15 +72,13 @@
 
 \newpage
 
-\section{Introduction}
+\section{Introduction} %INTRODUCTION 
 \label{sec:intro}
 
 \hs Video games have been a rapidly growing industry in the past 30 years \cite{History}. As such, there are a wide variety of genres and subgenres of games, each taking influence from and building upon successful games of the past. In some cases these games combine past elements in a way that create a new category of game. The goal of this project is to develop a game that will blend space-shooter elements from classic arcade games, such as Asteroids and Galaga, with randomized, challenging elements from more recent games such as The Binding of Isaac. These elements will include random usable items and equipment, permanent player death, and randomly generated level design. This combination will aim to provide players with new challenges that may not be available in current games. This game will be developed using Unity3D and will run in the Unity engine, which features robust tools that will allow us to manipulate nearly any element of the game quickly and with immediate feedback.
 
-\section{Research Review}
-\label{sec:Research}
-
-\hs For the development of this project, we will develop a video game using Unity. The majority of the research time will be used to learn the functionality of Unity. Since Unity is a complete game engine and editor, the game creation process will not require the development of an engine. Other alternative engines, such as the graphics engine Ogre3D, would still require the implementation of a game engine in addition to creating the game \cite{Ogre}. Unreal Engine 4 was another considered engine, and included many features that would be useful to this project. However, many individuals have said that it is difficult for beginners to learn due to the lack of tutorials. Ultimately, we settled on Unity, since it has a wide range of tutorials to help us get started more quickly and will allow the majority of the project resources to go towards gameplay. development.
+\subsection{Research}
+	For the development of this project, we will develop a video game using Unity. The majority of the research time will be used to learn the functionality of Unity. Since Unity is a complete game engine and editor, the game creation process will not require the development of an engine. Other alternative engines, such as the graphics engine Ogre3D, would still require the implementation of a game engine in addition to creating the game \cite{Ogre}. Unreal Engine 4 was another considered engine, and included many features that would be useful to this project. However, many individuals have said that it is difficult for beginners to learn due to the lack of tutorials. Ultimately, we settled on Unity, since it has a wide range of tutorials to help us get started more quickly and will allow the majority of the project resources to go towards gameplay. development.
 
         Unity primarily uses $C\#$ as it’s scripting language. $C\#$ was created by Microsoft in 1997. It uses the .NET framework and is the most popular .NET language used today. It was influenced heavily by Java and C++, and it is intended to be friendly to the software development process so it has features such as uninitialized variable compatibility and automatic garbage collection \cite{Cadet}. Even though $C\#$ is a compiled language, Unity is still able to use $C\#$ code snippets as “scripts” because Unity is built in IDE (Monodevelop), compiles the code and packages it with game resources before runtime. This gives the games a robust set of tools, but allows the game to load and run quickly. \cite{Moles} 
 
@@ -90,8 +88,19 @@
 
 	Finally, procedurally generated content will be used in order to build satisfying and challenging areas for the player. Procedural content generation is the process of designing an algorithm that can generate content at runtime. This fits in well with this project. With a relatively small number of inputs, the game can generate numerous different levels where the enemies encountered are found in different combinations. It also embodies the core idea of a roguelike game, changing the game every playthrough to challenge the player differently. There are a multitude of content generation algorithms, one of the common ones being Perlin noise, which actually refers to two algorithms created by Ken Perlin. These algorithms use a sum of different functions with varying amplitudes and frequencies in order to generate what is called a noise function. It is this function that is used to define different points of intensity. As it pertains to this project, these functions could be used to generate nebulae or star maps, giving a different visual experience to our player every time. \cite{PCG}
 
-\section{Design}
-\label{sec:Design}
+
+\section{Gameplay} %GAMEPLAY
+\label{sec:Gameplay}
+
+{\bf First Minute}: The player enters the game with their chosen ship, and can immediately start exploring the area in which they spawn. They will see the controls of the game described on the field, introducing new players to the game. After discovering how to control their ship, players will be able to leave the starting area in a single direction, leading them to the first area of the game. In this first area, enemies will be created at the other side of the field. The player must defeat these enemies to clear the field and move on. As the player moves about the field, the enemies start reacting, moving towards the player to defeat him. When battle resolves, any dropped items and currency are picked up by the player, and they are given a choice where to go next.
+
+{\bf Gameflow:}
+
+
+{\bf Victory conditions}: The player will achieve victory by completing each area that is generated without dying. The game is planned to culminate with a boss fight, and defeating this boss will trigger victory and end the game.
+
+\section{Requirements} %REQUIREMENTS
+\label{sec:Requirements}
 
 \hs The following use cases and diagrams describe how the game will be implemented in the Unity game engine. While Unity is set up to handle the View portion and some of the Controller portion of the MVC architecture, we will have to supply part of the Controller and the Model portion in order to deliver our game.
 
@@ -259,9 +268,13 @@ Figure \ref{Use Case Model} shows which external actors participate in each of t
 \caption{Use Case Model} \label{Use Case Model}
 \end{figure}
 
-\newpage
+
+\section{Design} %DESIGN
+\label{sec:Design}
+
 \subsection{Sequence Diagram}
 The sequence diagram represented in Figure \ref{PlayerDeath}  corresponds to the use case PlayerDeath, and outlines the process behind the player being hit with a projectile to a death state, followed by the appropriate response by the {\it GameController}. Health will only be subtracted if the player has no remaining shield. If the player no longer has any health or shields after taking damage, then the {\it Player} object will report its death to the {\it GameController}. Sequence diagrams for other use cases are functionally similar, albeit with a few differing actors and method calls.
+
 \begin{figure} [H]
 \centering
 \includegraphics[width=4.75in]{PlayerDeath.png}
@@ -286,43 +299,76 @@ Figure \ref{StateDia} describes the transitions between various scenes and menus
 \caption{State Diagram} \label{StateDia}
 \end{figure}
 
-\section{Gameplay Design}
+{\bf Entity Relationship model: \textcolor{red}{???}}
+
+\hs {\bf Testing plans}: The group members will play the game every step of the way to make sure that the individual additions to the project are functioning as expected. Once there is a version of the game that allows a player to navigate an environment and fight basic enemies, the group will reach out others to play it and give feedback in the form of a simple survey. 
+
+\section{Gameplay Design} %GAMEPLAY DESIGN
 \label{sec:GPdesign}
 
 Games are dynamic pieces of software that focus on delivering exciting or interesting experiences to players, gameplay design is as important as backend design. What follows is the basic design for the aspects of the gameplay that the player will see.
 
-\begin{itemize}
-\item Player controls: The player controls a small spaceship, and navigates through a space environment. As seen in Figure \ref{Controls}, the player will move with the WASD keys; pressing a key will cause the ship to accelerate in that direction. Acceleration speed will not be instantaneous and the player will not stop automatically, in order to simulate a sense of weight and the lack of friction in space. Shooting will be controlled by the arrow keys on the keyboard. Pressing an arrow key will cause shots to be fired in that direction. Since movement and shooting are separate, the player may move in one direction and fire in another. Usable items can be activated by pressing the spacebar. The controls are intended to transfer over to a controller relatively easily, so the player may control moving and shooting with the left and right analog stick respectively. The controls diagram is located at section 4.1 of this document.
+\subsection{Player} %Player
 
-\item Player’s ship: The players ship will have it’s own health and shield values. The shield will be a rechargeable defense that will be able to absorb a number of shots before the players ship takes permanent health damage. Recharging of the shield will occur over time. The ship’s health is the amount of damage the ship can sustain before it explodes and the player loses. It will not regenerate automatically like the shield, but items will be able to restore it.
+	{\bf Player controls: }The player controls a small spaceship, and navigates through a space environment. As seen in Figure \ref{Controls}, the player will move with the WASD keys; pressing a key will cause the ship to accelerate in that direction. Acceleration speed will not be instantaneous and the player will not stop automatically, in order to simulate a sense of weight and the lack of friction in space. Shooting will be controlled by the arrow keys on the keyboard. Pressing an arrow key will cause shots to be fired in that direction. Since movement and shooting are separate, the player may move in one direction and fire in another. Usable items can be activated by pressing the spacebar. The controls are intended to transfer over to a controller relatively easily, so the player may control moving and shooting with the left and right analog stick respectively. The controls diagram is located at section 4.1 of this document.
 
-\item Pick-ups:  There will be pick-ups available to the player throughout the game, dropping from enemies and asteroids. Pick-ups will change some attribute of the player ship, including  speeding the movement of the ship, restoring health, and changing the currently equipped menu.
+	{\bf Player Movement:}	
 
-\item Radar: The radar will be displayed in the bottom left corner. It shows the player the location of all enemies, pick-ups, and asteroids in the immediate surrounding area of the player. In addition, it also represent the direction of all enemies not shown in the immediate area with a symbol on the edge of the radar.
+	{\bf Player Shooting:}
 
-\item Standard Shooting:
+	{\bf Player’s ship:} The players ship will have it’s own health and shield values. The shield will be a rechargeable defense that will be able to absorb a number of shots before the players ship takes permanent health damage. Recharging of the shield will occur over time. The ship’s health is the amount of damage the ship can sustain before it explodes and the player loses. It will not regenerate automatically like the shield, but items will be able to restore it.
 
-\item Predictive Shooting: 
+\subsection{Enemies} %Enemies
 
-\item Enemies: The main goal of enemy ships is to kill the player ship. There are two main strategies the enemies will utilize to accomplish this. Certain enemies will shoot at the player, forcing the player to dodge if they want to survive, while other enemies will attempt to ram the player to deal damage. As such, there are enemy ships that will fly around in basic patterns while shooting at the player, and there are enemy ships that will charge straight at the player to prevent them from staying still for too long. Additionally, there will be “enemy” obstacles such as asteroids that will fly on screen to force players to be aware of their surroundings. These obstacles have no set objective and can hit enemy ships as well.
+	\hs {\bf Enemies: } The main goal of enemy ships is to kill the player ship. There are two main strategies the enemies will utilize to accomplish this. Certain enemies will shoot at the player, forcing the player to dodge if they want to survive, while other enemies will attempt to ram the player to deal damage. As such, there are enemy ships that will fly around in basic patterns while shooting at the player, and there are enemy ships that will charge straight at the player to prevent them from staying still for too long. Additionally, there will be “enemy” obstacles such as asteroids that will fly on screen to force players to be aware of their surroundings. These obstacles have no set objective and can hit enemy ships as well.
 
-The main goal of the enemy ships is to kill the player ship. There are two main types of enemy that employ different tactics to accomplish this goal. The first type of enemy tracks the player while it moves, having the possibility of shooting at a fixed time interval. The second type of enemy will follow the player closely while trying to get in front, having a stronger shot then that of the first enemy, but also firing less frequently. Additionally, there will be “enemy” obstacles such as asteroids that will fly on screen to force players to be aware of their surroundings. These obstacles have no set objective and can hit enemy ships as well.
+	The main goal of the enemy ships is to kill the player ship. There are two main types of enemy that employ different tactics to accomplish this goal. The first type of enemy tracks the player while it moves, having the possibility of shooting at a fixed time interval. The second type of enemy will follow the player closely while trying to get in front, having a stronger shot then that of the first enemy, but also firing less frequently. Additionally, there will be “enemy” obstacles such as asteroids that will fly on screen to force players to be aware of their surroundings. These obstacles have no set objective and can hit enemy ships as well.
 
-\item Level design: Enemy placement will play a critical role in the design of levels. The placement of enemies needs to be dense enough so that there is a challenge but  sparce enough so that every level is possible and does not feel the same. Since the game takes place in space, there will not be traditional level elements such as walls and floors. However, there may need to be other obstacles that guide the player‘s movements such as debris or very large ships.
+	{\bf Standard Shooting:}
 
-\item Weapons: Weapons will need to serve two functions: give the player a variety of gameplay options and motivate the player to explore a different gameplay style. For instance, a laser may allow the player to shoot a long range beam that pierces enemies but does not deal much damage, while a shotgun may reward the player with a more damaging weapon, but require the player to engage with enemy ships from a much closer range. The player will be able to switch out weapons such as these to better fit their playstyle.
+	{\bf Predictive Shooting:} 
 
-\item Items: The majority of the items in the game will provide a general bonus to the player without requiring additional action from the player. These could include upgrades like increased shield or hull capacity, increased damage, or faster ship acceleration. Additionally, there will be various items that the player can activate by pressing the Activate Item key that will provide the player with some benefit when used. For instance, a time bomb may temporarily slow down enemy ships and projectiles to allow the player to dodge them more easily.
+	{\bf Patrolling:}
 
-\item Bosses: Bosses will give the player a final challenge before ultimately reaching the end of the game and winning. Bosses will shoot large amounts of projectiles to making dodging difficult for the player. Additionally, the boss will have a predictive shooting projectile to increase the difficulty further. Finally, bosses will have a larger amount of health than the average enemy. Defeating a boss will end the game and display a win screen.
+	{\bf Enemy Type One:}
 
-\item Story - The Player is an explorer trying to reach the other side of the Universe to meet aliens that sent a treasure map to earth. The Player keeps in close contact with General Weathersbee who guides them to the last known location of the aliens. 
+	{\bf Enemy Type Two:}
 
-\item Art/models: The assets and models used in this project will all be free from the Unity store. We will use our own creativity to make all of the assets blend together in a cohesive way. We are using a black with star background for the main level, and then varying space themed backgrounds for the other scenes. The font Huxely is through out the game to tie the art all together.  
+	{\bf Bosses:} Bosses will give the player a final challenge before ultimately reaching the end of the game and winning. Bosses will shoot large amounts of projectiles to making dodging difficult for the player. Additionally, the boss will have a predictive shooting projectile to increase the difficulty further. Finally, bosses will have a larger amount of health than the average enemy. Defeating a boss will end the game and display a win screen.
 
-\item Music/ sound: Sound effects and music will be retrived from the Unity store and other creative commons sites. It will attempt to replicate a space environment similar to other space themed games. For example the laser gun will have a "pew pew pew" sound. 
+\subsection{Weapons} %Weapons
 
-\end{itemize}
+	{\bf Weapons:} Weapons will need to serve two functions: give the player a variety of gameplay options and motivate the player to explore a different gameplay style. For instance, a laser may allow the player to shoot a long range beam that pierces enemies but does not deal much damage, while a shotgun may reward the player with a more damaging weapon, but require the player to engage with enemy ships from a much closer range. The player will be able to switch out weapons such as these to better fit their playstyle.
+
+
+\subsection{Levels/Objects} %level
+
+	{\bf Pick-ups:}  There will be pick-ups available to the player throughout the game, dropping from enemies and asteroids. Pick-ups will change some attribute of the player ship, including  speeding the movement of the ship, restoring health, and changing the currently equipped menu.
+
+	{\bf  Items:} The majority of the items in the game will provide a general bonus to the player without requiring additional action from the player. These could include upgrades like increased shield or hull capacity, increased damage, or faster ship acceleration. Additionally, there will be various items that the player can activate by pressing the Activate Item key that will provide the player with some benefit when used. For instance, a time bomb may temporarily slow down enemy ships and projectiles to allow the player to dodge them more easily.
+
+	{\bf Level design:} Enemy placement will play a critical role in the design of levels. The placement of enemies needs to be dense enough so that there is a challenge but  sparce enough so that every level is possible and does not feel the same. Since the game takes place in space, there will not be traditional level elements such as walls and floors. However, there may need to be other obstacles that guide the player‘s movements such as debris or very large ships.
+
+	{\bf Star Field and Background:}
+
+	{\bf Asteroids:} (purpose and spawning)
+
+\subsection{User Interface} % UI
+
+	{\bf Radar:} The radar will be displayed in the bottom left corner. It shows the player the location of all enemies, pick-ups, and asteroids in the immediate surrounding area of the player. In addition, it also represent the direction of all enemies not shown in the immediate area with a symbol on the edge of the radar.
+
+	{\bf HUD:}
+
+	{\bf Menus:}
+
+\subsection{Art} %Art
+
+	{\bf Story:} The Player is an explorer trying to reach the other side of the Universe to meet aliens that sent a treasure map to earth. The Player keeps in close contact with General Weathersbee who guides them to the last known location of the aliens. 
+
+	{\bf Art/models:} The assets and models used in this project will all be free from the Unity store. We will use our own creativity to make all of the assets blend together in a cohesive way. We are using a black with star background for the main level, and then varying space themed backgrounds for the other scenes. The font Huxely is through out the game to tie the art all together.  
+
+	{\bf Music/ sound:} Sound effects and music will be retrived from the Unity store and other creative commons sites. It will attempt to replicate a space environment similar to other space themed games. For example the laser gun will have a "pew pew pew" sound. 
+
 
 \subsection{Controls Diagram}
 
@@ -332,14 +378,8 @@ The main goal of the enemy ships is to kill the player ship. There are two main 
 \caption{Controls Diagram} \label{Controls}
 \end{figure}
 
-\subsection{Miscellaneous}
-\hs {\bf Testing plans}: The group members will play the game every step of the way to make sure that the individual additions to the project are functioning as expected. Once there is a version of the game that allows a player to navigate an environment and fight basic enemies, the group will reach out others to play it and give feedback in the form of a simple survey. 
 
-{\bf Victory conditions}: The player will achieve victory by completing each area that is generated without dying. The game is planned to culminate with a boss fight, and defeating this boss will trigger victory and end the game.
-
-{\bf First Minute}: The player enters the game with their chosen ship, and can immediately start exploring the area in which they spawn. They will see the controls of the game described on the field, introducing new players to the game. After discovering how to control their ship, players will be able to leave the starting area in a single direction, leading them to the first area of the game. In this first area, enemies will be created at the other side of the field. The player must defeat these enemies to clear the field and move on. As the player moves about the field, the enemies start reacting, moving towards the player to defeat him. When battle resolves, any dropped items and currency are picked up by the player, and they are given a choice where to go next.
-
-\section{History of Work}
+\section{Implementation} %IMPLEMENTATION
 \label{sec:history}
 This section describes the completed work, current status, and future plans that are to be included to the project.
 
@@ -358,86 +398,18 @@ This section describes the completed work, current status, and future plans that
 Development is starting to move out of preliminary stages as we get the group back together for spring semester. We have finished mutiple Unity tutorials and have a basic foundation of the game. We are currently working on creating a new time table to get develpment on track. The design document was completed and turned in on December 18th, 2014, and an updated version of the document was turned in February 19th, 2015. 
 
 \subsection{Future Work}
-The following are tasks that still need to be completed in order to produce a functional polished game.
 
-\begin{enumerate}[A.]
-{\bf \item Research and Design Tasks:}
-     \begin{enumerate}[a.]
-	\item Game Design
-        \begin{enumerate}[i.]
-	\item Story- Come up with a complete story that includes a purpose and a goal. This will enhance the gameplay and get people interested in playing the game.
-         \item Art - Pick what art style the game will follow. Start gathering backgrounds  
-        \item Models
-	\end{enumerate}
-        \item Pathfinding Unity Tutorial - Find and complete a tutorial on Unity that focuses on the pathfinding aspects of the A.I.
-	\end{enumerate}
 
-{\bf \item Implementation Tasks:}
-\begin{enumerate}[a.]
-	
-\item Entity movement - The player and AI will have the ability to control in game entities to affect gameplay. 
 
-\item Collisions - The game will detect collisions between different entities, affecting movement and gameplay.
+%\section{Timetable}
+%\label{sec:time}
+%Figure \ref{Time} describes the planned development cycles for creating the game.
 
-\item Artificial Intelligence
-
-\begin{enumerate}[i.]
-\item Enemy response - The enemy AI will respond to player actions, influencing their own..
-\item Follower movements - Follower ships will follow the player around and shoot at enemies as they approach.
-\item Enemy spawning - A system that is dedicated to the spawning of enemies and obstacles upon loading a level.
-\end{enumerate}
-
-\item Inventory Control System
-\begin{enumerate}[i.]
-\item Sorting- Player will be able to move items around in their inventory.
-\item Equipping - Player will be able to equip a set amount of items into a number of different equipment slots. Equipping items will give the player a number of different benefits.
-\item Selling- Player can sell extra or unwanted items at a shop to clean out their inventory.
-\end{enumerate}
-
-\item User Interface
-\begin{enumerate}[i.]
-\item Heads up display- The information elements that will display vital information during gameplay.
-\item Minimap- A small map that shows the location of enemies and objectives relative to the player.
-\item Shop window- An interactive window that displays items available for purchase.
-\end{enumerate}
-
-\item Audio
-\begin{enumerate}[i.]
-\item Sound Effects - Actions that the player can take, as well as certain environmental effects, will have sounds associated with them.
-\item Music - Different soundtracks will play in the background of differing areas and menus.
-\end{enumerate}
-
-\item Lighting - Lighting systems will add dynamic lighting and ambience to make key entities more visible.
-
-\item Randomly generated levels - Levels will be generated upon loading each one differing from other level generations.
-
-\item Multiple artificially controlled enemies
-\begin{enumerate}[i.]
-\item Boss Enemies - An enemy that provide both a significant challenge and an extra reward.
-\item Unique Enemies - differing types of enemy entities
-\end{enumerate}
-
-\item Graphical Effects
-\begin{enumerate}[i.]
-\item Animations - animations will be used to create a smooth, interesting visual experience.
-\item Particle Effects - particle effects will be included to enhance certain actions, i.e. thrusters.
-\item Parallax Backgrounds
-\end{enumerate}
-
-\item Interactive background elements - Some background elements will interact with the player. For instance, a planet in the background might bombar the player with explosive armaments.
-
-\end{enumerate}
-\end{enumerate}
-
-\section{Timetable}
-\label{sec:time}
-Figure \ref{Time} describes the planned development cycles for creating the game.
-
-\begin{figure} [H]
-\centering
-\includegraphics[width=4.3 in]{TimeTableDec.png}
-\caption{Current Time Table} \label{Time}
-\end{figure}
+%\begin{figure} [H]
+%\centering
+%\includegraphics[width=4.3 in]{TimeTableDec.png}
+%\caption{Current Time Table} \label{Time}
+%\end{figure}
 
 
 \newpage
