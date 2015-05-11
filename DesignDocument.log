@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.8)  8 MAY 2015 17:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.10)  10 MAY 2015 19:56
 entering extended mode
-**C:/Users/Jake/Documents/GitHub/CapstoneGameDesignDocument/DesignDocument.tex
-(C:/Users/Jake/Documents/GitHub/CapstoneGameDesignDocument/DesignDocument.tex
+**C:/Users/Neil/Documents/GitHub/CapstoneGameDesignDocument/DesignDocument.tex
+(C:/Users/Neil/Documents/GitHub/CapstoneGameDesignDocument/DesignDocument.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -208,7 +208,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks30
 )
-(C:\Users\Jake\Documents\GitHub\CapstoneGameDesignDocument\DesignDocument.aux)
+(C:\Users\Neil\Documents\GitHub\CapstoneGameDesignDocument\DesignDocument.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
@@ -250,7 +250,7 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 57--57
 [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(C:\Users\Jake\Documents\GitHub\CapstoneGameDesignDocument\DesignDocument.toc
+(C:\Users\Neil\Documents\GitHub\CapstoneGameDesignDocument\DesignDocument.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 4.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
@@ -263,7 +263,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write3
  [1]
-(C:\Users\Jake\Documents\GitHub\CapstoneGameDesignDocument\DesignDocument.lof)
+(C:\Users\Neil\Documents\GitHub\CapstoneGameDesignDocument\DesignDocument.lof)
 \tf@lof=\write4
 
 [1]
@@ -299,7 +299,7 @@ File: UseCaseModel1.png Graphic file (type png)
 <use UseCaseModel1.png>
 Package pdftex.def Info: UseCaseModel1.png used on input line 258.
 (pdftex.def)             Requested size: 397.48499pt x 323.98914pt.
- [5] [6 <C:/Users/Jake/Documents/GitHub/CapstoneGameDesignDocument/UseCaseModel
+ [5] [6 <C:/Users/Neil/Documents/GitHub/CapstoneGameDesignDocument/UseCaseModel
 1.png>]
 <PlayerDeath.png, id=39, 484.209pt x 551.05875pt>
 File: PlayerDeath.png Graphic file (type png)
@@ -307,7 +307,7 @@ File: PlayerDeath.png Graphic file (type png)
 Package pdftex.def Info: PlayerDeath.png used on input line 267.
 (pdftex.def)             Requested size: 343.28249pt x 390.69107pt.
 
-[7 <C:/Users/Jake/Documents/GitHub/CapstoneGameDesignDocument/PlayerDeath.png>]
+[7 <C:/Users/Neil/Documents/GitHub/CapstoneGameDesignDocument/PlayerDeath.png>]
 <FinalUMLHorizontal.png, id=44, 1084.05pt x 578.16pt>
 File: FinalUMLHorizontal.png Graphic file (type png)
 
@@ -330,7 +330,7 @@ Overfull \hbox (36.13501pt too wide) in paragraph at lines 285--286
  [][] 
  []
 
-[8 <C:/Users/Jake/Documents/GitHub/CapstoneGameDesignDocument/FinalUMLHorizonta
+[8 <C:/Users/Neil/Documents/GitHub/CapstoneGameDesignDocument/FinalUMLHorizonta
 l.png>]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 295.
 
@@ -348,7 +348,7 @@ Missing character: There is no ô in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
- [9 <C:/Users/Jake/Documents/GitHub/CapstoneGameDesignDocument/PewPewStateDiagr
+ [9 <C:/Users/Neil/Documents/GitHub/CapstoneGameDesignDocument/PewPewStateDiagr
 amFinal.png>]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
@@ -363,9 +363,9 @@ Missing character: There is no ò in font cmr12!
 File: ControlDiagramFinal.png Graphic file (type png)
 
 <use ControlDiagramFinal.png>
-Package pdftex.def Info: ControlDiagramFinal.png used on input line 329.
+Package pdftex.def Info: ControlDiagramFinal.png used on input line 331.
 (pdftex.def)             Requested size: 455.30121pt x 322.13268pt.
- [11] [12 <C:/Users/Jake/Documents/GitHub/CapstoneGameDesignDocument/ControlDia
+ [11] [12 <C:/Users/Neil/Documents/GitHub/CapstoneGameDesignDocument/ControlDia
 gramFinal.png>]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
@@ -431,80 +431,80 @@ Missing character: There is no ù in font cmr12!
 <TimeTableDec.png, id=72, 744.7825pt x 1275.76625pt>
 File: TimeTableDec.png Graphic file (type png)
  <use TimeTableDec.png>
-Package pdftex.def Info: TimeTableDec.png used on input line 436.
+Package pdftex.def Info: TimeTableDec.png used on input line 438.
 (pdftex.def)             Requested size: 310.76122pt x 532.33366pt.
 
-[15] [16 <C:/Users/Jake/Documents/GitHub/CapstoneGameDesignDocument/TimeTableDe
+[15] [16 <C:/Users/Neil/Documents/GitHub/CapstoneGameDesignDocument/TimeTableDe
 c.png>]
-Underfull \hbox (badness 7291) in paragraph at lines 447--448
+Underfull \hbox (badness 7291) in paragraph at lines 449--450
 []\OT1/cmr/m/n/12 Ringo, D. His-tory of Gam-ing: A Look at How It All Be-gan. P
 ub-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 447--448
+Underfull \hbox (badness 10000) in paragraph at lines 449--450
 \OT1/cmr/m/n/12 lic Brod-cast-ing Ser-vice, n.d. Re-trieved Oc-to-ber 20, 2014,
  from PBS:
  []
 
 
-Underfull \hbox (badness 2512) in paragraph at lines 449--450
+Underfull \hbox (badness 2512) in paragraph at lines 451--452
 []\OT1/cmr/m/n/12 Tutorials. Unity Tech-nolo-gies, n.d. Re-trieved Oc-to-ber 15
 , 2014, from Unity:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 457--458
+Underfull \hbox (badness 10000) in paragraph at lines 459--460
 []\OT1/cmr/m/n/12 Procedural Con-tent Gen-er-a-tion Wiki. Re-trieved De-cem-ber
  4, 2014 from:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 461--462
+Underfull \hbox (badness 10000) in paragraph at lines 463--464
 []\OT1/cmr/m/n/12 Elias, H. Per-lin Noise. Re-trieved De-cem-ber 6, 2014 from:
  []
 
 
-Underfull \hbox (badness 5924) in paragraph at lines 463--464
+Underfull \hbox (badness 5924) in paragraph at lines 465--466
 []\OT1/cmr/m/n/12 Moles, S. How Does Unity Use $\OML/cmm/m/it/12 C\OT1/cmr/m/n/
 12 #$ as a Script-ing Lan-guage? N.p.,
  []
 
 
-Underfull \hbox (badness 7685) in paragraph at lines 463--464
+Underfull \hbox (badness 7685) in paragraph at lines 465--466
 \OT1/cmr/m/n/12 n.d. Re-trived: Novem-ber 13, 2014 from Game De-vel-op-ment Sta
 ck Ex-
  []
 
 
-Underfull \hbox (badness 3769) in paragraph at lines 467--469
+Underfull \hbox (badness 3769) in paragraph at lines 469--471
 []\OT1/cmr/m/n/12 Stevens, P. and Ten-zer J. GUIDE: Games with UML for In-ter-a
 c-tive De-
  []
 
 
-Underfull \hbox (badness 5288) in paragraph at lines 467--469
+Underfull \hbox (badness 5288) in paragraph at lines 469--471
 \OT1/cmr/m/n/12 sign Ex-plo-ration.  \OT1/cmr/m/it/12 Lab-o-ra-tory for Foun-da
 -tions of Com-puter Sci-ence School
  []
 
 
-Underfull \hbox (badness 3930) in paragraph at lines 467--469
+Underfull \hbox (badness 3930) in paragraph at lines 469--471
 \OT1/cmr/m/it/12 of In-for-mat-ics\OT1/cmr/m/n/12 . Re-trived Novem-ber 16, 201
 4 from Uni-ver-sity of Ed-in-burgh:
  []
 
 [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 484--501
+Underfull \hbox (badness 10000) in paragraph at lines 486--503
 
  []
 
 [19]
-(C:\Users\Jake\Documents\GitHub\CapstoneGameDesignDocument\DesignDocument.aux) 
+(C:\Users\Neil\Documents\GitHub\CapstoneGameDesignDocument\DesignDocument.aux) 
 ) 
 Here is how much of TeX's memory you used:
  3392 strings out of 493921
- 41682 string characters out of 3144880
+ 41682 string characters out of 3144879
  108660 words of memory out of 3000000
  6639 multiletter control sequences out of 15000+200000
  11157 words of font info for 42 fonts, out of 3000000 for 9000
@@ -517,7 +517,7 @@ Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pro
 gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on DesignDocument.pdf (22 pages, 547792 bytes).
+Output written on DesignDocument.pdf (22 pages, 548303 bytes).
 PDF statistics:
  113 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
