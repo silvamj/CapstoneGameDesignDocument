@@ -117,37 +117,40 @@ Participating Actor Instances:        \hspace{46pt} {\bf Player: PlayerEntity
 Flow of Events: 
 \begin{enumerate} 
 \item {\bf Player }collides with {\bf DamageEntity}.
-      \begin{enumerate}[a.]
        \item {\bf PlayerShield} decreases based on DamageEntity. 
-       \item {\bf PlayerHP} decreases based on DamageEntity. 
-                \begin{enumerate}[i.]
+       \item {\bf PlayerHP} decreases based on DamageEntity and Shield. 
+                \begin{enumerate}[a.]
                  \item {\bf PlayerHP} is greater than zero, continue as normal.
                  \item{\bf PlayerHP} is less than or equal to zero, {\bf Player} dies.
-                      \begin{enumerate}[1.]
+                      \begin{enumerate}[i.]
                 	\item {\bf Player} is deleted.
                 	\item Explosion animation spawned in place of {\bf Player}.
 		\item An end game menu prompts {\bf Player} to either play again or return to main menu.
 		 \end{enumerate}
                 \end{enumerate}
-        \end{enumerate}
 \end{enumerate}
 
 %%%
 \begin{center} \line(1,0){350} \end{center}
-Scenario Name: {\bf LevelComplete} \\
+Scenario Name: {\bf GameComplete} \\
 Participating Actor Instances:        \hspace{46pt} {\bf Player: PlayerEntity
 
 					          \hspace{2.6 in}   Boss: HostileEntity 
 
-                                                      \hspace{2.6 in}   Rocket: Projectile 
-
-					          \hspace{2.6in}    Item: InteractiveElement} \vspace{10pt}  \\ 
+                                                      \hspace{2.6 in}   Bullet: Projectile} \vspace{10pt}  \\ 
 Flow of Events: 
 \begin{enumerate} 
-\item {\bf Boss} is destroyed by a {\bf Rocket} shot by the {\bf Player}.
-\item {\bf Boss} will enter an animation where it explodes and drops an {\bf Item}.
-\item {\bf Player} has a grace period where they can pick up the {\bf Item} dropped by the boss, and then they’re transported to the shop and inventory management menus.
-\item After they are done with the end of level menus, {\bf Player} is taken to the beginning field of play for the next level. 
+\item {\bf Boss} is destroyed by a {\bf Bullet} shot by the {\bf Player}.
+\item {\bf Boss} will enter an animation where it explodes.
+\item {\bf Player} enters  a five second grace period where they must survive.
+	\begin{enumerate} [a.]
+	\item {\bf Player} does not survive the grace period and dies, restarting the game.
+	\item {\bf Player} survives the grace period.
+		\begin{enumerate} [i.]
+		\item {\bf Player} is treated to a victory screen.
+		\item {\bf Player} is given the option to play again or quit.
+		\end{enumerate}
+	\end{enumerate}
 \end{enumerate}
 
 %%%
@@ -161,35 +164,36 @@ Flow of Events:
 \item {\bf Player} leaves the field of play.
 \item Warning alarm sounds, warning flashes on screen.
       \begin{enumerate}[a.]
-       \item {\bf Player} chooses to turn around and return to field of play, everything returned to normal.
+       \item {\bf Player} chooses to turn around and return to field of play, everything returns to normal.
        \item {\bf Player} advances farther out of the field of play.
                 \begin{enumerate}[i.]
                 \item {\bf PlayerKiller} kills {\bf Player}.
-	     \item PlayerDeath().
                 \end{enumerate}
         \end{enumerate}
 \end{enumerate}
 
 %%%
 \begin{center} \line(1,0){350} \end{center}
-Scenario Name: {\bf GenerateLevel} \\
-Participating Actor Instances:        \hspace{46pt} {\bf LG: LevelGenerator
+Scenario Name: {\bf SpawnEnemyWave} \\
+Participating Actor Instances:        \hspace{46pt} {\bf Enemy: EnemyEntity
 
-					          \hspace{2.6 in}   GM: GameManager}  \vspace{10pt}  \\ 
+						\hspace{2.6 in} Wave: float
+
+					          \hspace{2.6 in}   GC: GameController}  \vspace{10pt}  \\ 
 Flow of Events: 
 \begin{enumerate} 
-\item {\bf GM} notifies {\bf LG} that a level needs to be generated.
-\item {\bf LG} creates a level layout.
-      \begin{enumerate}[a.]
-      \item If {\bf LG} determines that the level layout is navigable and correctly generated
-                \begin{enumerate}[i.]
-                \item The level is generated
-                \end{enumerate}
-      \item If {\bf LG} determines the the level layout is not navigable and is incorrectly generated
-                \begin{enumerate}[i.]
-                \item The {\bf LG} creates another layout and checks again.
-                \end{enumerate}
-        \end{enumerate}
+\item {\bf GC} waits a set amount of time before attempting to spawn a wave.
+\item The allotted amount of time has passed.
+	\begin{enumerate} [a.]
+	\item {\bf Wave} is not equal to the number of total waves.
+		\begin{enumerate} [i.]
+		\item Enemies are spawned in according to how many waves the player has defeated.
+		\end{enumerate}
+	\item {\bf Wave} is equal to the number of total waves.
+		\begin{enumerate} [i.]
+		\item The boss is spawned in and the player must fight them to win.
+		\end{enumerate}
+	\end{enumerate}
 \end{enumerate}
 
 %%%
@@ -202,17 +206,33 @@ Flow of Events:
 \begin{enumerate} 
 \item {\bf Player} presses a movement button, which defaults to the WASD keys, while simultaneously pressing a fire button, which default to the $ \uparrow \downarrow \leftarrow \to $ arrow keys.
 \item {\bf Player} moves in the direction of the movement button pressed, while {\bf Bullet} is fired in the direction of the fire button pressed.
-\item {\bf Player} continues moving in the way of the first directional input until an additional input is received, at which time {\bf Player} will begin to move in the way of the second directional input. {\bf Bullet} travels in the direction it was initially shot without the possibility of changing direction.
-      \begin{enumerate}[a.]
-      \item The {\bf Bullet} travels until it collides with another entity.
-                \begin{enumerate}[i.]
-                \item The {\bf Bullet} causes damage to that entity and terminates itself.
-                \end{enumerate}
-      \item The {\bf Bullet} travels until it fizzles out of the view of {\bf Player}.
-                \begin{enumerate}[i.]
-                \item The {\bf Bullet} terminates itself.
-                \end{enumerate}
-        \end{enumerate}
+\item {\bf Player} continues moving in the way of the first directional input until an additional input is received, at which time {\bf Player} will begin to move in the way of the second directional input. 
+\item {\bf Bullet} travels in the direction it was initially shot without the possibility of changing direction.
+\end{enumerate}
+
+%%%
+\begin{center} \line(1,0){350} \end{center}
+Scenario Name: {\bf SpawnAsteroids} \\
+Participating Actor Instances:        \hspace{46pt} {\bf Enemy: EnemyEntity
+
+						\hspace{2.6 in} Asteroid: AsteroidEntity
+
+						\hspace{2.6 in}  GC: GameController}  \vspace{10pt}  \\ 
+Flow of Events: 
+\begin{enumerate} 
+\item {\bf GC} performs a check to see if an asteroid will spawn.
+\item The check fails.
+	\begin{enumerate} [a.]
+	\item Nothing occurs, and {\bf GC} waits before attempting to spawn another.
+	\end{enumerate}
+\item The check passes.
+	\begin{enumerate} [a.]
+	\item An {\bf Asteroid} object is spawned with a random position, movement vector, and rotation speed.
+	\item The {\bf Asteroid} careens through space until it hits something or goes too far away.
+		\begin{enumerate} [i.]
+		\item The {\bf Asteroid} is then destroyed.
+		\end{enumerate}
+	\end{enumerate}
 \end{enumerate}
 
 %%%
@@ -220,7 +240,7 @@ Flow of Events:
 Scenario Name: {\bf BulletFizzle} \\
 Participating Actor Instances:        \hspace{46pt} {\bf Player: PlayerEntity
 
-					          \hspace{2.6 in}   Bullet:Projectile}  \vspace{10pt}  \\ 
+					          \hspace{2.6 in}   Bullet: Projectile}  \vspace{10pt}  \\ 
 Flow of Events: 
 \begin{enumerate} 
 \item {\bf Player} shoots a {\bf Bullet}.
@@ -240,22 +260,37 @@ Flow of Events:
 
 %%%
 \begin{center} \line(1,0){350} \end{center}
+Scenario Name: {\bf SpawnPickUp} \\
+Participating Actor Instances:        \hspace{46pt} {\bf Player: PlayerEntity
+	
+						\hspace{2.6 in} Enemy: EnemyEntity
+
+					          \hspace{2.6 in}  Shotgun: PickUp}  \vspace{10pt}  \\ 
+Flow of Events: 
+\begin{enumerate} 
+\item {\bf Player} destroys an {\bf Enemy} with its weapon.
+\item {\bf Enemy} rolls a check to see if it drops anything.
+\item The check succeeds, and {\bf Enemy} drops a {\bf Shotgun} pickup.
+\item {\bf Player} touches the {\bf Shotgun}.
+\item The {\bf Shotgun} is equipped, giving {\bf Player} 50 ammo and the {\bf Shotgun} weapon.
+\end{enumerate}
+
+%%%
+\begin{center} \line(1,0){350} \end{center}
 Scenario Name: {\bf PauseGame} \\
 Participating Actor Instances:        \hspace{46pt} {\bf Player: PlayerEntity }  \vspace{10pt}  \\ 
 Flow of Events: 
 \begin{enumerate} 
 \item {\bf Player} presses the pause button.
-\item A menu pops up with three options; resume game, options, and exit game.
-      \begin{enumerate}[a.]
-      \item If resume game is chosen, the menu exits and gameplay is resumed.
-      \item If options is chosen, the game state is maintained and the {\bf Player} is taken to the options menu.
-      \item If exit game is chosen, a sub menu pops up giving three options; exit to menu, exit game, return to menu.
-                \begin{enumerate}[i.]
-                \item If exit to menu is chosen, {\bf Player} is taken to the main screen view.
-                \item If exit game is chosen, the game is closed.
-                \item If return to menu is chosen, the {\bf Player} is navigated back to the prior menu.
-                \end{enumerate}
-        \end{enumerate}
+	\begin{enumerate} [a.]
+	\item A screen displays over the main screen, informing the {\bf Player} the game is paused.
+	\item The game's timescale is set to 0, freezing any objects currently in the scene.
+	\end{enumerate}
+\item {\bf Player} presses the pause button once more. 
+	\begin{enumerate} [a.]
+	\item The pause screen is disabled and removed.
+	\item The game's timescale is set back to 1, resuming the action.
+	\end{enumerate}
 \end{enumerate}
 
 
@@ -338,7 +373,15 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 \subsection{Weapons} %Weapons
 
-	{\bf Weapons:} Weapons will need to serve two functions: give the player a variety of gameplay options and motivate the player to explore a different gameplay style. For instance, a laser may allow the player to shoot a long range beam that pierces enemies but does not deal much damage, while a shotgun may reward the player with a more damaging weapon, but require the player to engage with enemy ships from a much closer range. The player will be able to switch out weapons such as these to better fit their playstyle.
+	{\bf Weapons:} Weapons are implemented through the Unity prefab system. By default, the player is given a low-damage, high rate-of-fire red laser weapon that they can change by finding a weapon pickup which drops off enemies. Once the player makes contact with the pickup, their current weapon is destroyed and the new weapon is loaded for the player. All non-default weapons have a limited amount of ammunition, and once their ammo is depleted, the weapon is destroyed and replaced with the default weapon.
+
+	\begin{enumerate}
+	\item {\bf Shotgun:} The shotgun has the same damage and rate of fire as the default weapon. However, every shot of the shotgun fires five bullets in a short, fixed spread, rather than one bullet straight ahead. Has 50 ammo.
+
+	\item {\bf Pulse Gun:} The pulse gun is a high damage, low rate of fire gun that shoots one large pulse of 70 green bullets in the direction the player presses. Bullets fired by this gun do not destroy themselves when colliding with an entity, allowing for a "piercing" effect. Has 10 ammo.
+
+	\item {\bf Minigun:} The minigun has a much faster rate of fire than the default gun. However, its damage is half of the default gun's per shot and the exact direction the bullets will be fired in has a variance, not guaranteeing accuracy. Has 400 ammo.
+	\end{enumerate}
 
 
 \subsection{Levels/Objects} %level
@@ -357,7 +400,7 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 	{\bf Radar:} The radar will be displayed in the bottom left corner. It shows the player the location of all enemies, pick-ups, and asteroids in the immediate surrounding area of the player. In addition, it also represent the direction of all enemies not shown in the immediate area with a symbol on the edge of the radar.
 
-	{\bf HUD:}
+	{\bf HUD:} The player has access to a Heads-Up Display in the bottom right corner, which displays vital information, such as the player's health, shield, currently equipped weapon, ammo remaining, the current wave, the amount of enemies left in the wave, and if the player is currently under the effects of a speed boost, how much time is remaining on their speed boost.
 
 	{\bf Menus:}
 
