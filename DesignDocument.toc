@@ -13,11 +13,11 @@
 \contentsline {subsection}{\numberline {5.2}Enemies}{10}
 \contentsline {subsection}{\numberline {5.3}Weapons}{11}
 \contentsline {subsection}{\numberline {5.4}Levels/Objects}{11}
-\contentsline {subsection}{\numberline {5.5}User Interface}{11}
-\contentsline {subsection}{\numberline {5.6}Art}{11}
-\contentsline {subsection}{\numberline {5.7}Controls Diagram}{12}
-\contentsline {section}{\numberline {6}Implementation}{12}
+\contentsline {subsection}{\numberline {5.5}User Interface}{12}
+\contentsline {subsection}{\numberline {5.6}Art}{12}
+\contentsline {subsection}{\numberline {5.7}Controls Diagram}{13}
+\contentsline {section}{\numberline {6}Implementation}{13}
 \contentsline {subsection}{\numberline {6.1}Work Completed}{13}
-\contentsline {subsection}{\numberline {6.2}Current Status}{13}
-\contentsline {subsection}{\numberline {6.3}Future Work}{13}
-\contentsline {section}{\numberline {7}Glossary}{16}
+\contentsline {subsection}{\numberline {6.2}Current Status}{14}
+\contentsline {subsection}{\numberline {6.3}Future Work}{14}
+\contentsline {section}{\numberline {7}Glossary}{17}
