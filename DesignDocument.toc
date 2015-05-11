@@ -7,6 +7,7 @@
 \contentsline {section}{\numberline {4}Design}{7}
 \contentsline {subsection}{\numberline {4.1}Sequence Diagram}{7}
 \contentsline {subsection}{\numberline {4.2}UML Diagram}{8}
+<<<<<<< HEAD
 \contentsline {subsection}{\numberline {4.3}State Diagram}{9}
 \contentsline {section}{\numberline {5}Gameplay Design}{10}
 \contentsline {subsection}{\numberline {5.1}Player}{10}
@@ -21,3 +22,19 @@
 \contentsline {subsection}{\numberline {6.2}Current Status}{15}
 \contentsline {subsection}{\numberline {6.3}Future Work}{15}
 \contentsline {section}{\numberline {7}Glossary}{18}
+=======
+\contentsline {subsection}{\numberline {4.3}State Diagram}{8}
+\contentsline {section}{\numberline {5}Gameplay Design}{9}
+\contentsline {subsection}{\numberline {5.1}Player}{9}
+\contentsline {subsection}{\numberline {5.2}Enemies}{10}
+\contentsline {subsection}{\numberline {5.3}Weapons}{11}
+\contentsline {subsection}{\numberline {5.4}Levels/Objects}{11}
+\contentsline {subsection}{\numberline {5.5}User Interface}{12}
+\contentsline {subsection}{\numberline {5.6}Art}{12}
+\contentsline {subsection}{\numberline {5.7}Controls Diagram}{13}
+\contentsline {section}{\numberline {6}Implementation}{13}
+\contentsline {subsection}{\numberline {6.1}Work Completed}{13}
+\contentsline {subsection}{\numberline {6.2}Current Status}{14}
+\contentsline {subsection}{\numberline {6.3}Future Work}{14}
+\contentsline {section}{\numberline {7}Glossary}{17}
+>>>>>>> origin/master
