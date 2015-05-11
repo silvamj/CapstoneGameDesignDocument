@@ -343,11 +343,11 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 \subsection{Levels/Objects} %level
 
-	{\bf Pick-ups:}  There will be pick-ups available to the player throughout the game, dropping from enemies and asteroids. Pick-ups will change some attribute of the player ship, including  speeding the movement of the ship, restoring health, and changing the currently equipped menu.
+	{\bf Pick-ups:}  There will be pick-ups available to the player throughout the game, dropping from enemies. Most pick-ups will change some attribute of the player ship, such as giving the player an alternative weapon, a temporary speed increase, or restoring the player's health. Additionally, there is another pickup that will spawn a follower ship that will follow the player ship around that map and shoot at nearby enemies. Some pick ups will be displayed in part of the UI (Section 5.5), such as the speed boost meter.
 
-	{\bf  Items:} The majority of the items in the game will provide a general bonus to the player without requiring additional action from the player. These could include upgrades like increased shield or hull capacity, increased damage, or faster ship acceleration. Additionally, there will be various items that the player can activate by pressing the Activate Item key that will provide the player with some benefit when used. For instance, a time bomb may temporarily slow down enemy ships and projectiles to allow the player to dodge them more easily.
+	{\bf  Items:} Items are intended to either provide a permanent boost to the player attributes (such as speed or maximum health), or add an effect that the player can activate by pressing a button, such as a time bomb that would slow down enemies and asteroids when activated, making them easier to dodge. There are currently no items implemented in the game, but could be included in the future. 
 
-	{\bf Level design:} Enemy placement will play a critical role in the design of levels. The placement of enemies needs to be dense enough so that there is a challenge but  sparce enough so that every level is possible and does not feel the same. Since the game takes place in space, there will not be traditional level elements such as walls and floors. However, there may need to be other obstacles that guide the player‘s movements such as debris or very large ships.
+	{\bf Level design:} The level consists of a circular arena. There is a circular border around the playing field that the player will be shot at if he crosses. Enemies spawn in waves inside the arena but outside the player's view. Asteroids spawn in and around the arena. As the player destroys waves of enemies, new larger waves will spawn. After completing a set number of waves, the boss will spawn in the arena.
 
 	{\bf Star Field and Background:}
 
