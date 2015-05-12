@@ -92,12 +92,12 @@
 \section{Gameplay} %GAMEPLAY
 \label{sec:Gameplay}
 
-{\bf First Minute}: The player enters the game with their chosen ship, and can immediately start exploring the area in which they spawn. They will see the controls of the game described on the field, introducing new players to the game. After discovering how to control their ship, players will be able to leave the starting area in a single direction, leading them to the first area of the game. In this first area, enemies will be created at the other side of the field. The player must defeat these enemies to clear the field and move on. As the player moves about the field, the enemies start reacting, moving towards the player to defeat him. When battle resolves, any dropped items and currency are picked up by the player, and they are given a choice where to go next.
+{\bf First Minute}: The player enters the game in their ship, and can immediately start exploring the area in which they spawn. The player is given a few moments to get used to the controls before the first wave spawns. In this first wave, only a few enemies will be created at the other side of the field. The player must find and defeat these enemies to clear the field and move on to the next wave. 
 
-{\bf Gameflow:}
+{\bf Gameflow:} 
 
 
-{\bf Victory conditions}: The player will achieve victory by completing each area that is generated without dying. The game is planned to culminate with a boss fight, and defeating this boss will trigger victory and end the game.
+{\bf Victory conditions}: The player will achieve victory by defeating all of the enemies in each wave that is generated without dying. The game culminates with a boss fight, and defeating this boss will trigger victory menu and end the game.
 
 \section{Requirements} %REQUIREMENTS
 \label{sec:Requirements}
@@ -355,21 +355,19 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 \subsection{Enemies} %Enemies
 
-	\hs {\bf Enemies: } The main goal of enemy ships is to kill the player ship. There are two main strategies the enemies will utilize to accomplish this. Certain enemies will shoot at the player, forcing the player to dodge if they want to survive, while other enemies will attempt to ram the player to deal damage. As such, there are enemy ships that will fly around in basic patterns while shooting at the player, and there are enemy ships that will charge straight at the player to prevent them from staying still for too long. Additionally, there will be “enemy” obstacles such as asteroids that will fly on screen to force players to be aware of their surroundings. These obstacles have no set objective and can hit enemy ships as well.
+	\hs {\bf Enemies: } The main goal of enemy ships is to kill the player ship. They will have two main types of AI that will decrease the predictability of enemies and prevent the player from staying still for too long. \\
 
-	The main goal of the enemy ships is to kill the player ship. There are two main types of enemy that employ different tactics to accomplish this goal. The first type of enemy tracks the player while it moves, having the possibility of shooting at a fixed time interval. The second type of enemy will follow the player closely while trying to get in front, having a stronger shot then that of the first enemy, but also firing less frequently. Additionally, there will be “enemy” obstacles such as asteroids that will fly on screen to force players to be aware of their surroundings. These obstacles have no set objective and can hit enemy ships as well.
+	{\bf Standard Shooting:} Standard shooting is when the enemy just shoots straight in the direction it is currently facing.  This is usually in the direction of the player. \\
 
-	{\bf Standard Shooting:}
+	{\bf Predictive Shooting:} Predictive shooting is when the enemy uses a special method to predict where the player will be when the shot reaches it. This creates an effect where the enemy is shooting in front of the player so that the shot hits the player most of the time. \\
 
-	{\bf Predictive Shooting:} 
+	{\bf Patrolling:} In order to patrol the enemies will set their spawn point to ``home''. Every time they are to far away from the player to track them, they will return ``home" and circle around it until the player comes back in to range. \\
 
-	{\bf Patrolling:}
+	{\bf Enemy Type One:} The first type of enemy tracks directly toward the current location of the player while it moves. It will try to stay a small ways away from the player to avoid colliding with them. This enemy type has a high possibility of shooting at a fixed time interval, using standard shooting. \\
 
-	{\bf Enemy Type One:}
+	{\bf Enemy Type Two:} The second type of enemy will follow the player more closely than the first type while also trying to get in front of the player. This type uses standard shooting with medium damage shot, firing less frequently than the first type. \\
 
-	{\bf Enemy Type Two:}
-
-	{\bf Bosses:} Bosses will give the player a final challenge before ultimately reaching the end of the game and winning. Bosses will shoot large amounts of projectiles to making dodging difficult for the player. Additionally, the boss will have a predictive shooting projectile to increase the difficulty further. Finally, bosses will have a larger amount of health than the average enemy. Defeating a boss will end the game and display a win screen.
+	{\bf Bosses:} Bosses will give the player a final challenge before ultimately reaching the end of the game and winning. Bosses will shoot large amounts of projectiles to making dodging difficult for the player. Additionally, the boss will have a predictive shooting projectile to increase the difficulty further. Finally, bosses will have a larger amount of health than the average enemy. Defeating a boss will end the game and display a win screen. \\
 
 \subsection{Weapons} %Weapons
 
@@ -394,7 +392,7 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 	{\bf Star Field and Background:}
 
-	{\bf Asteroids:} (purpose and spawning)
+	{\bf Asteroids:}  Asteroids will be obstacles that will fly across the screen, dealing damage to anything they collide with. This will force players to be more aware of their surroundings. These obstacles have no set objective and can collide with each other as well as enemy's ships. (Add how they are spawned)
 
 \subsection{User Interface} % UI
 
@@ -406,11 +404,11 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 \subsection{Art} %Art
 
-	{\bf Story:} The Player is an explorer trying to reach the other side of the Universe to meet aliens that sent a treasure map to earth. The Player keeps in close contact with General Weathersbee who guides them to the last known location of the aliens. 
+	\hs {\bf Story:} The Player is an explorer trying to reach the other side of the Universe to meet aliens that sent a treasure map to earth. The Player keeps in close contact with General Weathersbee who guides them to the last known location of the aliens. 
 
-	{\bf Art/models:} The assets and models used in this project will all be free from the Unity store. We will use our own creativity to make all of the assets blend together in a cohesive way. We are using a black with star background for the main level, and then varying space themed backgrounds for the other scenes. The font Huxely is through out the game to tie the art all together.  
+	{\bf Art/models:} The assets and models used in this project will mostly be free from the Unity store. Our group created some of the simple icons, used in the radar and the HUD. Some of the assets are combined and blended together to create a unique model specifically for this game. For example, there is a gun from one asset pack combined with a ship from another pack to create a new ship type. There is a black with stars background for the main level, with a moving star field overlay. The other scenes have varying space themed backgrounds, with the same star field. The font Huxley is used uniformly through out the game to tie the scenes together.  
 
-	{\bf Music/ sound:} Sound effects and music will be retrived from the Unity store and other creative commons sites. It will attempt to replicate a space environment similar to other space themed games. For example the laser gun will have a "pew pew pew" sound. 
+	{\bf Music/ sound:} Sound effects and music will be retrieved from the Unity store and other sites that allow people to download and use their music for non-commercial purposes. The music is upbeat and fast paced to set the tone of the game. The sound effects will mostly be explosions and gun sounds. For example the laser gun will have a "pew pew pew" sound. 
 
 
 \subsection{Controls Diagram}
@@ -441,6 +439,13 @@ This section describes the completed work, current status, and future plans that
 Development is starting to move out of preliminary stages as we get the group back together for spring semester. We have finished mutiple Unity tutorials and have a basic foundation of the game. We are currently working on creating a new time table to get develpment on track. The design document was completed and turned in on December 18th, 2014, and an updated version of the document was turned in February 19th, 2015. 
 
 \subsection{Future Work}
+Since our project is in a complete state anything added would be to expand or enhance the game. That being said if we had more time to work on this game there are a few things that we could work on:
+\begin{itemize} 
+	\item {\bf Update Assets:} Finding new assets or learning to create our own assets would be helpful for creating a more consistent art style. As well as creating a more unique game that does not have the same assets as many other low budget space games.  
+	\item {\bf Update AI:} Adding more sophisticated and challenging AI would be a way to add difficulty to the game. It would also smooth out the movement of the enemies making them less jumpy and less predictable. 
+	\item {\bf Adding Menus:} Menus that add a  ship selection, achievements or  options like difficulty, would increase peoples desire to replay of the game. For example if the way to unlock more ships was by completing achievements, people would have to play the game multiple times if they wanted to play with a new ship.
+	\item {\bf Adding Levels:} More levels would vary the game play more and make it possible to incorporate our story in to the game. 
+\end{itemize}
 
 
 
@@ -503,6 +508,7 @@ Development is starting to move out of preliminary stages as we get the group ba
 {\bf Entity} - An object that can interact with other objects in the game. \\
 {\bf Field of Play} - The area in which a player will interact with obstacles, enemies, and other events. \\
 {\bf HP} - Health points, a measure of the players health level often represented as either a fraction or bar. \\
+{\bf HUD} - Heads Up Display, the in game area of the screen that displays player statistics like health or ammo left. \\
 {\bf Level} - A collection of similarly challenging fields of play culminating in a boss. \\
 {\bf NPC} - Non Player Characters, e.g., any enemies or passive characters that act in the game that are not controlled by the player. \\
 {\bf Parallax} - The effect whereby the position or direction of an object appears to differ when viewed from different positions, e.g., elements far from the camera appear to move more slowly than foreground elements. \\
