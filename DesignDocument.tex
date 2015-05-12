@@ -75,7 +75,7 @@
 \section{Introduction} %INTRODUCTION 
 \label{sec:intro}
 
-\hs Video games have been a rapidly growing industry in the past 30 years \cite{History}. As such, there are a wide variety of genres and subgenres of games, each taking influence from and building upon successful games of the past. In some cases these games combine past elements in a way that create a new category of game. The goal of this project is to develop a game that will blend space-shooter elements from classic arcade games, such as Asteroids and Galaga, with randomized, challenging elements from more recent games such as The Binding of Isaac. These elements will include random usable items and equipment, permanent player death, and randomly generated level design. This combination will aim to provide players with new challenges that may not be available in current games. This game will be developed using Unity3D and will run in the Unity engine, which features robust tools that will allow us to manipulate nearly any element of the game quickly and with immediate feedback.
+\hs Video games have been a rapidly growing industry in the past 30 years \cite{History}. As such, there are a wide variety of genres and subgenres of games, each taking influence from and building upon successful games of the past. In some cases these games combine past elements in a way that create a new category of game. The goal of this project is to develop a game that will blend space-shooter elements from classic arcade games, such as Asteroids and Galaga, with randomized, challenging elements from more recent games such as The Binding of Isaac. These elements will include random pick-ups, permanent player death, and semi-random wave spawning. This combination will aim to provide players with new challenges that may not be available in current games. This game will be developed using Unity3D and will run in the Unity engine, which features robust tools that will allow us to manipulate nearly any element of the game quickly and with immediate feedback. During the implementation of this project, we hope to learn about scripting in $C\#$, developing on the Unity platform, and working within a team.
 
 \subsection{Research}
 	For the development of this project, we will develop a video game using Unity. The majority of the research time will be used to learn the functionality of Unity. Since Unity is a complete game engine and editor, the game creation process will not require the development of an engine. Other alternative engines, such as the graphics engine Ogre3D, would still require the implementation of a game engine in addition to creating the game \cite{Ogre}. Unreal Engine 4 was another considered engine, and included many features that would be useful to this project. However, many individuals have said that it is difficult for beginners to learn due to the lack of tutorials. Ultimately, we settled on Unity, since it has a wide range of tutorials to help us get started more quickly and will allow the majority of the project resources to go towards gameplay. development.
@@ -92,7 +92,7 @@
 \section{Gameplay} %GAMEPLAY
 \label{sec:Gameplay}
 
-{\bf First Minute}: The player enters the game in their ship, and can immediately start exploring the area in which they spawn. The player is given a few moments to get used to the controls before the first wave spawns. In this first wave, only a few enemies will be created at the other side of the field. The player must find and defeat these enemies to clear the field and move on to the next wave. 
+{\bf First Minute: } The player enters the game in their ship, and can immediately start exploring the area in which they spawn. The player is given a few moments to get used to the controls before the first wave spawns. In this first wave, only a few enemies will be created at the other side of the field. The player must find and defeat these enemies to clear the field and move on to the next wave. 
 
 {\bf Gameflow:} 
 
@@ -388,15 +388,15 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 	{\bf  Items:} Items are intended to either provide a permanent boost to the player attributes (such as speed or maximum health), or add an effect that the player can activate by pressing a button, such as a time bomb that would slow down enemies and asteroids when activated, making them easier to dodge. There are currently no items implemented in the game, but could be included in the future. 
 
-	{\bf Level design:} The level consists of a circular arena. There is a circular border around the playing field that the player will be shot at if he crosses. Enemies spawn in waves inside the arena but outside the player's view. Asteroids spawn in and around the arena. As the player destroys waves of enemies, new larger waves will spawn. After completing a set number of waves, the boss will spawn in the arena.
+	{\bf Level design:} The level consists of a circular arena. There is a circular border around the playing field that the player will be shot at if crossed. Enemies spawn in waves inside the arena but outside the player's view. Asteroids spawn in and around the arena. As the player destroys waves of enemies, new larger waves will spawn. After completing a set number of waves, the boss will spawn in the arena.
 
-	{\bf Star Field and Background:}
+	{\bf Star Field and Background:} The background will be a tile that can be replicated across the screen to create a smooth, endless field of stars. The star field layered on top of the background image will emit a particle effect that will move across the screen, adding to the feel of being in space.
 
 	{\bf Asteroids:}  Asteroids will be obstacles that will fly across the screen, dealing damage to anything they collide with. This will force players to be more aware of their surroundings. These obstacles have no set objective and can collide with each other as well as enemy's ships. (Add how they are spawned)
 
 \subsection{User Interface} % UI
 
-	{\bf Radar:} The radar will be displayed in the bottom left corner. It shows the player the location of all enemies, pick-ups, and asteroids in the immediate surrounding area of the player. In addition, it also represent the direction of all enemies not shown in the immediate area with a symbol on the edge of the radar.
+	{\bf Radar:} The radar will be displayed in the bottom left corner. It shows the player the location of all enemies, pick-ups, and asteroids in the immediate surrounding area of the player. In addition, it also represents the direction of all enemies not shown in the immediate area with a symbol on the edge of the radar, assisting the player with locating all enemies in a wave.
 
 	{\bf HUD:} The player has access to a Heads-Up Display in the bottom right corner, which displays vital information, such as the player's health, shield, currently equipped weapon, ammo remaining, the current wave, the amount of enemies left in the wave, and if the player is currently under the effects of a speed boost, how much time is remaining on their speed boost.
 
@@ -436,10 +436,10 @@ This section describes the completed work, current status, and future plans that
 
 \subsection{Current Status}
 
-Development is starting to move out of preliminary stages as we get the group back together for spring semester. We have finished mutiple Unity tutorials and have a basic foundation of the game. We are currently working on creating a new time table to get develpment on track. The design document was completed and turned in on December 18th, 2014, and an updated version of the document was turned in February 19th, 2015. 
+We are currently at a place in the project where many of the functional goals have been accomplished. We intended to have five different pick-ups, a loss condition, a boss with a corresponding win condition, and a level. We have finished all of these goals and created a playable and winnable game.
 
 \subsection{Future Work}
-Since our project is in a complete state anything added would be to expand or enhance the game. That being said if we had more time to work on this game there are a few things that we could work on:
+Since our project is in a complete state, anything added would be to expand or enhance the game. That being said, if we had more time to work on this game there are a few things that we could work on:
 \begin{itemize} 
 	\item {\bf Update Assets:} Finding new assets or learning to create our own assets would be helpful for creating a more consistent art style. As well as creating a more unique game that does not have the same assets as many other low budget space games.  
 	\item {\bf Update AI:} Adding more sophisticated and challenging AI would be a way to add difficulty to the game. It would also smooth out the movement of the enemies making them less jumpy and less predictable. 
