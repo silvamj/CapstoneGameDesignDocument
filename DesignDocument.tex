@@ -351,7 +351,7 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 	{\bf Player Shooting:} Player shooting functions similarly to player movement in terms of input. By pressing the arrow keys or on the right analog stick, the player will shoot in the respective direction. The player's ship has a rotating gun attached to it, which allow the player to aim and shoot in any direction regardless of current movement. However, there is no rotation time for the gun on the player's ship, so the gun will shoot instantaneously in the direction that is being pressed. Be default the player's ship shoots a rapid fire laser, which will allow the user to get comfortable with shooting without having to worry about missing or wasting ammo. Various weapon pickups can be used to modify how the player's weapon shoots (detailed in Section 5.3). The control method will remain the same for all weapons so the player does not have to worry about learning different controls for each weapon.
 
-	{\bf Player ship:} The players ship will have it’s own health and shield values. The shield will be a rechargeable defense that will be able to absorb a number of shots before the players ship takes permanent health damage. Recharging of the shield will occur over time after a few seconds of avoiding damage. The ship’s health is the amount of damage the ship can sustain before it explodes and the player loses. It will not regenerate automatically like the shield, but items will be able to restore it.
+	{\bf Player ship:} The player's ship will have its own health and shield values. The shield will be a rechargeable defense that will be able to absorb a number of shots before the players ship takes permanent health damage. Recharging of the shield will occur over time after a few seconds of avoiding damage. The ship's health is the amount of damage the ship can sustain before it explodes and the player loses. It will not regenerate automatically like the shield, but items will be able to restore it.
 
 \subsection{Enemies} %Enemies
 
@@ -390,9 +390,9 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 	{\bf Level design:} The level consists of a circular arena. There is a circular border around the playing field that the player will be shot at if crossed. Enemies spawn in waves inside the arena but outside the player's view. Asteroids spawn in and around the arena. As the player destroys waves of enemies, new larger waves will spawn. After completing a set number of waves, the boss will spawn in the arena.
 
-	{\bf Star Field and Background:} The background will be a tile that can be replicated across the screen to create a smooth, endless field of stars. The star field layered on top of the background image will emit a particle effect that will move across the screen, adding to the feel of being in space.
+	{\bf Star Field and Background:} The background will be a two dimensional tile that can be replicated across the screen to create a smooth, endless field of stars. The star field layered on top of the background image is particle effect conisting of small drifting particles that will move across the screen. The multilayering will add a three-dimensionality to the background and keep the background from being static.
 
-	{\bf Asteroids:}  Asteroids will be obstacles that will fly across the screen, dealing damage to anything they collide with. This will force players to be more aware of their surroundings. These obstacles have no set objective and can collide with each other as well as enemy's ships. (Add how they are spawned)
+	{\bf Asteroids:}  Asteroids will be obstacles that will fly across the screen, dealing damage to anything they collide with. This forces players to be more aware of their surroundings or risk dying and gives them another danger they must avoid. Asteroids have no set allegiance and can collide with each other and enemy ships. Asteroids will spawn in random locations outside the player view with a random initial velocity and direction. Asteroids will travel until they either collide with a ship, get shot by the player, or travel outside of the level boundaries.
 
 \subsection{User Interface} % UI
 
@@ -436,7 +436,7 @@ This section describes the completed work, current status, and future plans that
 
 \subsection{Current Status}
 
-We are currently at a place in the project where many of the functional goals have been accomplished. We intended to have five different pick-ups, a loss condition, a boss with a corresponding win condition, and a level. We have finished all of these goals and created a playable and winnable game.
+In the current state of the project many of the functional goals have been accomplished. By the academic festival we aimed to have at least five different pick-ups, a loss condition, a boss with a corresponding win condition, and a single level. We have finished all of these goals and created a playable and winnable game. Additional features that have been added during development include a predictive shooting method, a follower, and independently rotating guns attached to the player and boss ships. Due to the lack of time, the game's level structure was modified from a multi-level adventure to wave-based gameplay in an arena.
 
 \subsection{Future Work}
 Since our project is in a complete state, anything added would be to expand or enhance the game. That being said, if we had more time to work on this game there are a few things that we could work on:
