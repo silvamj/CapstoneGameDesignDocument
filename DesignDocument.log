@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.11)  13 MAY 2015 17:11
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.11)  17 MAY 2015 19:08
 entering extended mode
 **C:/Users/cannonjt/Documents/GitHub/CapstoneGameDesignDocument/DesignDocument.
 tex
@@ -296,13 +296,13 @@ Missing character: There is no ™ in font cmr12!
 <UseCaseModel1.png, id=33, 439.6425pt x 358.33875pt>
 File: UseCaseModel1.png Graphic file (type png)
  <use UseCaseModel1.png>
-Package pdftex.def Info: UseCaseModel1.png used on input line 302.
+Package pdftex.def Info: UseCaseModel1.png used on input line 304.
 (pdftex.def)             Requested size: 397.48499pt x 323.98914pt.
 
 [6] <PlayerDeath.png, id=38, 484.209pt x 551.05875pt>
 File: PlayerDeath.png Graphic file (type png)
  <use PlayerDeath.png>
-Package pdftex.def Info: PlayerDeath.png used on input line 315.
+Package pdftex.def Info: PlayerDeath.png used on input line 317.
 (pdftex.def)             Requested size: 343.28249pt x 390.69107pt.
 
 [7 <C:/Users/cannonjt/Documents/GitHub/CapstoneGameDesignDocument/UseCaseModel1
@@ -311,10 +311,10 @@ Death.png>] <FinalUMLHorizontal.png, id=47, 1084.05pt x 578.16pt>
 File: FinalUMLHorizontal.png Graphic file (type png)
 
 <use FinalUMLHorizontal.png>
-Package pdftex.def Info: FinalUMLHorizontal.png used on input line 324.
+Package pdftex.def Info: FinalUMLHorizontal.png used on input line 326.
 (pdftex.def)             Requested size: 527.57121pt x 281.37769pt.
 
-Overfull \hbox (57.81622pt too wide) in paragraph at lines 324--325
+Overfull \hbox (57.81622pt too wide) in paragraph at lines 326--327
  [][] 
  []
 
@@ -322,10 +322,10 @@ Overfull \hbox (57.81622pt too wide) in paragraph at lines 324--325
 File: PewPewStateDiagramFinal.png Graphic file (type png)
 
 <use PewPewStateDiagramFinal.png>
-Package pdftex.def Info: PewPewStateDiagramFinal.png used on input line 333.
+Package pdftex.def Info: PewPewStateDiagramFinal.png used on input line 335.
 (pdftex.def)             Requested size: 505.89pt x 252.94437pt.
 
-Overfull \hbox (36.13501pt too wide) in paragraph at lines 333--334
+Overfull \hbox (36.13501pt too wide) in paragraph at lines 335--336
  [][] 
  []
 
@@ -513,7 +513,7 @@ ux) )
 Here is how much of TeX's memory you used:
  3386 strings out of 493921
  41629 string characters out of 3144867
- 109652 words of memory out of 3000000
+ 109663 words of memory out of 3000000
  6634 multiletter control sequences out of 15000+200000
  11157 words of font info for 42 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -525,7 +525,7 @@ b><C:/Users/cannonjt/Documents/LaTex/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 /Users/cannonjt/Documents/LaTex/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Us
 ers/cannonjt/Documents/LaTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/User
 s/cannonjt/Documents/LaTex/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on DesignDocument.pdf (23 pages, 473449 bytes).
+Output written on DesignDocument.pdf (23 pages, 473635 bytes).
 PDF statistics:
  114 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
