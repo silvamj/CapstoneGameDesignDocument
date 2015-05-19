@@ -80,7 +80,22 @@
 
 \hs Video games have been a rapidly growing industry in the past 30 years \cite{History}. As such, there are a wide variety of genres and subgenres of games, each taking influence from and building upon successful games of the past. In some cases these games combine past elements in a way that create a new category of game. The goal of this project is to develop a game that will blend space-shooter elements from classic arcade games, such as Asteroids and Galaga, with randomized, challenging elements from more recent games such as The Binding of Isaac. These elements include random pick-ups, permanent player death, and semi-random wave spawning. This combinationl aims to provide players with new challenges that may not be available in current games. This game was developed using Unity3D andl runs in the Unity engine, which features robust tools that allowed us to manipulate nearly any element of the game quickly and with immediate feedback.
 
-\subsection{Basic Unity Features} % Need to talk about prefabs and other Unity functionality
+\subsection{Basic Unity Features} % Need to talk about prefabs and other Unity functionality: Layer, Camera, Scene, Hierarchy, Prefab
+\begin{figure} [H]
+\centering
+\includegraphics[width=7in]{scene.png}
+\caption{Unity Editor} \label{Unity}
+\end{figure}
+
+\hs {\bf Scene:} The scene view, shown in the middle of Figure \ref{Unity}, shows where all of the Unity objects are inside the current level. Scenes are independent from each other and moving from one scene to another loads an entirely new level with new scripts, objects, etc.
+
+{\bf Hierarchy:} The object hierarchy, seen in the top left of Figure \ref{Unity}, shows how the game objects are laid out inside the current scene. Game objects use a parent/child relationship as defined in the object hierarchy.
+
+{\bf Camera:} A camera in Unity renders what it "sees" in front of itself to the screen, much like a normal camera would. Cameras can be adjusted in the scene view of the editor.
+
+{\bf Layer:} A layer in Unity defines what is actually rendered to the camera. If an object is on a different layer than the camera's layer, the camera will not render it.
+
+{\bf Prefab:} A prefab is a saved instance of a game object which can then be loaded as either a child of a game object or its own instance. Any game object can be saved as a prefab.
 
 \subsection{Background}
 	For the development of this project, we will develop a video game using Unity. The majority of the research time will be used to learn the functionality of Unity. Since Unity is a complete game engine and editor, the game creation process will not require the development of an engine. Other alternative engines, such as the graphics engine Ogre3D, would still require the implementation of a game engine in addition to creating the game \cite{Ogre}. Unreal Engine 4 was another considered engine, and included many features that would be useful to this project. However, many individuals have said that it is difficult for beginners to learn due to the lack of tutorials. Ultimately, we settled on Unity, since it has a wide range of tutorials to help us get started more quickly and will allow the majority of the project resources to go towards gameplay. development.
