@@ -32,7 +32,7 @@
 \rule{0.3\textwidth}{0.4pt}\par % Short horizontal line under the title
 \vspace{\drop} % Whitespace between the thin horizontal line and the author name
 
-{\Large \textsc{George Bateman BS CS \\* Jacob Cannon BS CS \\* Nicholas DeVoll BS CS \\* \vspace{3pt} Madison Silva BA CS}}\par % Author name
+{\Large \textsc{George Bateman BA CS \\* Jacob Cannon BS CS \\* Nicholas DeVoll BS CS \\* \vspace{3pt} Madison Silva BA CS}}\par % Author name
 
 \vfill % Whitespace between the author name and publisher text
 
@@ -401,22 +401,37 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 	\item {\bf Minigun:} The minigun has a much faster rate of fire than the default gun. However, its damage is half of the default gun's per shot and the exact direction the bullets will be fired in has a variance, not guaranteeing accuracy. Has 400 ammo.
 	\end{enumerate}
 
-
-\subsection{Levels/Objects} %level
-
-	{\bf Pick-ups:}  There will be pick-ups available to the player throughout the game, dropping from enemies. Most pick-ups will change some attribute of the player ship, such as giving the player an alternative weapon, a temporary speed increase, or restoring the player's health. Additionally, there is another pickup that will spawn a follower ship that will follow the player ship around that map and shoot at nearby enemies. Some pick ups will be displayed in part of the UI (Section 5.5), such as the speed boost meter.
-
-	{\bf  Items:} Items are intended to either provide a permanent boost to the player attributes (such as speed or maximum health), or add an effect that the player can activate by pressing a button, such as a time bomb that would slow down enemies and asteroids when activated, making them easier to dodge. There are currently no items implemented in the game, but could be included in the future. 
+\subsection{Levels} %levels
 
 	{\bf Level design:} The level consists of a circular arena. There is a circular border around the playing field that the player will be shot at if crossed. Enemies spawn in waves inside the arena but outside the player's view. Asteroids spawn in and around the arena. As the player destroys waves of enemies, new larger waves will spawn. After completing a set number of waves, the boss will spawn in the arena.
 
 	{\bf Star Field and Background:} The background will be a two dimensional tile that can be replicated across the screen to create a smooth, endless field of stars. The star field layered on top of the background image is particle effect conisting of small drifting particles that will move across the screen. The multilayering will add a three-dimensionality to the background and keep the background from being static.
 
+\subsection{Objects} %objects
+
+	{\bf Pick-ups:}  There will be pick-ups available to the player throughout the game, dropping from enemies. Most pick-ups will change some attribute of the player ship, such as giving the player an alternative weapon, a temporary speed increase, or restoring the player's health. Additionally, there is another pickup that will spawn a follower ship that will follow the player ship around that map and shoot at nearby enemies. Some pick ups will be displayed in part of the UI (Section 5.5), such as the speed boost meter.
+
+	{\bf  Items:} Items are intended to either provide a permanent boost to the player attributes (such as speed or maximum health), or add an effect that the player can activate by pressing a button, such as a time bomb that would slow down enemies and asteroids when activated, making them easier to dodge. There are currently no items implemented in the game, but could be included in the future. 
+
 	{\bf Asteroids:}  Asteroids will be obstacles that will fly across the screen, dealing damage to anything they collide with. This forces players to be more aware of their surroundings or risk dying and gives them another danger they must avoid. Asteroids have no set allegiance and can collide with each other and enemy ships. Asteroids will spawn in random locations outside the player view with a random initial velocity and direction. Asteroids will travel until they either collide with a ship, get shot by the player, or travel outside of the level boundaries.
 
 \subsection{User Interface} % UI
 
-	{\bf Radar:} The radar will be displayed in the bottom left corner. It shows the player the location of all enemies, pick-ups, and asteroids in the immediate surrounding area of the player. In addition, it also represents the direction of all enemies not shown in the immediate area with a symbol on the edge of the radar, assisting the player with locating all enemies in a wave.
+	{\bf Radar:} The radar shows the location of all enemies, pick-ups, and asteroids in relation to the location of the player. It will be displayed in the bottom left corner. In addition, it also represents the direction of all enemies not shown in the immediate area with a symbol on the edge of the radar, assisting the player with locating all enemies in a wave. The radar was implemented in two separate iterations. In the initial implementation, a camera is used to provide an overhead view of the in game entities. However, it was difficult to tell what the models looked like, and it did not show the player very useful information. The following image depicts what this implementation looked like:
+
+\begin{figure} [H]
+\centering
+\includegraphics[width=5in]{minimapExample1.png}
+\caption{Initial Implementation} \label{RadarOne}
+\end{figure}
+
+	The current implementation of radar uses the same basic concept as the first implementation. However, the major difference is that the latter implementation makes use of Unity's layer function. Layers in Unity determine what in game entities are rendered to which camera. By defining new layers, a camera was created that only renders icons that were attached to each enemy, pick-up, and asteroid prefab. In code, two Hashtables keep track of all enemy positions in game as well as a list of icons that alternate between being rendered to the camera and being put in the invisible layer. The invisible layer is not rendered to any camera in the game, and effectively hides any models assigned to it. This is what accomplishes the goal of having enemy positions cling to the edge of the radar image. The following image depicts the second implementation:
+
+\begin{figure} [H]
+\centering
+\includegraphics[width=2in]{radarExample2.png}
+\caption{Current Implementation} \label{RadarTwo}
+\end{figure}
 
 	{\bf HUD:} The player has access to a Heads-Up Display in the bottom right corner, which displays vital information, such as the player's health, shield, currently equipped weapon, ammo remaining, the current wave, and the number of enemies left in the wave. The HUD will also display if the player is currently under the effects of a speed boost and how much time is remaining on their speed boost.
 
@@ -465,6 +480,7 @@ Since our project is in a complete state, anything added would be to expand or e
 	\item {\bf Update AI:} Adding more sophisticated and challenging AI would be a way to add difficulty to the game. It would also smooth out the movement of the enemies making them less jumpy and less predictable. 
 	\item {\bf Adding Menus:} Menus that add a  ship selection, achievements or  options like difficulty, would increase peoples desire to replay of the game. For example if the way to unlock more ships was by completing achievements, people would have to play the game multiple times if they wanted to play with a new ship.
 	\item {\bf Adding Levels:} More levels would vary the game play more and make it possible to incorporate our story in to the game. 
+	\item {\bf Radar:} The next step in implementing radar would be to render it to the Canvas with all the other elements of the HUD. This can be accomplished by either using scripts to render it to the Canvas, or by defining a target texture where the camera would render.
 \end{itemize}
 
 
