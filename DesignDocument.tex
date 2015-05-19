@@ -152,29 +152,6 @@ Flow of Events:
 
 %%%
 \begin{center} \line(1,0){350} \end{center}
-Scenario Name: {\bf GameComplete} \\
-Participating Actor Instances:        \hspace{46pt} {\bf Player: PlayerEntity
-
-					          \hspace{2.6 in}   Boss: HostileEntity 
-
-                                                      \hspace{2.6 in}   Bullet: Projectile} \vspace{10pt}  \\ 
-Flow of Events: 
-\begin{enumerate} 
-\item {\bf Boss} is destroyed by a {\bf Bullet} shot by the {\bf Player}.
-\item {\bf Boss} will enter an animation where it explodes.
-\item {\bf Player} enters  a five second grace period where they must survive.
-	\begin{enumerate} [a.]
-	\item {\bf Player} does not survive the grace period and dies, restarting the game.
-	\item {\bf Player} survives the grace period.
-		\begin{enumerate} [i.]
-		\item {\bf Player} is treated to a victory screen.
-		\item {\bf Player} is given the option to play again or quit.
-		\end{enumerate}
-	\end{enumerate}
-\end{enumerate}
-
-%%%
-\begin{center} \line(1,0){350} \end{center}
 Scenario Name: {\bf LeavingFieldOfPlay} \\
 Participating Actor Instances:        \hspace{46pt} {\bf Player: PlayerEntity
 
@@ -202,7 +179,7 @@ Participating Actor Instances:        \hspace{46pt} {\bf Enemy: EnemyEntity
 					          \hspace{2.6 in}   GC: GameController}  \vspace{10pt}  \\ 
 Flow of Events: 
 \begin{enumerate} 
-\item {\bf GC} waits a set amount of time before attempting to spawn a wave.
+\item {\bf GC} waits a set amount of time before attempting to spawn a wave of enemies.
 \item The allotted amount of time has passed.
 	\begin{enumerate} [a.]
 	\item {\bf Wave} is not equal to the number of total waves.
@@ -211,7 +188,7 @@ Flow of Events:
 		\end{enumerate}
 	\item {\bf Wave} is equal to the number of total waves.
 		\begin{enumerate} [i.]
-		\item The boss is spawned in and the player must fight them to win.
+		\item The boss is spawned in and the player must fight it to win.
 		\end{enumerate}
 	\end{enumerate}
 \end{enumerate}
@@ -226,7 +203,7 @@ Flow of Events:
 \begin{enumerate} 
 \item {\bf Player} presses a movement button, which defaults to the WASD keys, while simultaneously pressing a fire button, which default to the $ \uparrow \downarrow \leftarrow \to $ arrow keys.
 \item {\bf Player} moves in the direction of the movement button pressed, while {\bf Bullet} is fired in the direction of the fire button pressed.
-\item {\bf Player} continues moving in the way of the first directional input until an additional input is received, at which time {\bf Player} will begin to move in the way of the second directional input. 
+\item {\bf Player} continues moving in the way of the first directional input until an additional input is received, at which time {\bf Player} will begin to thrust forward, while {\bf Player's} direction will quickly change to face towards the second input.
 \item {\bf Bullet} travels in the direction it was initially shot without the possibility of changing direction.
 \end{enumerate}
 
@@ -240,15 +217,15 @@ Participating Actor Instances:        \hspace{46pt} {\bf Enemy: EnemyEntity
 						\hspace{2.6 in}  GC: GameController}  \vspace{10pt}  \\ 
 Flow of Events: 
 \begin{enumerate} 
-\item {\bf GC} performs a check to see if an asteroid will spawn.
-\item The check fails.
+\item {\bf GC} performs a check to see where an asteroid will spawn.
+\item The check puts the asteroid in the view of the player.
 	\begin{enumerate} [a.]
-	\item Nothing occurs, and {\bf GC} waits before attempting to spawn another.
+	\item The {\bf Asteroid} is not spawned, and {\bf GC} attempts to spawn another.
 	\end{enumerate}
-\item The check passes.
+\item The check puts the asteroid out of view of the player.
 	\begin{enumerate} [a.]
-	\item An {\bf Asteroid} object is spawned with a random position, movement vector, and rotation speed.
-	\item The {\bf Asteroid} careens through space until it hits something or goes too far away.
+	\item An {\bf Asteroid} object is spawned with a random movement vector and rotation speed.
+	\item The {\bf Asteroid} careens through space until it hits something or goes outside of the level's absolute boundary.
 		\begin{enumerate} [i.]
 		\item The {\bf Asteroid} is then destroyed.
 		\end{enumerate}
@@ -273,7 +250,7 @@ Flow of Events:
                 \end{enumerate}
       \item The {\bf Bullet} does not collide with anything.
                 \begin{enumerate}[i.]
-                \item The {\bf Bullet} is terminated after a short distance.
+                \item The {\bf Bullet} is terminated after leaving the projectile boundary which surrounds the {\bf Player}.
                 \end{enumerate}
         \end{enumerate}
 \end{enumerate}
@@ -285,14 +262,13 @@ Participating Actor Instances:        \hspace{46pt} {\bf Player: PlayerEntity
 	
 						\hspace{2.6 in} Enemy: EnemyEntity
 
-					          \hspace{2.6 in}  Shotgun: PickUp}  \vspace{10pt}  \\ 
+					          \hspace{2.6 in}  Pickup: PickUp}  \vspace{10pt}  \\ 
 Flow of Events: 
 \begin{enumerate} 
 \item {\bf Player} destroys an {\bf Enemy} with its weapon.
-\item {\bf Enemy} rolls a check to see if it drops anything.
-\item The check succeeds, and {\bf Enemy} drops a {\bf Shotgun} pickup.
-\item {\bf Player} touches the {\bf Shotgun}.
-\item The {\bf Shotgun} is equipped, giving {\bf Player} 50 ammo and the {\bf Shotgun} weapon.
+\item Before it dies, the {\bf Enemy} rolls a check to see if it drops anything.
+\item The check succeeds, and {\bf Enemy} drops a {\bf Pickup}.
+\item {\bf Player} touches the {\bf Pickup}, equipping it and gaining its contents.
 \end{enumerate}
 
 %%%

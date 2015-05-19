@@ -8,18 +8,18 @@
 \contentsline {section}{\numberline {4}Design}{9}
 \contentsline {subsection}{\numberline {4.1}Sequence Diagram}{9}
 \contentsline {subsection}{\numberline {4.2}UML Diagram}{10}
-\contentsline {subsection}{\numberline {4.3}State Diagram}{11}
-\contentsline {section}{\numberline {5}Gameplay Design}{12}
-\contentsline {subsection}{\numberline {5.1}Player}{12}
-\contentsline {subsection}{\numberline {5.2}Enemies}{13}
-\contentsline {subsection}{\numberline {5.3}Weapons}{14}
-\contentsline {subsection}{\numberline {5.4}Levels}{15}
-\contentsline {subsection}{\numberline {5.5}Objects}{15}
-\contentsline {subsection}{\numberline {5.6}User Interface}{16}
-\contentsline {subsection}{\numberline {5.7}Art}{17}
-\contentsline {subsection}{\numberline {5.8}Controls Diagram}{18}
-\contentsline {section}{\numberline {6}Implementation}{18}
-\contentsline {subsection}{\numberline {6.1}Work Completed}{18}
-\contentsline {subsection}{\numberline {6.2}Current Status}{19}
-\contentsline {subsection}{\numberline {6.3}Future Work}{19}
-\contentsline {section}{\numberline {7}Glossary}{23}
+\contentsline {subsection}{\numberline {4.3}State Diagram}{10}
+\contentsline {section}{\numberline {5}Gameplay Design}{11}
+\contentsline {subsection}{\numberline {5.1}Player}{11}
+\contentsline {subsection}{\numberline {5.2}Enemies}{12}
+\contentsline {subsection}{\numberline {5.3}Weapons}{13}
+\contentsline {subsection}{\numberline {5.4}Levels}{14}
+\contentsline {subsection}{\numberline {5.5}Objects}{14}
+\contentsline {subsection}{\numberline {5.6}User Interface}{15}
+\contentsline {subsection}{\numberline {5.7}Art}{16}
+\contentsline {subsection}{\numberline {5.8}Controls Diagram}{17}
+\contentsline {section}{\numberline {6}Implementation}{17}
+\contentsline {subsection}{\numberline {6.1}Work Completed}{17}
+\contentsline {subsection}{\numberline {6.2}Current Status}{18}
+\contentsline {subsection}{\numberline {6.3}Future Work}{18}
+\contentsline {section}{\numberline {7}Glossary}{22}
