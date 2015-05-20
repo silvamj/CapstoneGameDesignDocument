@@ -339,43 +339,51 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 \subsection{Player} %Player
 
-	{\bf Player controls: }The player controls a small spaceship, and navigates through a space environment. As seen in Figure \ref{Controls}, the player will move with the WASD keys; pressing a key will cause the ship to rotate to and accelerate in that direction.  Shooting will be controlled by the arrow keys on the keyboard. Pressing an arrow key will cause shots to be fired in that direction. Since movement and shooting are separate, the player may move in one direction and fire in another.  The player can also pause the game with the escape button. The controls are intended to transfer over to a controller relatively easily, so the player may control moving and shooting with the left and right analog stick respectively. The controls diagram is located at Section 5.7 of this document.
+	\hs {\bf Player controls: }The player controls a small spaceship, and navigates through a space environment. As seen in Figure \ref{Controls}, the player will move with the WASD keys; pressing a key will cause the ship to rotate to and accelerate in that direction.  Shooting will be controlled by the arrow keys on the keyboard. Pressing an arrow key will cause shots to be fired in that direction. Since movement and shooting are separate, the player may move in one direction and fire in another.  The player can also pause the game with the escape button. The controls are intended to transfer over to a controller relatively easily, so the player may control moving and shooting with the left and right analog stick respectively. The controls diagram is located at Section 5.7 of this document. \\
 
-	{\bf Player Movement:}	As stated above, the player presses either the WASD keys or the left analog stick to begin rotating and accelerating in that direction. Intended direction is generated as a vector, which has X and Y values, allows any degree of rotation to be represented. Since both the directional keys and analog sticks return vectors, both control methods can be used similarly. Rotation has a maximum speed, so quickly changing direction causes the ship to veer in a small circle as it rotates to face the intended direction. Acceleration speed will not be instantaneous and the player will not stop automatically, in order to simulate a sense of weight and the lack of friction in space. The ship will perform these actions quickly enough that controlling the ship feels responsive to the player. 
+\begin{figure} [H]
+\centering
+\includegraphics[width=6.3 in]{ControlDiagramFinal.png}
+\caption{Controls Diagram} \label{Controls}
+\end{figure}
 
-	{\bf Player Shooting:} Player shooting functions similarly to player movement in terms of input. By pressing the arrow keys or on the right analog stick, the player will shoot in the respective direction. The player's ship has a rotating gun attached to it, which allow the player to aim and shoot in any direction regardless of current movement. However, there is no rotation time for the gun on the player's ship, so the gun will shoot instantaneously in the direction that is being pressed. Be default the player's ship shoots a rapid fire laser, which will allow the user to get comfortable with shooting without having to worry about missing or wasting ammo. Various weapon pickups can be used to modify how the player's weapon shoots (detailed in Section 5.3). The control method will remain the same for all weapons so the player does not have to worry about learning different controls for each weapon.
+	{\bf Player Movement:}	As stated above, the player presses either the WASD keys or the left analog stick to begin rotating and accelerating in that direction. Intended direction is generated as a vector, which has X and Y values, allows any degree of rotation to be represented. Since both the directional keys and analog sticks return vectors, both control methods can be used similarly. Rotation has a maximum speed, so quickly changing direction causes the ship to veer in a small circle as it rotates to face the intended direction. Acceleration speed will not be instantaneous and the player will not stop automatically, in order to simulate a sense of weight and the lack of friction in space. The ship will perform these actions quickly enough that controlling the ship feels responsive to the player. \\
 
-	{\bf Player ship:} The player's ship will have its own health and shield values. The shield will be a rechargeable defense that will be able to absorb a number of shots before the players ship takes permanent health damage. Recharging of the shield will occur over time after a few seconds of avoiding damage. The ship's health is the amount of damage the ship can sustain before it explodes and the player loses. It will not regenerate automatically like the shield, but items will be able to restore it.
+	{\bf Player Shooting:} Player shooting functions similarly to player movement in terms of input. By pressing the arrow keys or on the right analog stick, the player will shoot in the respective direction. The player's ship has a rotating gun attached to it, which allow the player to aim and shoot in any direction regardless of current movement. However, there is no rotation time for the gun on the player's ship, so the gun will shoot instantaneously in the direction that is being pressed. Be default the player's ship shoots a rapid fire laser, which will allow the user to get comfortable with shooting without having to worry about missing or wasting ammo. Various weapon pickups can be used to modify how the player's weapon shoots (detailed in Section 5.3). The control method will remain the same for all weapons so the player does not have to worry about learning different controls for each weapon. \\
+
+	{\bf Player ship:} The player's ship will have its own health and shield values. The shield will be a rechargeable defense that will be able to absorb a number of shots before the players ship takes permanent health damage. Recharging of the shield will occur over time after a few seconds of avoiding damage. The ship's health is the amount of damage the ship can sustain before it explodes and the player loses. It will not regenerate automatically like the shield, but items will be able to restore it. 
 
 \subsection{Enemies} %Enemies
 
 \hs The main objective of the enemy ships is to find and kill the player ship. They will have two main types of AI that will decrease the predictability of enemies. Other than just posing a threat to the player, an important function of the enemies AI is encouraging the player to always be moving, this is accomplished by having the enemies spaced out around the map at all times. \\
 
-{\bf Standard Shooting:} Standard shooting is when the enemy’s shooting vector is set to be the same as the enemy’s movement vector. This makes it so that the enemies shoot straight in front of them. The two main enemies, both of which are always rotating towards the player, use this method, meaning they will usually be shooting in the direction of the player.  The shots tend to be inaccurate because the player is always moving, however if the enemies had higher accuracy the game could become to difficult. \\
+	{\bf Standard Shooting:} Standard shooting is when the enemy’s shooting vector is set to be the same as the enemy’s movement vector. This makes it so that the enemies shoot straight in front of them. The two main enemies, both of which are always rotating towards the player, use this method, meaning they will usually be shooting in the direction of the player.  The shots tend to be inaccurate because the player is always moving, however if the enemies had higher accuracy the game could become to difficult. \\
 
-{\bf Predictive Shooting:} Predictive shooting is a method of shooting used by the Boss and PlayerKiller. This method of aiming and shooting allows the two enemies to hit the player if the player continues to move in a straight line by aiming at where the player will be. Predictive shooting uses the current movement vector of the player, the projectile speed and its starting location to calculate the vector to shoot ahead of the player. The predictive shooting projectiles are much more difficult to dodge than Standard Shooting and requires the player to plan their movement ahead of time. \\
+	{\bf Predictive Shooting:} Predictive shooting is a method of shooting used by the Boss and PlayerKiller. This method of aiming and shooting allows the two enemies to hit the player if the player continues to move in a straight line by aiming at where the player will be. Predictive shooting uses the current movement vector of the player, the projectile speed and its starting location to calculate the vector to shoot ahead of the player. The predictive shooting projectiles are much more difficult to dodge than Standard Shooting and requires the player to plan their movement ahead of time. \\
 
-{\bf Patrolling:} In order to patrol the enemies will set their spawn point to ``home''. Each enemy has a maximum distance that they will still track the player from. Once the enemy is outside of this max distance, they will track to the ``home" point and patrol around it until the player comes back with in the max tracking distance. This is the main method for getting the enemies spaced back out around the map. \\
+	{\bf Patrolling:} In order to patrol the enemies will set their spawn point to ``home''. Each enemy has a maximum distance that they will still track the player from. Once the enemy is outside of this max distance, they will track to the ``home" point and patrol around it until the player comes back with in the max tracking distance. This is the main method for getting the enemies spaced back out around the map. \\
 
-{\bf Enemy Type One:} The first type of enemy tracks directly toward the current location of the player, by constantly rotating toward the player and then applying forward thrust in the direction it is currently facing. It will try to stay a small ways away from the player to avoid colliding with them. This enemy type has a high probability of shooting at a fixed time interval, using standard shooting. \\
+	{\bf Enemy One (Purple Enemy):} The first type of enemy tracks directly toward the current location of the player, by constantly rotating toward the player and then applying forward thrust in the direction it is currently facing. It will try to stay a small ways away from the player to avoid colliding with them. This enemy type has a high probability of shooting at a fixed time interval, using standard shooting. \\
 
-Include Image Here \\
+\begin{figure} [H]\centering  \includegraphics[width=1.5in]{PurpleEnemy.png} \caption{Purple Enemy} \label{EnemyOne} \end{figure}
 
-{\bf Enemy Type Two:} The second type of enemy will follow the player more closely than the first type while also trying to get in front of the player as an obstacle to the players movement. To attempt to get in front of the player, the enemy uses the predictive shooting method to calculate a vector to intercept the player and then uses it as its movement vector. This enemy is still able to use standard shooting because it is always rotating toward the player even if it is moving in front of the player. Its projectiles do medium damage, firing less frequently than the first type. \\
+	{\bf Enemy Two (Green Enemy):} The second type of enemy will follow the player more closely than the first type while also trying to get in front of the player as an obstacle to the players movement. To attempt to get in front of the player, the enemy uses the predictive shooting method to calculate a vector to intercept the player and then uses it as its movement vector. This enemy is still able to use standard shooting because it is always rotating toward the player even if it is moving in front of the player. Its projectiles do medium damage, firing less frequently than the first type. \\
 
-Include Image Here \\
+\begin{figure} [H]\centering  \includegraphics[width=1.5in]{GreenEnemy.png} \caption{Green Enemy} \label{EnemyTwo} \end{figure} 
 
-{\bf Boss:} The boss will give the player a final challenge before ultimately reaching the end of the game and winning. The boss will shoot large amounts of projectiles to making dodging difficult for the player. Additionally, the boss will have a predictive shooting projectile that will shoot periodically to increase the difficulty further. Finally, bosses will have a larger amount of health than the average enemy. Defeating a boss will end the game and display a win screen. \\
+	{\bf Boss:} The boss will give the player a final challenge before ultimately reaching the end of the game and winning. As seen in Figure \ref{BossImage} the boss is significantly larger than the player, this makes avoiding the boss much more challenging than avoiding other enemies. The boss will shoot large amounts of projectiles to making dodging difficult for the player. Additionally, the boss will have a predictive shooting projectile that will shoot periodically to increase the difficulty further. Finally, bosses will have a larger amount of health than the average enemy. Defeating a boss will end the game and display a win screen. \\
+
+\begin{figure} [H]\centering  \includegraphics[width=4in]{BossShooting.png} \caption{Boss Enemy} \label{BossImage} \end{figure} 
 
 {\bf PlayerKiller:} PlayerKiller is a stationary, invincible and invisible enemy that is used to enforce the boundary of the level. Upon exiting the arena, PlayerKiller will activate and will begin to shoot at the player until the player is destroyed or re-enters the level. PlayerKiller's projectiles travel very quickly and will destroy the player in one hit, so that the player cannot spend much time safely outside the level.
 
 
 \subsection{Weapons} %Weapons
 
-	{\bf Weapons:} Weapons are implemented through the Unity prefab system. By default, the player is given a low-damage, high rate-of-fire red laser weapon that they can change by finding a weapon pickup which drops off enemies. Once the player makes contact with the pickup, their current weapon is destroyed and the new weapon is loaded for the player. All non-default weapons have a limited amount of ammunition, and once their ammo is depleted, the weapon is destroyed and replaced with the default weapon.
+	\hs {\bf Weapons:} Weapons are implemented through the Unity prefab system. By default, the player is given a low-damage, high rate-of-fire red laser weapon that they can change by finding a weapon pickup which drops off enemies. Once the player makes contact with the pickup, their current weapon is destroyed and the new weapon is loaded for the player. All non-default weapons have a limited amount of ammunition, and once their ammo is depleted, the weapon is destroyed and replaced with the default weapon.
 
 	\begin{enumerate}
-	\item {\bf Shotgun:} The shotgun has the same damage and rate of fire as the default weapon. However, every shot of the shotgun fires five bullets in a short, fixed spread, rather than one bullet straight ahead. Has 50 ammo.
+	\item {\bf Shotgun:} The shotgun has the same damage and rate of fire as the default weapon. However, every shot of the shotgun fires five bullets in a short, fixed spread, rather than one bullet straight ahead. Has 50 ammo. 
 
 	\item {\bf Pulse Gun:} The pulse gun is a high damage, low rate of fire gun that shoots one large pulse of 70 green bullets in the direction the player presses. Bullets fired by this gun do not destroy themselves when colliding with an entity, allowing for a "piercing" effect. Has 10 ammo.
 
@@ -384,25 +392,25 @@ Include Image Here \\
 
 \subsection{Levels} %levels
 
-	{\bf Level design:} The level consists of a circular arena. There is a circular border around the playing field that the player will be shot at if crossed. Enemies spawn in waves inside the arena but outside the player's view. Asteroids spawn in and around the arena. As the player destroys waves of enemies, new larger waves will spawn. After completing a set number of waves, the boss will spawn in the arena.
+	\hs {\bf Level design:} The level consists of a circular arena. There is a circular border around the playing field that the player will be shot at if crossed. Enemies spawn in waves inside the arena but outside the player's view. Asteroids spawn in and around the arena. As the player destroys waves of enemies, new larger waves will spawn. After completing a set number of waves, the boss will spawn in the arena. \\
 
-	{\bf Star Field and Background:} The background will be a two dimensional tile that can be replicated across the screen to create a smooth, endless field of stars. The star field layered on top of the background image is particle effect conisting of small drifting particles that will move across the screen. The multilayering will add a three-dimensionality to the background and keep the background from being static.
+	{\bf Star Field and Background:} The background will be a two dimensional tile that can be replicated across the screen to create a smooth, endless field of stars. The star field layered on top of the background image is particle effect conisting of small drifting particles that will move across the screen. The multilayering will add a three-dimensionality to the background and keep the background from being static. 
 
 \subsection{Objects} %objects
 
-	{\bf Pick-ups:}  There will be pick-ups available to the player throughout the game, dropping from enemies. Most pick-ups will change some attribute of the player ship, such as giving the player an alternative weapon, a temporary speed increase, or restoring the player's health. Additionally, there is another pickup that will spawn a follower ship that will follow the player ship around that map and shoot at nearby enemies. Some pick ups will be displayed in part of the UI (Section 5.5), such as the speed boost meter.
+	\hs {\bf Pick-ups:}  There will be pick-ups available to the player throughout the game, dropping from enemies. Most pick-ups will change some attribute of the player ship, such as giving the player an alternative weapon, a temporary speed increase, or restoring the player's health. Additionally, there is another pickup that will spawn a follower ship that will follow the player ship around that map and shoot at nearby enemies. Some pick ups will be displayed in part of the UI (Section 5.5), such as the speed boost meter. \\
 
-	{\bf  Items:} Items are intended to either provide a permanent boost to the player attributes (such as speed or maximum health), or add an effect that the player can activate by pressing a button, such as a time bomb that would slow down enemies and asteroids when activated, making them easier to dodge. There are currently no items implemented in the game, but could be included in the future. 
+	{\bf  Items:} Items are intended to either provide a permanent boost to the player attributes (such as speed or maximum health), or add an effect that the player can activate by pressing a button, such as a time bomb that would slow down enemies and asteroids when activated, making them easier to dodge. There are currently no items implemented in the game, but could be included in the future. \\
 
 	{\bf Asteroids:}  Asteroids will be obstacles that will fly across the screen, dealing damage to anything they collide with. This forces players to be more aware of their surroundings or risk dying and gives them another danger they must avoid. Asteroids have no set allegiance and can collide with each other and enemy ships. Asteroids will spawn in random locations outside the player view with a random initial velocity and direction. Asteroids will travel until they either collide with a ship, get shot by the player, or travel outside of the level boundaries.
 
 \subsection{User Interface} % UI
 
-	{\bf Radar:} The radar shows the location of all enemies, pick-ups, and asteroids in relation to the location of the player. It will be displayed in the bottom left corner. In addition, it also represents the direction of all enemies not shown in the immediate area with a symbol on the edge of the radar, assisting the player with locating all enemies in a wave. The radar was implemented in two separate iterations. In the initial implementation, a camera is used to provide an overhead view of the in game entities. However, it was difficult to tell what the models looked like, and it did not show the player very useful information. The following image depicts what this implementation looked like:
+	\hs {\bf Radar:} The radar shows the location of all enemies, pick-ups, and asteroids in relation to the location of the player. It will be displayed in the bottom left corner. In addition, it also represents the direction of all enemies not shown in the immediate area with a symbol on the edge of the radar, assisting the player with locating all enemies in a wave. The radar was implemented in two separate iterations. In the initial implementation, a camera is used to provide an overhead view of the in game entities. However, it was difficult to tell what the models looked like, and it did not show the player very useful information. The following image depicts what this implementation looked like:
 
 \begin{figure} [H]
 \centering
-\includegraphics[width=5in]{minimapExample1.png}
+\includegraphics[width=4.5in]{minimapExample1.png}
 \caption{Initial Implementation} \label{RadarOne}
 \end{figure}
 
@@ -414,26 +422,20 @@ Include Image Here \\
 \caption{Current Implementation} \label{RadarTwo}
 \end{figure}
 
-	{\bf HUD:} The player has access to a Heads-Up Display in the bottom right corner, which displays vital information, such as the player's health, shield, currently equipped weapon, ammo remaining, the current wave, and the number of enemies left in the wave. The HUD will also display if the player is currently under the effects of a speed boost and how much time is remaining on their speed boost.
+	{\bf HUD:} The player has access to a Heads-Up Display seen in Figure \ref{HUDDia}. It will appear in the bottom right corner of the screen, which displays vital information, such as the player's health, shield, currently equipped weapon, ammo remaining, the current wave, and the number of enemies left in the wave. The HUD will also display if the player is currently under the effects of a speed boost and how much time is remaining on their speed boost. \\
+
+\begin{figure} [H] \centering\includegraphics[width=3in] {HUDDiagram.png}\caption{Heads-Up Display} \label{HUDDia}\end{figure}
 
 	{\bf Menus:} Menus in the game consist of a selection of several buttons that the user can select with the cursor to navigate through different game states. The primary menu is the main menu, which allows the user to start the game, navigate to the controls menu, or exit the application. The controls menu gives a brief game discription and shows the controls, with an option to return to the main menu. Additionally, there is a pause screen that appears when the player pauses in game that shows a few different controls that can be used to resume or restart the game.
 
 \subsection{Art} %Art
 
-	\hs {\bf Story:} The Player is an explorer trying to reach the other side of the Universe to meet aliens that sent a treasure map to earth. The Player keeps in close contact with General Weathersbee who guides them to the last known location of the aliens. 
+	\hs {\bf Story:} The Player is an explorer trying to reach the other side of the Universe to meet aliens that sent a treasure map to earth. The Player keeps in close contact with General Weathersbee who guides them to the last known location of the aliens. \\
 
-	{\bf Art/models:} The assets and models used in this project will mostly be free from the Unity store. Our group created some of the simple icons, used in the radar and the HUD. Some of the assets are combined and blended together to create a unique model specifically for this game. For example, there is a gun from one asset pack combined with a ship from another pack to create a new ship type. There is a black with stars background for the main level, with a moving star field overlay. The other scenes have varying space themed backgrounds, with the same star field. The font Huxley is used uniformly through out the game to tie the scenes together.  
+	{\bf Art/models:} The assets and models used in this project will mostly be free from the Unity store. Our group created some of the simple icons, used in the radar and the HUD. Some of the assets are combined and blended together to create a unique model specifically for this game. For example, there is a gun from one asset pack combined with a ship from another pack to create a new ship type. There is a black with stars background for the main level, with a moving star field overlay. The other scenes have varying space themed backgrounds, with the same star field. The font Huxley is used uniformly through out the game to tie the scenes together.  \\
 
 	{\bf Music/ sound:} Sound effects and music will be retrieved from the Unity store and other sites that allow people to download and use their music for non-commercial purposes. The music is upbeat and fast paced to set the tone of the game. The sound effects will mostly be explosions and gun sounds. For example the laser gun will have a "pew pew pew" sound. 
 
-
-\subsection{Controls Diagram}
-
-\begin{figure} [H]
-\centering
-\includegraphics[width=6.3 in]{ControlDiagramFinal.png}
-\caption{Controls Diagram} \label{Controls}
-\end{figure}
 
 
 \section{Implementation} %IMPLEMENTATION
