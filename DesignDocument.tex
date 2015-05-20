@@ -380,15 +380,13 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 \subsection{Weapons} %Weapons
 
-	\hs {\bf Weapons:} Weapons are implemented through the Unity prefab system. By default, the player is given a low-damage, high rate-of-fire red laser weapon that they can change by finding a weapon pickup which drops off enemies. Once the player makes contact with the pickup, their current weapon is destroyed and the new weapon is loaded for the player. All non-default weapons have a limited amount of ammunition, and once their ammo is depleted, the weapon is destroyed and replaced with the default weapon.
+{\bf Weapons:} Weapons are implemented through the Unity prefab system. By default, the player is given a low-damage, high rate-of-fire red laser weapon that they can change by finding a weapon pickup which drops off enemies. Once the player makes contact with the pickup, their current weapon is destroyed and the new weapon is loaded for the player. All non-default weapons have a limited amount of ammunition, and once their ammo is depleted, the weapon is destroyed and replaced with the default weapon. A table showing off the various variables of the weapons can be found below in Figure \ref{stats}.
 
-	\begin{enumerate}
-	\item {\bf Shotgun:} The shotgun has the same damage and rate of fire as the default weapon. However, every shot of the shotgun fires five bullets in a short, fixed spread, rather than one bullet straight ahead. Has 50 ammo. 
-
-	\item {\bf Pulse Gun:} The pulse gun is a high damage, low rate of fire gun that shoots one large pulse of 70 green bullets in the direction the player presses. Bullets fired by this gun do not destroy themselves when colliding with an entity, allowing for a "piercing" effect. Has 10 ammo.
-
-	\item {\bf Minigun:} The minigun has a much faster rate of fire than the default gun. However, its damage is half of the default gun's per shot and the exact direction the bullets will be fired in has a variance, not guaranteeing accuracy. Has 400 ammo.
-	\end{enumerate}
+\begin{figure} [H]
+\includegraphics[width=6in]{stats.png}
+\centering
+\caption{Weapon Stats} \label{stats}
+\end{figure}
 
 \subsection{Levels} %levels
 
@@ -422,7 +420,7 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 \caption{Current Implementation} \label{RadarTwo}
 \end{figure}
 
-	{\bf HUD:} The player has access to a Heads-Up Display seen in Figure \ref{HUDDia}. It will appear in the bottom right corner of the screen, which displays vital information, such as the player's health, shield, currently equipped weapon, ammo remaining, the current wave, and the number of enemies left in the wave. The HUD will also display if the player is currently under the effects of a speed boost and how much time is remaining on their speed boost. \\
+	{\bf HUD:} The player has access to a Heads-Up Display in the bottom right corner, shown below in Figure \ref{HUDDia}, which displays vital information: The player's health, shield, currently equipped weapon, ammo remaining, the current wave, and the number of enemies left in the wave. The HUD will also display if the player is currently under the effects of a speed boost and how much time is remaining on their speed boost.
 
 \begin{figure} [H] \centering\includegraphics[width=3in] {HUDDiagram.png}\caption{Heads-Up Display} \label{HUDDia}\end{figure}
 
