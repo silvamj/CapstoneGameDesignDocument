@@ -1,24 +1,14 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.8)  20 MAY 2015 12:11
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  22 MAY 2015 09:54
 entering extended mode
-**C:/Users/Nicholas/Documents/GitHub/CapstoneGameDesignDocument/DesignDocument.
-tex
-
-(C:/Users/Nicholas/Documents/GitHub/CapstoneGameDesignDocument/DesignDocument.t
-ex
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**DesignDocument.tex
+(./DesignDocument.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-(C:\Users\Nicholas\Documents\lt\tex\latex\base\article.cls
+Babel <3.9f> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(C:\Users\Nicholas\Documents\lt\tex\latex\base\size12.clo
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -33,21 +23,21 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(C:\Users\Nicholas\Documents\lt\tex\latex\xcolor\xcolor.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-(C:\Users\Nicholas\Documents\lt\tex\latex\00miktex\color.cfg
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-(C:\Users\Nicholas\Documents\lt\tex\latex\pdftex-def\pdftex.def
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(C:\Users\Nicholas\Documents\lt\tex\generic\oberdiek\infwarerr.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(C:\Users\Nicholas\Documents\lt\tex\generic\oberdiek\ltxcmds.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count87
@@ -62,27 +52,27 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 
-(C:\Users\Nicholas\Documents\lt\tex\latex\xcolor\svgnam.def
+(/usr/local/texlive/2013/texmf-dist/tex/latex/xcolor/svgnam.def
 File: svgnam.def 2007/01/21 v2.11 Predefined colors according to SVG 1.1 (UK)
 ))
-(C:\Users\Nicholas\Documents\lt\tex\latex\amsmath\amsmath.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-(C:\Users\Nicholas\Documents\lt\tex\latex\amsmath\amstext.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(C:\Users\Nicholas\Documents\lt\tex\latex\amsmath\amsgen.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks14
 \ex@=\dimen103
 ))
-(C:\Users\Nicholas\Documents\lt\tex\latex\amsmath\amsbsy.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen104
 )
-(C:\Users\Nicholas\Documents\lt\tex\latex\amsmath\amsopn.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count88
@@ -123,7 +113,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(C:\Users\Nicholas\Documents\lt\tex\latex\amscls\amsthm.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2004/08/06 v2.20
 \thm@style=\toks19
 \thm@bodyfont=\toks20
@@ -135,7 +125,7 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headsep=\skip48
 \dth@everypar=\toks24
 )
-(C:\Users\Nicholas\Documents\lt\tex\latex\ulem\ulem.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box28
 \UL@hyphenbox=\box29
 \UL@skip=\skip49
@@ -147,31 +137,31 @@ Package: amsthm 2004/08/06 v2.20
 Package: ulem 2012/05/18
 \ULdepth=\dimen114
 )
-(C:\Users\Nicholas\Documents\lt\tex\latex\graphics\graphicx.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\Nicholas\Documents\lt\tex\latex\graphics\keyval.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks26
 )
-(C:\Users\Nicholas\Documents\lt\tex\latex\graphics\graphics.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\Nicholas\Documents\lt\tex\latex\graphics\trig.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(C:\Users\Nicholas\Documents\lt\tex\latex\00miktex\graphics.cfg
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 )
 \Gin@req@height=\dimen115
 \Gin@req@width=\dimen116
 )
-(C:\Users\Nicholas\Documents\lt\tex\latex\marvosym\marvosym.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/marvosym/marvosym.sty
 Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
 )
-(C:\Users\Nicholas\Documents\lt\tex\latex\fancyhdr\fancyhdr.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip50
 \f@ncyO@elh=\skip51
 \f@ncyO@erh=\skip52
@@ -182,24 +172,24 @@ Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
 \f@ncyO@olf=\skip57
 \f@ncyO@orf=\skip58
 )
-(C:\Users\Nicholas\Documents\lt\tex\latex\amsmath\amscd.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amscd.sty
 Package: amscd 1999/11/29 v2.0
 \athelp@=\toks27
 \minaw@=\dimen117
 \bigaw@=\dimen118
 \minCDarrowwidth=\dimen119
 )
-(C:\Users\Nicholas\Documents\lt\tex\latex\amsfonts\amssymb.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(C:\Users\Nicholas\Documents\lt\tex\latex\amsfonts\amsfonts.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(C:\Users\Nicholas\Documents\lt\tex\latex\float\float.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count101
 \float@exts=\toks28
@@ -207,12 +197,13 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks29
 \@floatcapt=\box32
 )
-(C:\Users\Nicholas\Documents\lt\tex\latex\tools\enumerate.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks30
 )
-(C:\Users\Nicholas\Documents\GitHub\CapstoneGameDesignDocument\DesignDocument.a
-ux)
+(./DesignDocument.aux)
+\openout1 = `DesignDocument.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
@@ -225,7 +216,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
 LaTeX Font Info:    ... okay on input line 53.
- (C:\Users\Nicholas\Documents\lt\tex\context\base\supp-pdf.mkii
+
+(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count102
 \scratchdimen=\dimen120
@@ -238,7 +230,54 @@ LaTeX Font Info:    ... okay on input line 53.
 \MPnumerator=\count106
 \makeMPintoPDFobject=\count107
 \everyMPtoPDFconversion=\toks32
+) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 \drop=\skip59
 
 Overfull \hbox (17.62482pt too wide) in paragraph at lines 57--57
@@ -252,26 +291,30 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 57--57
 
 [1
 
-{C:/Users/Nicholas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(C:\Users\Nicholas\Documents\GitHub\CapstoneGameDesignDocument\DesignDocument.t
-oc
+{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./DesignDocument.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 2.
- (C:\Users\Nicholas\Documents\lt\tex\latex\amsfonts\umsa.fd
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 
-(C:\Users\Nicholas\Documents\lt\tex\latex\amsfonts\umsb.fd
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write3
+\openout3 = `DesignDocument.toc'.
+
  [1]
-(C:\Users\Nicholas\Documents\GitHub\CapstoneGameDesignDocument\DesignDocument.l
-of)
+(./DesignDocument.lof)
 \tf@lof=\write4
- [1] <scene.png, id=15, 963.6pt x 722.7pt>
+\openout4 = `DesignDocument.lof'.
+
+ [1] <scene.png, id=16, 963.6pt x 722.7pt>
 File: scene.png Graphic file (type png)
- <use scene.png>
+
+<use scene.png>
 Package pdftex.def Info: scene.png used on input line 86.
 (pdftex.def)             Requested size: 505.89pt x 379.41216pt.
 
@@ -279,8 +322,7 @@ Overfull \hbox (36.13501pt too wide) in paragraph at lines 86--87
  [][] 
  []
 
-[1] [2 <C:/Users/Nicholas/Documents/GitHub/CapstoneGameDesignDocument/scene.png
->]
+[1] [2 <./scene.png>]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
@@ -299,69 +341,66 @@ Missing character: There is no ô in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
- [3] [4] [5] [6] [7] <UseCaseModel1.png, id=42, 439.6425pt x 358.33875pt>
+ [3] [4]
+<UseCaseModel1.png, id=31, 439.6425pt x 358.33875pt>
 File: UseCaseModel1.png Graphic file (type png)
-
-<use UseCaseModel1.png>
-Package pdftex.def Info: UseCaseModel1.png used on input line 298.
+ <use UseCaseModel1.png>
+Package pdftex.def Info: UseCaseModel1.png used on input line 130.
 (pdftex.def)             Requested size: 397.48499pt x 323.98914pt.
- [8 <C:/Users/Nicholas/Documents/GitHub/CapstoneGameDesignDocument/UseCaseModel
-1.png>]
-<PlayerDeath.png, id=48, 484.209pt x 551.05875pt>
+
+[5 <./UseCaseModel1.png>] [6] [7] [8]
+<PlayerDeath.png, id=47, 484.209pt x 551.05875pt>
 File: PlayerDeath.png Graphic file (type png)
  <use PlayerDeath.png>
-Package pdftex.def Info: PlayerDeath.png used on input line 311.
+Package pdftex.def Info: PlayerDeath.png used on input line 308.
 (pdftex.def)             Requested size: 343.28249pt x 390.69107pt.
 
-[9 <C:/Users/Nicholas/Documents/GitHub/CapstoneGameDesignDocument/PlayerDeath.p
-ng>] <FinalUMLHorizontal.png, id=53, 1084.05pt x 578.16pt>
+[9 <./PlayerDeath.png>] <FinalUMLHorizontal.png, id=52, 1084.05pt x 578.16pt>
 File: FinalUMLHorizontal.png Graphic file (type png)
 
 <use FinalUMLHorizontal.png>
-Package pdftex.def Info: FinalUMLHorizontal.png used on input line 320.
+Package pdftex.def Info: FinalUMLHorizontal.png used on input line 317.
 (pdftex.def)             Requested size: 527.57121pt x 281.37769pt.
 
-Overfull \hbox (57.81622pt too wide) in paragraph at lines 320--321
+Overfull \hbox (57.81622pt too wide) in paragraph at lines 317--318
  [][] 
  []
 
-<PewPewStateDiagramFinal.png, id=54, 578.16pt x 289.08pt>
+<PewPewStateDiagramFinal.png, id=53, 578.16pt x 289.08pt>
 File: PewPewStateDiagramFinal.png Graphic file (type png)
 
 <use PewPewStateDiagramFinal.png>
-Package pdftex.def Info: PewPewStateDiagramFinal.png used on input line 329.
+Package pdftex.def Info: PewPewStateDiagramFinal.png used on input line 326.
 (pdftex.def)             Requested size: 505.89pt x 252.94437pt.
 
-Overfull \hbox (36.13501pt too wide) in paragraph at lines 329--330
+Overfull \hbox (36.13501pt too wide) in paragraph at lines 326--327
  [][] 
  []
 
-[10 <C:/Users/Nicholas/Documents/GitHub/CapstoneGameDesignDocument/FinalUMLHori
-zontal.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 342--343
+[10 <./FinalUMLHorizontal.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
 
  []
 
-[11 <C:/Users/Nicholas/Documents/GitHub/CapstoneGameDesignDocument/PewPewStateD
-iagramFinal.png>] <ControlDiagramFinal.png, id=64, 792.71156pt x 560.8453pt>
+[11 <./PewPewStateDiagramFinal.png>]
+<ControlDiagramFinal.png, id=63, 792.71156pt x 560.8453pt>
 File: ControlDiagramFinal.png Graphic file (type png)
 
 <use ControlDiagramFinal.png>
-Package pdftex.def Info: ControlDiagramFinal.png used on input line 346.
+Package pdftex.def Info: ControlDiagramFinal.png used on input line 343.
 (pdftex.def)             Requested size: 455.30121pt x 322.13268pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--351
+Underfull \hbox (badness 10000) in paragraph at lines 347--348
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--353
+Underfull \hbox (badness 10000) in paragraph at lines 349--350
 
  []
 
-[12 <C:/Users/Nicholas/Documents/GitHub/CapstoneGameDesignDocument/ControlDiagr
-amFinal.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 358--359
+[12 <./ControlDiagramFinal.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 355--356
 
  []
 
@@ -372,263 +411,211 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--361
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--363
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--365
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 366--367
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
 
  []
 
-<PurpleEnemy.png, id=72, 100.87688pt x 100.87688pt>
+<PurpleEnemy.png, id=71, 100.87688pt x 100.87688pt>
 File: PurpleEnemy.png Graphic file (type png)
  <use PurpleEnemy.png>
-Package pdftex.def Info: PurpleEnemy.png used on input line 368.
+Package pdftex.def Info: PurpleEnemy.png used on input line 365.
 (pdftex.def)             Requested size: 108.405pt x 108.40665pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 370--371
+Underfull \hbox (badness 10000) in paragraph at lines 367--368
 
  []
 
-<GreenEnemy.png, id=73, 144.54pt x 144.54pt>
+<GreenEnemy.png, id=72, 144.54pt x 144.54pt>
 File: GreenEnemy.png Graphic file (type png)
  <use GreenEnemy.png>
-Package pdftex.def Info: GreenEnemy.png used on input line 372.
+Package pdftex.def Info: GreenEnemy.png used on input line 369.
 (pdftex.def)             Requested size: 108.405pt x 108.40471pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--375
+Underfull \hbox (badness 10000) in paragraph at lines 371--372
 
  []
 
-[14 <C:/Users/Nicholas/Documents/GitHub/CapstoneGameDesignDocument/PurpleEnemy.
-png> <C:/Users/Nicholas/Documents/GitHub/CapstoneGameDesignDocument/GreenEnemy.
-png>] <BossShooting.png, id=79, 763.35187pt x 430.60875pt>
+[14 <./PurpleEnemy.png> <./GreenEnemy.png>]
+<BossShooting.png, id=78, 763.35187pt x 430.60875pt>
 File: BossShooting.png Graphic file (type png)
-
-<use BossShooting.png>
-Package pdftex.def Info: BossShooting.png used on input line 376.
+ <use BossShooting.png>
+Package pdftex.def Info: BossShooting.png used on input line 373.
 (pdftex.def)             Requested size: 289.07999pt x 163.06795pt.
- <stats.png, id=80, 608.2725pt x 77.53969pt>
-File: stats.png Graphic file (type png)
 
-<use stats.png>
-Package pdftex.def Info: stats.png used on input line 386.
+<stats.png, id=79, 608.2725pt x 77.53969pt>
+File: stats.png Graphic file (type png)
+ <use stats.png>
+Package pdftex.def Info: stats.png used on input line 383.
 (pdftex.def)             Requested size: 433.62pt x 55.27716pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--394
+Underfull \hbox (badness 10000) in paragraph at lines 390--391
 
  []
 
-[15 <C:/Users/Nicholas/Documents/GitHub/CapstoneGameDesignDocument/BossShooting
-.png> <C:/Users/Nicholas/Documents/GitHub/CapstoneGameDesignDocument/stats.png>
-]
-Underfull \hbox (badness 10000) in paragraph at lines 399--400
+[15 <./BossShooting.png> <./stats.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 396--397
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--402
+Underfull \hbox (badness 10000) in paragraph at lines 398--399
 
  []
 
-[16] <minimapExample1.png, id=89, 262.73157pt x 144.54pt>
+[16] <minimapExample1.png, id=88, 262.73157pt x 144.54pt>
 File: minimapExample1.png Graphic file (type png)
 
 <use minimapExample1.png>
-Package pdftex.def Info: minimapExample1.png used on input line 411.
+Package pdftex.def Info: minimapExample1.png used on input line 408.
 (pdftex.def)             Requested size: 325.215pt x 178.92116pt.
- <radarExample2.png, id=90, 115.93312pt x 114.4275pt>
+ <radarExample2.png, id=89, 115.93312pt x 114.4275pt>
 File: radarExample2.png Graphic file (type png)
 
 <use radarExample2.png>
-Package pdftex.def Info: radarExample2.png used on input line 419.
+Package pdftex.def Info: radarExample2.png used on input line 416.
 (pdftex.def)             Requested size: 144.54pt x 142.67607pt.
- [17 <C:/Users/Nicholas/Documents/GitHub/CapstoneGameDesignDocument/minimapExam
-ple1.png> <C:/Users/Nicholas/Documents/GitHub/CapstoneGameDesignDocument/radarE
-xample2.png>]
-<HUDDiagram.png, id=94, 261.97874pt x 161.85469pt>
+ [17 <./minimapExample1.png> <./radarExample2.png>]
+<HUDDiagram.png, id=93, 261.97874pt x 161.85469pt>
 File: HUDDiagram.png Graphic file (type png)
  <use HUDDiagram.png>
-Package pdftex.def Info: HUDDiagram.png used on input line 425.
+Package pdftex.def Info: HUDDiagram.png used on input line 422.
 (pdftex.def)             Requested size: 216.81pt x 133.9516pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--432
+Underfull \hbox (badness 10000) in paragraph at lines 428--429
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--434
+Underfull \hbox (badness 10000) in paragraph at lines 430--431
 
  []
 
-[18 <C:/Users/Nicholas/Documents/GitHub/CapstoneGameDesignDocument/HUDDiagram.p
-ng>]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ú in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ù in font cmr12!
- [19]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 460.
+[18 <./HUDDiagram.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 447.
 
- (C:\Users\Nicholas\Documents\lt\tex\latex\base\omscmr.fd
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 460.
- [20]
-Underfull \hbox (badness 7291) in paragraph at lines 486--487
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 447.
+ [19] [20]
+Underfull \hbox (badness 10000) in paragraph at lines 473--474
+[]\OT1/cmr/m/n/12 Aleksandr. Doc-u-men-ta-tion Unity Script-ing Lan-guages and 
+You.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 473--474
+\OT1/cmr/m/n/12 Septem-ber 3, 2014. Re-trieved May 22, 2015 from Unity:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 473--474
+\OT1/cmr/m/n/12 http://blogs.unity3d.com/2014/09/03/documentation-unity-scripti
+ng-languages-
+ []
+
+
+Underfull \hbox (badness 7291) in paragraph at lines 475--476
 []\OT1/cmr/m/n/12 Ringo, D. His-tory of Gam-ing: A Look at How It All Be-gan. P
 ub-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 486--487
+Underfull \hbox (badness 10000) in paragraph at lines 475--476
 \OT1/cmr/m/n/12 lic Brod-cast-ing Ser-vice, n.d. Re-trieved Oc-to-ber 20, 2014,
  from PBS:
  []
 
 
-Underfull \hbox (badness 2512) in paragraph at lines 488--489
+Underfull \hbox (badness 2512) in paragraph at lines 477--478
 []\OT1/cmr/m/n/12 Tutorials. Unity Tech-nolo-gies, n.d. Re-trieved Oc-to-ber 15
 , 2014, from Unity:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 496--497
+Underfull \hbox (badness 10000) in paragraph at lines 485--486
 []\OT1/cmr/m/n/12 Procedural Con-tent Gen-er-a-tion Wiki. Re-trieved De-cem-ber
  4, 2014 from:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--501
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
 []\OT1/cmr/m/n/12 Elias, H. Per-lin Noise. Re-trieved De-cem-ber 6, 2014 from:
  []
 
 
-Underfull \hbox (badness 5924) in paragraph at lines 502--503
+Underfull \hbox (badness 5924) in paragraph at lines 491--492
 []\OT1/cmr/m/n/12 Moles, S. How Does Unity Use $\OML/cmm/m/it/12 C\OT1/cmr/m/n/
 12 #$ as a Script-ing Lan-guage? N.p.,
  []
 
 
-Underfull \hbox (badness 7685) in paragraph at lines 502--503
+Underfull \hbox (badness 7685) in paragraph at lines 491--492
 \OT1/cmr/m/n/12 n.d. Re-trived: Novem-ber 13, 2014 from Game De-vel-op-ment Sta
 ck Ex-
  []
 
 
-Underfull \hbox (badness 3769) in paragraph at lines 506--508
+Underfull \hbox (badness 3769) in paragraph at lines 495--497
 []\OT1/cmr/m/n/12 Stevens, P. and Ten-zer J. GUIDE: Games with UML for In-ter-a
 c-tive De-
  []
 
 
-Underfull \hbox (badness 5288) in paragraph at lines 506--508
+Underfull \hbox (badness 5288) in paragraph at lines 495--497
 \OT1/cmr/m/n/12 sign Ex-plo-ration.  \OT1/cmr/m/it/12 Lab-o-ra-tory for Foun-da
 -tions of Com-puter Sci-ence School
  []
 
 
-Underfull \hbox (badness 3930) in paragraph at lines 506--508
+Underfull \hbox (badness 3930) in paragraph at lines 495--497
 \OT1/cmr/m/it/12 of In-for-mat-ics\OT1/cmr/m/n/12 . Re-trived Novem-ber 16, 201
 4 from Uni-ver-sity of Ed-in-burgh:
  []
 
 [21] [22]
-Underfull \hbox (badness 10000) in paragraph at lines 523--541
+Underfull \hbox (badness 10000) in paragraph at lines 512--530
 
  []
 
-[23]
-(C:\Users\Nicholas\Documents\GitHub\CapstoneGameDesignDocument\DesignDocument.a
-ux) ) 
+[23] (./DesignDocument.aux) ) 
 Here is how much of TeX's memory you used:
- 3437 strings out of 493921
- 42235 string characters out of 3146071
- 108739 words of memory out of 3000000
- 6676 multiletter control sequences out of 15000+200000
- 11765 words of font info for 44 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 27i,6n,43p,1295b,351s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Nicholas/Documents/lt/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-<C:/Users/Nicholas/Documents/lt/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/U
-sers/Nicholas/Documents/lt/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users
-/Nicholas/Documents/lt/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Nich
-olas/Documents/lt/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Nicholas/D
-ocuments/lt/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Nicholas/Documen
-ts/lt/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Nicholas/Documents/lt/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Nicholas/Documents/lt/fonts
-/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on DesignDocument.pdf (26 pages, 1123522 bytes).
+ 3792 strings out of 493315
+ 48506 string characters out of 6137904
+ 122998 words of memory out of 5000000
+ 7159 multiletter control sequences out of 15000+600000
+ 11157 words of font info for 42 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 37i,6n,43p,1233b,271s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2013/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmti12.pfb>
+Output written on DesignDocument.pdf (26 pages, 1080937 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
+ 138 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
