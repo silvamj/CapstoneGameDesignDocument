@@ -93,17 +93,20 @@
 
 \subsection{Basic Unity Features} % Need to talk about prefabs and other Unity functionality: Layer, Camera, Scene, Hierarchy, Prefab
 
+The Unity development platform contains a number of useful tools that a developer can use during the game creation process. The main view is shown in Figure \ref{Unity} below.
+
 \begin{figure} [H]
 \centering
 \includegraphics[width=7in]{scene.png}
 \caption{Unity Editor} \label{Unity}
 \end{figure}
+Some of the components found in this view include:
 
-\hs {\bf Scene:} The scene view, shown as the central component of Figure \ref{Unity}, shows where all of the Unity objects are inside the current scene. Scenes are independent from each other and moving from one scene to another loads an entirely new level with new scripts, objects, etc.\\
+\hs {\bf Scene:} The scene view, labelled with the number 1 in Figure \ref{Unity}, shows where all of the Unity objects are inside the current scene. Scenes are independent from each other and moving from one scene to another loads an entirely new level with new scripts, objects, etc.\\
 
-{\bf Hierarchy:} The object hierarchy, seen in the top left of Figure \ref{Unity}, shows how the game objects are laid out inside the current scene. Game objects use a parent/child relationship as defined in the object hierarchy.\\
+{\bf Hierarchy:} The object hierarchy, labelled with the number 2 in Figure \ref{Unity}, shows how the game objects are laid out inside the current scene. Game objects use a parent/child relationship as defined in the object hierarchy.\\
 
-{\bf Camera:} A camera in Unity renders the objects positioned in front of itself to the screen, much like a normal camera would. Multiple cameras can be used to display different views of the scene. Cameras can be adjusted in the scene view of the editor.\\
+{\bf Camera:} A camera in Unity renders the objects positioned in front of itself to the screen. Multiple cameras can be used to display different views of the scene. Cameras can be adjusted in the scene view of the editor.\\
 
 {\bf Layer:} A layer in Unity defines what in the scene view is rendered to which camera. Each camera contains what is called a culling mask that determines which layers it will render. \\
 
@@ -229,11 +232,11 @@ Participating Actor Instances:        \hspace{46pt} {\bf Enemy: EnemyEntity
 Flow of Events: 
 \begin{enumerate} 
 \item {\bf GC} performs a check to see where an asteroid will spawn.
-\item The check puts the asteroid in the view of the player.
+\item {\bf GC} puts the asteroid in the view of the player.
 	\begin{enumerate} [a.]
 	\item The {\bf Asteroid} is not spawned, and {\bf GC} attempts to spawn another.
 	\end{enumerate}
-\item The check puts the asteroid out of view of the player.
+\item {\bf GC} puts the asteroid out of view of the player.
 	\begin{enumerate} [a.]
 	\item An {\bf Asteroid} object is spawned with a random movement vector and rotation speed.
 	\item The {\bf Asteroid} careens through space until it hits something or goes outside of the level's absolute boundary.
@@ -278,7 +281,7 @@ Flow of Events:
 \begin{enumerate} 
 \item {\bf Player} destroys an {\bf Enemy} with its weapon.
 \item Before it dies, the {\bf Enemy} generates a random number to see if it drops anything.
-\item The check succeeds, and {\bf Enemy} drops a {\bf Pickup}.
+\item The generation succeeds and {\bf Enemy} drops a {\bf Pickup} based on the number that it rolled.
 \item {\bf Player} touches the {\bf Pickup}, equipping it and gaining its contents.
 \end{enumerate}
 
