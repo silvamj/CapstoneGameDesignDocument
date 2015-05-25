@@ -99,13 +99,13 @@
 \caption{Unity Editor} \label{Unity}
 \end{figure}
 
-\hs {\bf Scene:} The scene view, shown in the middle of Figure \ref{Unity}, shows where all of the Unity objects are inside the current level. Scenes are independent from each other and moving from one scene to another loads an entirely new level with new scripts, objects, etc.\\
+\hs {\bf Scene:} The scene view, shown as the central component of Figure \ref{Unity}, shows where all of the Unity objects are inside the current scene. Scenes are independent from each other and moving from one scene to another loads an entirely new level with new scripts, objects, etc.\\
 
 {\bf Hierarchy:} The object hierarchy, seen in the top left of Figure \ref{Unity}, shows how the game objects are laid out inside the current scene. Game objects use a parent/child relationship as defined in the object hierarchy.\\
 
-{\bf Camera:} A camera in Unity renders what it "sees" in front of itself to the screen, much like a normal camera would. Cameras can be adjusted in the scene view of the editor.\\
+{\bf Camera:} A camera in Unity renders the objects positioned in front of itself to the screen, much like a normal camera would. Multiple cameras can be used to display different views of the scene. Cameras can be adjusted in the scene view of the editor.\\
 
-{\bf Layer:} A layer in Unity defines what is actually rendered to the camera. If an object is on a different layer than the camera's layer, the camera will not render it.\\
+{\bf Layer:} A layer in Unity defines what in the scene view is rendered to which camera. Each camera contains what is called a culling mask that determines which layers it will render. \\
 
 {\bf Prefab:} A prefab is a saved instance of a game object which can then be loaded as either a child of a game object or its own instance. Any game object can be saved as a prefab.
 
@@ -148,8 +148,8 @@ Participating Actor Instances:        \hspace{46pt} {\bf Player: PlayerEntity
 Flow of Events: 
 \begin{enumerate} 
 \item {\bf Player }collides with {\bf DamageEntity}.
-       \item {\bf PlayerShield} decreases based on DamageEntity. 
-       \item {\bf PlayerHP} decreases based on DamageEntity and Shield. 
+       \item {\bf PlayerShield} decreases based on {\bf DamageEntity}. 
+       \item {\bf PlayerHP} decreases based on {\bf DamageEntity} and {\bf Shield}. 
                 \begin{enumerate}[a.]
                  \item {\bf PlayerHP} is greater than zero, continue as normal.
                  \item{\bf PlayerHP} is less than or equal to zero, {\bf Player} dies.
@@ -185,7 +185,7 @@ Flow of Events:
 Scenario Name: {\bf SpawnEnemyWave} \\
 Participating Actor Instances:        \hspace{46pt} {\bf Enemy: EnemyEntity
 
-						\hspace{2.6 in} Wave: float
+						\hspace{2.6 in} CurrentWave: float
 
 					          \hspace{2.6 in}   GC: GameController}  \vspace{10pt}  \\ 
 Flow of Events: 
@@ -193,11 +193,11 @@ Flow of Events:
 \item {\bf GC} waits a set amount of time before attempting to spawn a wave of enemies.
 \item The allotted amount of time has passed.
 	\begin{enumerate} [a.]
-	\item {\bf Wave} is not equal to the number of total waves.
+	\item {\bf CurrentWave} is not equal to the number of total waves.
 		\begin{enumerate} [i.]
 		\item Enemies are spawned in according to how many waves the player has defeated.
 		\end{enumerate}
-	\item {\bf Wave} is equal to the number of total waves.
+	\item {\bf CurrentWave} is equal to the number of total waves.
 		\begin{enumerate} [i.]
 		\item The boss is spawned in and the player must fight it to win.
 		\end{enumerate}
@@ -277,7 +277,7 @@ Participating Actor Instances:        \hspace{46pt} {\bf Player: PlayerEntity
 Flow of Events: 
 \begin{enumerate} 
 \item {\bf Player} destroys an {\bf Enemy} with its weapon.
-\item Before it dies, the {\bf Enemy} rolls a check to see if it drops anything.
+\item Before it dies, the {\bf Enemy} generates a random number to see if it drops anything.
 \item The check succeeds, and {\bf Enemy} drops a {\bf Pickup}.
 \item {\bf Player} touches the {\bf Pickup}, equipping it and gaining its contents.
 \end{enumerate}
@@ -370,12 +370,12 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 \begin{figure} [H]\centering  \includegraphics[width=4in]{BossShooting.png} \caption{Boss Enemy} \label{BossImage} \end{figure} 
 
-{\bf PlayerKiller:} PlayerKiller is a stationary, invincible and invisible enemy that is used to enforce the boundary of the level. Upon exiting the arena, PlayerKiller will activate and will begin to shoot at the player until the player is destroyed or re-enters the level. PlayerKiller's projectiles travel very quickly and will destroy the player in one hit, so that the player cannot spend much time safely outside the level.
+	{\bf PlayerKiller:} PlayerKiller is a stationary, invincible and invisible enemy that is used to enforce the boundary of the level. Upon exiting the arena, PlayerKiller will activate and will begin to shoot at the player until the player is destroyed or re-enters the level. PlayerKiller's projectiles travel very quickly and will destroy the player in one hit, so that the player cannot spend much time safely outside the level.
 
 
 \subsection{Weapons} %Weapons
 
-{\bf Weapons:} Weapons are implemented through the Unity prefab system. By default, the player is given a low-damage, high rate-of-fire red laser weapon that they can change by finding a weapon pickup which drops off enemies. Once the player makes contact with the pickup, their current weapon is destroyed and the new weapon is loaded for the player. All non-default weapons have a limited amount of ammunition, and once their ammo is depleted, the weapon is destroyed and replaced with the default weapon. A table showing off the various variables of the weapons can be found below in Figure \ref{stats}.
+	{\bf Weapons:} Weapons are implemented through the Unity prefab system. By default, the player is given a low-damage, high rate-of-fire red laser weapon that they can change by finding a weapon pickup which drops off enemies. Once the player makes contact with the pickup, their current weapon is destroyed and the new weapon is loaded for the player. All non-default weapons have a limited amount of ammunition, and once their ammo is depleted, the weapon is destroyed and replaced with the default weapon. A table showing off the various variables of the weapons can be found below in Figure \ref{stats}.
 
 \begin{figure} [H]
 \includegraphics[width=6in]{stats.png}
@@ -385,7 +385,7 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 \subsection{Levels} %levels
 
-	\hs {\bf Level design:} The level consists of a circular arena. There is a circular border around the playing field that the player will be shot at if crossed. Enemies spawn in waves inside the arena but outside the player's view. Asteroids spawn in and around the arena. As the player destroys waves of enemies, new larger waves will spawn. After completing a set number of waves, the boss will spawn in the arena. \\
+	\hs {\bf Level design:} The level consists of a circular arena. There is a circular border around the playing field that the player will be shot at if crossed. Enemies spawn in waves inside the arena but outside the player's view. Asteroids spawn in and around the arena. As the player destroys waves of enemies, new waves consisting of more enemies will spawn. After completing a set number of waves, the boss will spawn in the arena. \\
 
 	{\bf Star Field and Background:} The background will be a two dimensional tile that can be replicated across the screen to create a smooth, endless field of stars. The star field layered on top of the background image is particle effect conisting of small drifting particles that will move across the screen. The multilayering will add a three-dimensionality to the background and keep the background from being static. 
 
@@ -399,7 +399,7 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 \subsection{User Interface} % UI
 
-	\hs {\bf Radar:} The radar shows the location of all enemies, pick-ups, and asteroids in relation to the location of the player. It will be displayed in the bottom left corner. In addition, it also represents the direction of all enemies not shown in the immediate area with a symbol on the edge of the radar, assisting the player with locating all enemies in a wave. The radar was implemented in two separate iterations. In the initial implementation, a camera is used to provide an overhead view of the in game entities. However, it was difficult to tell what the models looked like, and it did not show the player very useful information. The following image depicts what this implementation looked like:
+	\hs {\bf Radar:} The radar shows the location of all enemies, pick-ups, and asteroids in relation to the location of the player. It will be displayed in the bottom left corner. In addition, it also represents the direction of all enemies not shown in the immediate area with a symbol on the edge of the radar, assisting the player with locating all enemies in a wave. The radar was implemented in two separate iterations. In the initial implementation, a camera is used to provide an overhead view of the in game entities. However, it was difficult to tell what was shown using this method, therefore it did not show the player very useful information. The following image depicts what this implementation looked like:
 
 \begin{figure} [H]
 \centering
@@ -407,7 +407,7 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 \caption{Initial Implementation} \label{RadarOne}
 \end{figure}
 
-	The current implementation of radar uses the same basic concept as the first implementation. However, the major difference is that the latter implementation makes use of Unity's layer function. Layers in Unity determine what in game entities are rendered to which camera. By defining new layers, a camera was created that only renders icons that were attached to each enemy, pick-up, and asteroid prefab. In code, two Hashtables keep track of all enemy positions in game as well as a list of icons that alternate between being rendered to the camera and being put in the invisible layer. The invisible layer is not rendered to any camera in the game, and effectively hides any models assigned to it. This is what accomplishes the goal of having enemy positions cling to the edge of the radar image. The following image depicts the second implementation:
+	The current implementation of radar uses the same basic concept as the first implementation. However, the major difference is that the latter implementation makes use of Unity's layer function. Layers in Unity determine what in game entities are rendered to which camera. By defining new layers, a camera was created that only renders icons that were attached to each enemy, pick-up, and asteroid prefab. In our implementation, two Hashtables keep track of all enemy positions in game as well as a list of icons that alternate between being rendered to the camera and being put in the invisible layer. The invisible layer is not rendered to any camera in the game, and effectively hides any models assigned to it. This is what accomplishes the goal of having enemy positions cling to the edge of the radar image. The following image depicts the second implementation:
 
 \begin{figure} [H]
 \centering
