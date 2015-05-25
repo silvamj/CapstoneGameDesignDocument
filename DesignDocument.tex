@@ -78,43 +78,45 @@
 \section{Introduction} %INTRODUCTION 
 \label{sec:intro}
 
-\hs Video games have been a rapidly growing industry in the past 30 years \cite{History}. As such, there are a wide variety of genres and subgenres of games, each taking influence from and building upon successful games of the past. In some cases these games combine past elements in a way that create a new category of game. The goal of this project is to develop a game that will blend space-shooter elements from classic arcade games, such as Asteroids and Galaga, with randomized, challenging elements from more recent games such as The Binding of Isaac. These elements include random pick-ups, permanent player death, and semi-random wave spawning. This combinationl aims to provide players with new challenges that may not be available in current games. This game was developed using Unity3D andl runs in the Unity engine, which features robust tools that allowed us to manipulate nearly any element of the game quickly and with immediate feedback. In the following subsections, we will introduce the basic features of Unity, our inspirations, and a few of the the researched technical game engine systems.
+\hs Video games have been a rapidly growing industry in the past 30 years \cite{History}. As such, there are a wide variety of genres and subgenres of games, each taking influence from and building upon successful games of the past. In some cases these games combine past elements in a way that create a new category of game. The goal of this project is to develop a game that will blend space-shooter elements from classic arcade games, such as Asteroids and Galaga, with randomized, challenging elements from more recent games such as The Binding of Isaac. These elements include random pick-ups, permanent player death, and semi-random wave spawning. This combinationl aims to provide players with new challenges that may not be available in current games. This game was developed using Unity3D andl runs in the Unity engine, which features robust tools that allowed us to manipulate nearly any element of the game quickly and with immediate feedback. In the following subsections, we will introduce the basic features of Unity, our inspirations, and a few of the the researched technical game engine systems. 
+
+\subsection{Background}
+	\hs For the development of this project, we developed a video game using Unity. The majority of the research time was used to learn the functionality of Unity. Since Unity is a complete game engine and editor, the game creation process did not require the development of an engine. Other alternative engines, such as the graphics engine Ogre3D, would require the implementation of a game engine in addition to creating the game \cite{Ogre}. Unreal Engine 4 was another considered engine, and included many features that would be useful to this project. However, it can be difficult for beginners to learn due to the lack of tutorials. Ultimately, we choose Unity, since it has a wide range of tutorials to help us get started more quickly and will allow the majority of the project resources to go towards gameplay development. \\
+
+        Unity historically supports three languages, Boo, JavaScript and $C\#$.  Over 80\% of Unity projects use $C\#$ as their scripting language, and most tutorials and sample assets are based around $C\#$. \cite{blog} The $C\#$ language was created by Microsoft in 1997, influenced heavily by Java and C++ it is intended to be friendly to the software development process. It’s features such as uninitialized variable compatibility and automatic garbage collection contributed to our decision to use it for this project \cite{Cadet}. Even though $C\#$ is a compiled language, Unity is still able to use $C\#$ code snippets as “scripts” because Unity is built in IDE (Monodevelop), compiles the code and packages it with game resources before runtime. This gives the games a robust set of tools, but allows the game to load and run quickly. \cite{Moles} \\
+
+	Our game strives to follow the principles set out by previous roguelike games. The term roguelike is a broad term used to describe video games that use random elements to create a replayable game that restarts the player on each subsequent playthrough. The original game that spawned this categorization was the game Rogue. Rogue was programmed at UC Santa Cruz in the 1980’s, using ASCII characters to take players on an adventure through a subterranean dungeon for the Amulet of Yendor. Once the game was released to others outside the developer, it spread rapidly throughout the college and the surrounding communities. Rogue inspired many other hits in the video game industry, including Diablo II, Faster Than Light, and The Binding of Isaac. \cite{Rogue} \\
+
+	While developing unique and challenging non-player entities it is crucial to have artificial intelligence (AI). Without AI entities quickly become predictable and non- threatening, even simple enemy AI can make improvements to a game. One of the first steps in creating a basic AI is choosing a method of path finding, so that the enemy can intentionally find the player. An example of a basic but effective path finding algorithm is A*. Amit Patel defines A* as a combination of Dijkstra’s Algorithm and the Best-First-Search Algorithm. A* searches all vertices by favoring the ones in the direction of the goal, this helps it be more efficient like Best First Search but avoid obstacles more like Dijkstra’s. \cite{A} Since this game will not have very many stationary objects specifically there will not be any walls, it is not as necessary to use a path finding algorithms. If the enemy AI calculates a straight path to the player, the path will almost always be clear of obstacles.  The second major part of enemy AI is shooting, this adds another level of difficulty to the enemy. These two components give the enemy enough instructions to be able to find and kill the player. \\
+
+	Finally, procedurally generated content will be used in order to build satisfying and challenging areas for the player. Procedural content generation is the process of designing an algorithm that can generate content at runtime. This fits in well with this project. With a relatively small number of inputs, the game can generate numerous different levels where the enemies encountered are found in different combinations. It also embodies the core idea of a roguelike game, changing the game every playthrough to challenge the player differently. There are a multitude of content generation algorithms, one of the common ones being Perlin noise, which actually refers to two algorithms created by Ken Perlin. These algorithms use a sum of different functions with varying amplitudes and frequencies in order to generate what is called a noise function. It is this function that is used to define different points of intensity. As it pertains to this project, these functions could be used to generate nebulae or star maps, giving a different visual experience to our player every time. \cite{PCG}
 
 \subsection{Basic Unity Features} % Need to talk about prefabs and other Unity functionality: Layer, Camera, Scene, Hierarchy, Prefab
+
 \begin{figure} [H]
 \centering
 \includegraphics[width=7in]{scene.png}
 \caption{Unity Editor} \label{Unity}
 \end{figure}
 
-\hs {\bf Scene:} The scene view, shown in the middle of Figure \ref{Unity}, shows where all of the Unity objects are inside the current level. Scenes are independent from each other and moving from one scene to another loads an entirely new level with new scripts, objects, etc.
+\hs {\bf Scene:} The scene view, shown in the middle of Figure \ref{Unity}, shows where all of the Unity objects are inside the current level. Scenes are independent from each other and moving from one scene to another loads an entirely new level with new scripts, objects, etc.\\
 
-{\bf Hierarchy:} The object hierarchy, seen in the top left of Figure \ref{Unity}, shows how the game objects are laid out inside the current scene. Game objects use a parent/child relationship as defined in the object hierarchy.
+{\bf Hierarchy:} The object hierarchy, seen in the top left of Figure \ref{Unity}, shows how the game objects are laid out inside the current scene. Game objects use a parent/child relationship as defined in the object hierarchy.\\
 
-{\bf Camera:} A camera in Unity renders what it "sees" in front of itself to the screen, much like a normal camera would. Cameras can be adjusted in the scene view of the editor.
+{\bf Camera:} A camera in Unity renders what it "sees" in front of itself to the screen, much like a normal camera would. Cameras can be adjusted in the scene view of the editor.\\
 
-{\bf Layer:} A layer in Unity defines what is actually rendered to the camera. If an object is on a different layer than the camera's layer, the camera will not render it.
+{\bf Layer:} A layer in Unity defines what is actually rendered to the camera. If an object is on a different layer than the camera's layer, the camera will not render it.\\
 
 {\bf Prefab:} A prefab is a saved instance of a game object which can then be loaded as either a child of a game object or its own instance. Any game object can be saved as a prefab.
 
-\subsection{Background}
-	\hs For the development of this project, we developed a video game using Unity. The majority of the research time was used to learn the functionality of Unity. Since Unity is a complete game engine and editor, the game creation process did not require the development of an engine. Other alternative engines, such as the graphics engine Ogre3D, would require the implementation of a game engine in addition to creating the game \cite{Ogre}. Unreal Engine 4 was another considered engine, and included many features that would be useful to this project. However, it can be difficult for beginners to learn due to the lack of tutorials. Ultimately, we choose Unity, since it has a wide range of tutorials to help us get started more quickly and will allow the majority of the project resources to go towards gameplay development.
-
-        Unity historically supports three languages, Boo, JavaScript and $C\#$.  Over 80\% of Unity projects use $C\#$ as their scripting language, and most tutorials and sample assets are based around $C\#$. \cite{blog} The $C\#$ language was created by Microsoft in 1997, influenced heavily by Java and C++ it is intended to be friendly to the software development process. It’s features such as uninitialized variable compatibility and automatic garbage collection contributed to our decision to use it for this project \cite{Cadet}. Even though $C\#$ is a compiled language, Unity is still able to use $C\#$ code snippets as “scripts” because Unity is built in IDE (Monodevelop), compiles the code and packages it with game resources before runtime. This gives the games a robust set of tools, but allows the game to load and run quickly. \cite{Moles} 
-
-	Our game strives to follow the principles set out by previous roguelike games. The term roguelike is a broad term used to describe video games that use random elements to create a replayable game that restarts the player on each subsequent playthrough. The original game that spawned this categorization was the game Rogue. Rogue was programmed at UC Santa Cruz in the 1980’s, using ASCII characters to take players on an adventure through a subterranean dungeon for the Amulet of Yendor. Once the game was released to others outside the developer, it spread rapidly throughout the college and the surrounding communities. Rogue inspired many other hits in the video game industry, including Diablo II, Faster Than Light, and The Binding of Isaac. \cite{Rogue}
-
-	While developing unique and challenging non-player entities it is crucial to have artificial intelligence (AI). Without AI entities quickly become predictable and non- threatening, even simple enemy AI can make improvements to a game. One of the first steps in creating a basic AI is choosing a method of path finding, so that the enemy can intentionally find the player. An example of a basic but effective path finding algorithm is A*. Amit Patel defines A* as a combination of Dijkstra’s Algorithm and the Best-First-Search Algorithm. A* searches all vertices by favoring the ones in the direction of the goal, this helps it be more efficient like Best First Search but avoid obstacles more like Dijkstra’s. \cite{A} Since this game will not have very many stationary objects specifically there will not be any walls, it is not as necessary to use a path finding algorithms. If the enemy AI calculates a straight path to the player, the path will almost always be clear of obstacles.  The second major part of enemy AI is shooting, this adds another level of difficulty to the enemy. These two components give the enemy enough instructions to be able to find and kill the player. 
-
-	Finally, procedurally generated content will be used in order to build satisfying and challenging areas for the player. Procedural content generation is the process of designing an algorithm that can generate content at runtime. This fits in well with this project. With a relatively small number of inputs, the game can generate numerous different levels where the enemies encountered are found in different combinations. It also embodies the core idea of a roguelike game, changing the game every playthrough to challenge the player differently. There are a multitude of content generation algorithms, one of the common ones being Perlin noise, which actually refers to two algorithms created by Ken Perlin. These algorithms use a sum of different functions with varying amplitudes and frequencies in order to generate what is called a noise function. It is this function that is used to define different points of intensity. As it pertains to this project, these functions could be used to generate nebulae or star maps, giving a different visual experience to our player every time. \cite{PCG}
 
 
 \section{Gameplay} %GAMEPLAY
 \label{sec:Gameplay}
 
-\hs {\bf Core Concept: }Pew Pew can be described as a wave-based, randomly generated, twin-stick shooter. Pew Pew features a small space ship on a two dimensional plane that the player controls with the left analog stick and can shoot with the right analog stick, hence the name "twin stick shooter". The game takes place in a circular arena, in which waves of enemies spawn in random sizes and compositions. The player must defeat all the enemies in a given wave by shooting them with various weapons, received from pickups, to progress onto the next wave. At the start of a wave more enemies will spawn than the previous wave. After defeating a set amount of waves, the boss will spawn in the arena. If the player manages to defeat the boss without dying, they achieve victory and will be rewarded with the victory screen. The player can be defeated by taking too much damage from enemy projectiles, hitting too many asteroids, or leaving the area by passing the line known as the boundary or the edge of the field of play.
+\hs {\bf Core Concept: }Pew Pew can be described as a wave-based, randomly generated, twin-stick shooter. Pew Pew features a small space ship on a two dimensional plane that the player controls with the left analog stick and can shoot with the right analog stick, hence the name "twin stick shooter". The game takes place in a circular arena, in which waves of enemies spawn in random sizes and compositions. The player must defeat all the enemies in a given wave by shooting them with various weapons, received from pickups, to progress onto the next wave. At the start of a wave more enemies will spawn than the previous wave. After defeating a set amount of waves, the boss will spawn in the arena. If the player manages to defeat the boss without dying, they achieve victory and will be rewarded with the victory screen. The player can be defeated by taking too much damage from enemy projectiles, hitting too many asteroids, or leaving the area by passing the line known as the boundary or the edge of the field of play. \\
 
-\hs {\bf First Minute:} The player enters the game in their ship, and can immediately start exploring the area in which they spawn. The player is given a few moments to get used to the controls before the first group of enemies spawn. This is the first wave; it will contain very few enemies that will be created some where in the game, out of the view of the player. The player must find and defeat all of these enemies before the next wave with new enemies starts. 
+{\bf First Minute:} The player enters the game in their ship, and can immediately start exploring the area in which they spawn. The player is given a few moments to get used to the controls before the first group of enemies spawn. This is the first wave; it will contain very few enemies that will be created some where in the game, out of the view of the player. The player must find and defeat all of these enemies before the next wave with new enemies starts. \\
 
 {\bf Victory conditions}: The player will achieve victory by defeating all of the enemies in each wave that is generated without dying. The game culminates with a boss fight, and defeating this boss will trigger victory menu and end the game.
 
@@ -320,14 +322,6 @@ The sequence diagram represented in Figure \ref{PlayerDeath}  corresponds to the
 \caption{UML Diagram} \label{UML}
 \end{figure}
 
-\subsection{State Diagram}
-Figure \ref{StateDia} describes the transitions between various scenes and menus in the game. Each state corresponds to either a Unity scene or a GUI child menu.
-
-\begin{figure} [H]
-\centering
-\includegraphics[width=7in]{PewPewStateDiagramFinal.png}
-\caption{State Diagram} \label{StateDia}
-\end{figure}
 
 \section{Gameplay Design} %GAMEPLAY DESIGN
 \label{sec:GPdesign}
@@ -360,7 +354,7 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 	{\bf Predictive Shooting:} Predictive shooting is a method of shooting used by the Boss and PlayerKiller. This method of aiming and shooting allows the two enemies to hit the player if the player continues to move in a straight line by aiming at where the player will be. Predictive shooting uses the current movement vector of the player, the projectile speed and its starting location to calculate the vector to shoot ahead of the player. The predictive shooting projectiles are much more difficult to dodge than Standard Shooting and requires the player to plan their movement ahead of time. \\
 
-	{\bf Patrolling:} In order to patrol the enemies will set their spawn point to ``home''. Each enemy has a maximum distance that they will still track the player from. Once the enemy is outside of this max distance, they will track to the ``home" point and patrol around it until the player comes back with in the max tracking distance. This is the main method for getting the enemies spaced back out around the map. \\
+
 
 	{\bf Enemy One (Purple Enemy):} The first type of enemy tracks directly toward the current location of the player, by constantly rotating toward the player and then applying forward thrust in the direction it is currently facing. It aims to maintain a small distance from the player to avoid colliding with them. This enemy type has a high probability of shooting at a fixed time interval, using standard shooting. \\
 
@@ -369,6 +363,8 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 	{\bf Enemy Two (Green Enemy):} The second type of enemy will follow the player more closely than the first type while also trying to get in front of the player as an obstacle to the players movement. To attempt to get in front of the player, the enemy uses the predictive shooting method to calculate a vector to intercept the player and then uses it as its movement vector. This enemy is still able to use standard shooting because it is always rotating toward the player even if it is moving in front of the player. Its projectiles do medium damage, firing less frequently than the first type. \\
 
 \begin{figure} [H]\centering  \includegraphics[width=1.5in]{GreenEnemy.png} \caption{Green Enemy} \label{EnemyTwo} \end{figure} 
+
+	{\bf Patrolling:} Once an enemy is far enough away from the player, they will begin to patrol instead of track the player, ``far enough” is a constant variable called max distance. In order to patrol, the enemies will store their initial location as ``home''. When the enemy is farther than max distance to the player they will switch from tracking the player to tracking ``home”. This will cause the enemy to return to their initial location in the level and circle around it until the player comes back within the max distance. This is the main method for keeping the enemies spaced out around the map, creating a consistent level of difficulty though out the level. \\
 
 	{\bf Boss:} The boss will give the player a final challenge before ultimately reaching the end of the game and winning. As seen in Figure \ref{BossImage} the boss is significantly larger than the player, this makes avoiding the boss much more challenging than avoiding other enemies. The boss will shoot large amounts of projectiles to make dodging difficult for the player. Additionally, the boss will have a predictive shooting projectile that will shoot periodically to increase the difficulty further. Finally, bosses will have a larger amount of health than the average enemy. Defeating a boss will end the game and display a win screen. \\
 
@@ -423,7 +419,13 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 \begin{figure} [H] \centering\includegraphics[width=3in] {HUDDiagram.png}\caption{Heads-Up Display} \label{HUDDia}\end{figure}
 
-	{\bf Menus:} Menus in the game consist of a selection of several buttons that the user can select with the cursor to navigate through different game states. The primary menu is the main menu, which allows the user to start the game, navigate to the controls menu, or exit the application. The controls menu gives a brief game discription and shows the controls, with an option to return to the main menu. Additionally, there is a pause screen that appears when the player pauses in game that shows a few different controls that can be used to resume or restart the game.
+	{\bf Menus:} Menus in the game consist of a selection of several buttons that the user can select with the cursor to navigate through different game states. The primary menu is the main menu, which allows the user to start the game, navigate to the controls menu, or exit the application. The controls menu gives a brief game discription and shows the controls, with an option to return to the main menu. Additionally, there is a pause screen that appears when the player pauses in game that shows a few different controls that can be used to resume or restart the game. The state diagram in Figure \ref{PewState} depicts these menus as they appear in the game as well as the connections between them. Each menu/state corresponds to either a distinct Unity scene or a GUI child menu. 
+
+\begin{figure} [H]
+\centering
+\includegraphics[width=6.7 in]{NewPewPewStateDiagramFinal.png}
+\caption{State Diagram Showing In Game Menus} \label{PewState}
+\end{figure}
 
 \subsection{Art} %Art
 
@@ -437,11 +439,11 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 \section{Implementation} %IMPLEMENTATION
 \label{sec:history}
-This section describes the completed work, current status, and future plans that are to be included to the project.
+This section describes the current status, as well as future work that could be incorprated into the project.
 
 \subsection{Current Status}
 
-In the current state of the project many of the functional goals have been accomplished. By the academic festival we aimed to have at least five different pick-ups, a loss condition, a boss with a corresponding win condition, and a single level. We have finished all of these goals and created a playable and winnable game. Additional features that have been added during development include a predictive shooting method, a follower, and independently rotating guns attached to the player and boss ships. Due to the lack of time, the game's level structure was modified from a multi-level adventure to wave-based gameplay in an arena.
+\hs In the current state of the project many of the functional goals have been accomplished. By the academic festival there were five different pick-ups, a loss condition, a boss with a corresponding win condition, and a single level complete will correct wave spawning. We reached all of the major goals and created a playable and winnable game. Additional features added during development include a predictive shooting method, a follower, and independently rotating guns attached to the player and boss ships. Due to the lack of time, the game's level structure was modified from a multi-level adventure to wave-based gameplay in an arena.
 
 \subsection{Future Work}
 Since our project is in a complete state, anything added would be to expand or enhance the game. That being said, if we had more time to work on this game there are a few things that we could work on:
@@ -519,16 +521,14 @@ Since our project is in a complete state, anything added would be to expand or e
 {\bf HUD} - Heads Up Display, the in game area of the screen that displays player statistics like health or ammo left. \\
 {\bf Level} - A collection of similarly challenging fields of play culminating in a boss. \\
 {\bf NPC} - Non Player Characters, e.g., any enemies or passive characters that act in the game that are not controlled by the player. \\
-{\bf Parallax} - The effect whereby the position or direction of an object appears to differ when viewed from different positions, e.g., elements far from the camera appear to move more slowly than foreground elements. \\
 {\bf Prefab} - A function supported by Unity that allows for predefined object specification and quick entity instantiation. \\
-{\bf Ramming} - When one entity attacks another through direct collision. \\
 {\bf Roguelike Game} - A game that is distinct because of two important characteristics:
 Has highly randomized gameplay with a large amount of replayability. 
 Permanent death, meaning if the main protagonist dies, the game ends and the player must restart from the beginning. \\
 {\bf Sprite} - The image that represents entities in the game. \\
 {\bf Unity} - The primary game engine we will be using. \\
 {\bf Unity3D} - The software kit used to develop games in Unity. \\
-{\bf Usable Items} - Items the player can use by pressing the use item key. \\
+
 
 
 
