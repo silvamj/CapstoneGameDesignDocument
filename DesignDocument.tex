@@ -38,7 +38,7 @@
 
 {\large \textsc{Faculty Mentor: Dr. Jorge Reyes Silveyra}}\par 
 
-{\large \textsc{May 15th 2015}}\par
+{\large \textsc{May 27th 2015}}\par
 
 \vspace*{\drop} % Whitespace under the publisher text
 
@@ -89,22 +89,22 @@
 
 	While developing unique and challenging non-player entities it is crucial to have artificial intelligence (AI). Without AI entities quickly become predictable and non- threatening, even simple enemy AI can make improvements to a game. One of the first steps in creating a basic AI is choosing a method of path finding, so that the enemy can intentionally find the player. An example of a basic but effective path finding algorithm is A*. Amit Patel defines A* as a combination of Dijkstra’s Algorithm and the Best-First-Search Algorithm. A* searches all vertices by favoring the ones in the direction of the goal, this helps it be more efficient like Best First Search but avoid obstacles more like Dijkstra’s. \cite{A} Since this game will not have very many stationary objects specifically there will not be any walls, it is not as necessary to use a path finding algorithms. If the enemy AI calculates a straight path to the player, the path will almost always be clear of obstacles.  The second major part of enemy AI is shooting, this adds another level of difficulty to the enemy. These two components give the enemy enough instructions to be able to find and kill the player. \\
 
-	Finally, procedurally generated content will be used in order to build satisfying and challenging areas for the player. Procedural content generation is the process of designing an algorithm that can generate content at runtime. This fits in well with this project. With a relatively small number of inputs, the game can generate numerous different levels where the enemies encountered are found in different combinations. It also embodies the core idea of a roguelike game, changing the game every playthrough to challenge the player differently. There are a multitude of content generation algorithms, one of the common ones being Perlin noise, which actually refers to two algorithms created by Ken Perlin. These algorithms use a sum of different functions with varying amplitudes and frequencies in order to generate what is called a noise function. It is this function that is used to define different points of intensity. As it pertains to this project, these functions could be used to generate nebulae or star maps, giving a different visual experience to our player every time. \cite{PCG}
+	Finally, procedurally generated content can be used in order to build satisfying and challenging areas for the player. Procedural content generation is the process of designing an algorithm that can generate content at runtime. This fits in well with this project. With a relatively small number of inputs, the game can generate numerous different levels where the enemies encountered are found in different combinations. It also embodies the core idea of a roguelike game, changing the game every playthrough to challenge the player differently. There are a multitude of content generation algorithms, one of the common ones being Perlin noise, which actually refers to two algorithms created by Ken Perlin. These algorithms use a sum of different functions with varying amplitudes and frequencies in order to generate what is called a noise function. It is this function that is used to define different points of intensity. As it pertains to this project, these functions could be used to generate nebulae or star maps, giving a different visual experience to our player every time. \cite{PCG} 
 
 \subsection{Basic Unity Features} % Need to talk about prefabs and other Unity functionality: Layer, Camera, Scene, Hierarchy, Prefab
 
-The Unity development platform contains a number of useful tools that a developer can use during the game creation process. The main view is shown in Figure \ref{Unity} below.
+The Unity development platform contains a number of useful tools that a developer can use during the game creation process. The main view is shown in Figure \ref{Unity}.
 
 \begin{figure} [H]
 \centering
 \includegraphics[width=7in]{scene.png}
 \caption{Unity Editor} \label{Unity}
 \end{figure}
-Some of the components found in this view include:
+\hspace{-20pt} Some of the components found in this view include:
 
-\hs {\bf Scene:} The scene view, labelled with the number 1 in Figure \ref{Unity}, shows where all of the Unity objects are inside the current scene. Scenes are independent from each other and moving from one scene to another loads an entirely new level with new scripts, objects, etc.\\
+{\bf Scene:} The scene view, labelled with the number 1 in Figure \ref{Unity}, shows the current scene and where all of the Unity objects are located inside that scene. Scenes are independent from each other and moving from one scene to another loads an entirely new level with new scripts, objects, etc.\\
 
-{\bf Hierarchy:} The object hierarchy, labelled with the number 2 in Figure \ref{Unity}, shows how the game objects are laid out inside the current scene. Game objects use a parent/child relationship as defined in the object hierarchy.\\
+{\bf Hierarchy:} The object hierarchy, labelled with the number 2 in Figure \ref{Unity}, lists all of the game objects currently in the scene. It also shows how the game objects are laid out inside the current scene. Game objects use a parent/child relationship as defined in the object hierarchy.\\
 
 {\bf Camera:} A camera in Unity renders the objects positioned in front of itself to the screen. Multiple cameras can be used to display different views of the scene. Cameras can be adjusted in the scene view of the editor.\\
 
@@ -128,15 +128,6 @@ Some of the components found in this view include:
 
 \hs The following use cases and diagrams describe how the game has been implemented in the Unity game engine. While Unity is set up to handle the View portion and some of the Controller portion of the MVC architecture, we had to supply part of the Controller and the Model portion in order to deliver our game.
 
-\newpage
-\subsection{Use Case Model}
-Figure \ref{Use Case Model} shows which external actors participate in each of the Use Case Scenarios included.
-
-\begin{figure} [H]
-\centering
-\includegraphics[width=5.5in]{UseCaseModel1.png}
-\caption{Use Case Model} \label{Use Case Model}
-\end{figure}
 
 \subsection{Use Case Scenarios} 
 %%%
@@ -222,7 +213,7 @@ Flow of Events:
 \end{enumerate}
 
 %%%
-\begin{center} \line(1,0){350} \end{center}
+\begin{center} \line(1,0){350} \end{center} \newpage
 Scenario Name: {\bf SpawnAsteroids} \\
 Participating Actor Instances:        \hspace{46pt} {\bf Enemy: EnemyEntity
 
@@ -270,7 +261,7 @@ Flow of Events:
 \end{enumerate}
 
 %%%
-\begin{center} \line(1,0){350} \end{center}
+\begin{center} \line(1,0){350} \end{center} \newpage
 Scenario Name: {\bf SpawnPickUp} \\
 Participating Actor Instances:        \hspace{46pt} {\bf Player: PlayerEntity
 	
@@ -304,8 +295,8 @@ Flow of Events:
 \end{enumerate}
 
 
-\section{Design} %DESIGN
-\label{sec:Design}
+%\section{Design} %DESIGN
+%\label{sec:Design}
 
 \subsection{Sequence Diagram}
 The sequence diagram represented in Figure \ref{PlayerDeath}  corresponds to the use case PlayerDeath, and outlines the process behind the player being hit with a projectile to a death state, followed by the appropriate response by the {\it GameController}. Health will only be subtracted if the player has no remaining shield. If the player no longer has any health or shields after taking damage, then the {\it Player} object will report its death to the {\it GameController}. Sequence diagrams for other use cases are functionally similar, albeit with a few differing actors and method calls.
@@ -349,15 +340,11 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 \subsection{Enemies} %Enemies
 
-\hs The main objective of the enemy ships is to find and kill the player ship. They will have two main types of AI that will decrease the predictability of enemies. Other than just posing a threat to the player, an important function of the enemies AI is encouraging the player to always be moving, this is accomplished by having the enemies spaced out around the map at all times. 
-
-\hs Enemy shooting patterns are different based on the enemy type to encourage variety, so methods of shooting have been broken down into two types, Standard Shooting and Predictive Shooting, detailed below.\\
+\hs The main objective of the enemy ships is to find and kill the player ship. They will have two main types of AI that will decrease their predictability. Other than just posing a threat to the player, an important function of the enemies AI is encouraging the player to always be moving, this is accomplished by having the enemies spaced out around the map at all times. Enemy shooting patterns are different based on the enemy type to encourage variety, so methods of shooting have been broken down into two types, Standard Shooting and Predictive Shooting, detailed below.\\
 
 	{\bf Standard Shooting:} Standard shooting is when the enemy’s shooting vector is set to be the same as the enemy’s movement vector. This makes it so that the enemies shoot straight in front of them. The two main enemies, both of which are always rotating towards the player, use this method, meaning they will usually be shooting in the direction of the player.  The shots tend to be inaccurate because the player is always moving, however if the enemies had higher accuracy the game could become to difficult. \\
 
 	{\bf Predictive Shooting:} Predictive shooting is a method of shooting used by the Boss and PlayerKiller. This method of aiming and shooting allows the two enemies to hit the player if the player continues to move in a straight line by aiming at where the player will be. Predictive shooting uses the current movement vector of the player, the projectile speed and its starting location to calculate the vector to shoot ahead of the player. The predictive shooting projectiles are much more difficult to dodge than Standard Shooting and requires the player to plan their movement ahead of time. \\
-
-
 
 	{\bf Enemy One (Purple Enemy):} The first type of enemy tracks directly toward the current location of the player, by constantly rotating toward the player and then applying forward thrust in the direction it is currently facing. It aims to maintain a small distance from the player to avoid colliding with them. This enemy type has a high probability of shooting at a fixed time interval, using standard shooting. \\
 
@@ -388,13 +375,13 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 \subsection{Levels} %levels
 
-	\hs {\bf Level design:} The level consists of a circular arena. There is a circular border around the playing field that the player will be shot at if crossed. Enemies spawn in waves inside the arena but outside the player's view. Asteroids spawn in and around the arena. As the player destroys waves of enemies, new waves consisting of more enemies will spawn. After completing a set number of waves, the boss will spawn in the arena. \\
+	\hs {\bf Level design:} The level consists of a circular arena or playing field.There is a border around the playing field, represented by a thick blue circle. If the player crosses this border they will be shot, this can be seen in the {\bf LeavingFieldOfPlay} use case. Enemies spawn in waves inside the playing field but outside the player's view. Asteroids spawn in and around the arena. As the player destroys waves of enemies, new waves consisting of more enemies will spawn. After completing a set number of waves, the boss will spawn in the arena. \\
 
 	{\bf Star Field and Background:} The background will be a two dimensional tile that can be replicated across the screen to create a smooth, endless field of stars. The star field layered on top of the background image is particle effect conisting of small drifting particles that will move across the screen. The multilayering will add a three-dimensionality to the background and keep the background from being static. 
 
 \subsection{Objects} %objects
 
-	\hs {\bf Pick-ups:}  There will be pick-ups available to the player throughout the game, dropping from enemies. Most pick-ups will change some attribute of the player ship, such as giving the player an alternative weapon, a temporary speed increase, or restoring the player's health. Additionally, there is another pickup that will spawn a follower ship that will follow the player ship around that map and shoot at nearby enemies. Some pick ups will be displayed in part of the UI (Section 5.5), such as the speed boost meter. \\
+	\hs {\bf Pick-ups:}  There will be pick-ups available to the player throughout the game, dropping from enemies. Most pick-ups will change some attribute of the player ship, such as giving the player an alternative weapon, a temporary speed increase, or restoring the player's health. Additionally, there is another pickup that will spawn a follower ship that will follow the player ship around that map and shoot at nearby enemies. Some pick ups will be displayed in part of the user interface, such as the speed boost meter. \\
 
 	{\bf  Items:} Items are intended to either provide a permanent boost to the player attributes (such as speed or maximum health), or add an effect that the player can activate by pressing a button, such as a time bomb that would slow down enemies and asteroids when activated, making them easier to dodge. There are currently no items implemented in the game, but could be included in the future. \\
 
