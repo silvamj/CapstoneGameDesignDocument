@@ -2,11 +2,13 @@
 \contentsline {figure}{\numberline {2}{\ignorespaces Player Death Sequence Diagram}}{9}
 \contentsline {figure}{\numberline {3}{\ignorespaces UML Diagram}}{10}
 \contentsline {figure}{\numberline {4}{\ignorespaces Controls Diagram}}{11}
-\contentsline {figure}{\numberline {5}{\ignorespaces Purple Enemy}}{13}
-\contentsline {figure}{\numberline {6}{\ignorespaces Green Enemy}}{13}
-\contentsline {figure}{\numberline {7}{\ignorespaces Boss Enemy}}{14}
-\contentsline {figure}{\numberline {8}{\ignorespaces Weapon Stats}}{15}
-\contentsline {figure}{\numberline {9}{\ignorespaces Initial Implementation}}{16}
-\contentsline {figure}{\numberline {10}{\ignorespaces Current Implementation}}{17}
-\contentsline {figure}{\numberline {11}{\ignorespaces Heads-Up Display}}{17}
-\contentsline {figure}{\numberline {12}{\ignorespaces State Diagram Showing In Game Menus}}{18}
+\contentsline {figure}{\numberline {5}{\ignorespaces Standard Shooting}}{13}
+\contentsline {figure}{\numberline {6}{\ignorespaces Predictive Shooting}}{14}
+\contentsline {figure}{\numberline {7}{\ignorespaces Purple Enemy}}{15}
+\contentsline {figure}{\numberline {8}{\ignorespaces Green Enemy}}{15}
+\contentsline {figure}{\numberline {9}{\ignorespaces Boss Enemy}}{16}
+\contentsline {figure}{\numberline {10}{\ignorespaces Weapon Stats}}{16}
+\contentsline {figure}{\numberline {11}{\ignorespaces Initial Implementation}}{18}
+\contentsline {figure}{\numberline {12}{\ignorespaces Current Implementation}}{19}
+\contentsline {figure}{\numberline {13}{\ignorespaces Heads-Up Display}}{19}
+\contentsline {figure}{\numberline {14}{\ignorespaces State Diagram Showing In Game Menus}}{20}

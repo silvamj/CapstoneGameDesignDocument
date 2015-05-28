@@ -9,12 +9,12 @@
 \contentsline {section}{\numberline {4}Gameplay Design}{10}
 \contentsline {subsection}{\numberline {4.1}Player}{10}
 \contentsline {subsection}{\numberline {4.2}Enemies}{12}
-\contentsline {subsection}{\numberline {4.3}Weapons}{14}
-\contentsline {subsection}{\numberline {4.4}Levels}{15}
-\contentsline {subsection}{\numberline {4.5}Objects}{15}
-\contentsline {subsection}{\numberline {4.6}User Interface}{16}
-\contentsline {subsection}{\numberline {4.7}Art}{18}
-\contentsline {section}{\numberline {5}Implementation}{19}
-\contentsline {subsection}{\numberline {5.1}Current Status}{19}
-\contentsline {subsection}{\numberline {5.2}Future Work}{19}
-\contentsline {section}{\numberline {6}Glossary}{22}
+\contentsline {subsection}{\numberline {4.3}Weapons}{16}
+\contentsline {subsection}{\numberline {4.4}Levels}{17}
+\contentsline {subsection}{\numberline {4.5}Objects}{17}
+\contentsline {subsection}{\numberline {4.6}User Interface}{17}
+\contentsline {subsection}{\numberline {4.7}Art}{20}
+\contentsline {section}{\numberline {5}Implementation}{21}
+\contentsline {subsection}{\numberline {5.1}Current Status}{21}
+\contentsline {subsection}{\numberline {5.2}Future Work}{21}
+\contentsline {section}{\numberline {6}Glossary}{24}
