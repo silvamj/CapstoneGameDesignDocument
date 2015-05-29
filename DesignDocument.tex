@@ -379,14 +379,30 @@ Games are dynamic pieces of software that focus on delivering exciting experienc
 
 \subsection{Weapons} %Weapons
 
-	{\bf Weapons:} Weapons are implemented through the Unity prefab system. By default, the player is given a low-damage, high rate-of-fire red laser weapon that they can change by finding a weapon pickup which drops off enemies. Once the player makes contact with the pickup, their current weapon is destroyed and the new weapon is loaded for the player. All non-default weapons have a limited amount of ammunition, and once their ammo is depleted, the weapon is destroyed and replaced with the default weapon. A table showing off the various variables of the weapons can be found below in Figure \ref{stats}.
+	{\bf Weapons:} Weapons are implemented through the Unity prefab system. By default, the player is given a low-damage, high rate-of-fire red laser weapon that they can change by finding a weapon pickup which drops off enemies. Once the player makes contact with the pickup, their current weapon is destroyed and the new weapon is loaded for the player. All non-default weapons have a limited amount of ammunition, and once their ammo is depleted, the weapon is destroyed and replaced with the default weapon. A table showing off the various variables of the weapons can be found below in Table \ref{table:Weapon}.
 
-\begin{figure} [H]
-\includegraphics[width=6in]{stats.png}
+
+{\begin{table}[ht]
+\caption{Weapon Statistics}
 \centering
-\caption{Weapon Stats} \label{stats}
-\end{figure}
+\begin{tabular}{c c c c c c c c}
+\hline\hline
+Weapon & Damage & Icon(UI) & Shots & Shots/Sec. & Deviation & DestroyOnHit & Ammo  \\ [0.5ex] 
+\hline
+\vspace{5pt}
+Default & 10 & N/A & 1 & 10  & 0 & True & $\infty$ \\
+\vspace{5pt}
+Shotgun & 10 & \includegraphics[width=1cm]{OrangeTri.png} & 5 & 10  & 40(fixed) & True & 50 \\
+\vspace{5pt}
+Pulse Gun & 250 & \includegraphics[width=1cm]{GreenR.png} & 70 & 0.5  & 100(fixed) & False & 10 \\
+\vspace{5pt}
+Minigun & 5 & \includegraphics[width=1cm]{SilverBullet.png} & 1 & 50  & 30(random) & True & 400 \\ [1ex]
+\hline
+\end{tabular}
+\label{table:Weapon}
+\end{table}
 
+\newpage
 \subsection{Levels} %levels
 
 	\hs {\bf Level design:} The level consists of a circular arena or playing field.There is a border around the playing field, represented by a thick blue circle. If the player crosses this border they will be shot, this can be seen in the {\bf LeavingFieldOfPlay} use case in Section \ref{UseCaseScen}. Enemies spawn in waves inside the playing field but outside the player's view. Asteroids spawn in and around the arena. As the player destroys waves of enemies, new waves consisting of more enemies will spawn. After completing a set number of waves, the boss will spawn in the arena. \\
@@ -395,9 +411,29 @@ Games are dynamic pieces of software that focus on delivering exciting experienc
 
 \subsection{Objects} %objects
 
-	\hs {\bf Pick-ups:}  There will be pick-ups available to the player throughout the game, dropping from enemies. Most pick-ups will change some attribute of the player ship, such as giving the player an alternative weapon, a temporary speed increase, or restoring the player's health. Additionally, there is another pickup that will spawn a follower ship that will follow the player ship around that map and shoot at nearby enemies. Some pick ups will be displayed in part of the user interface, such as the speed boost meter. \\
+	\hs {\bf Pick-ups:}  There will be pick-ups available to the player throughout the game, dropping from enemies. Most pick-ups will change some attribute of the player ship, such as giving the player an alternative weapon, a temporary speed increase, or restoring the player's health. Additionally, there is another pickup that will spawn a follower ship that will follow the player ship around that map and shoot at nearby enemies. Some pick ups will be displayed in part of the user interface, such as the speed boost meter. This info can be seen in Table \ref{table:PickUp}\\
 
-	{\bf  Items:} Items are intended to either provide a permanent boost to the player attributes (such as speed or maximum health), or add an effect that the player can activate by pressing a button, such as a time bomb that would slow down enemies and asteroids when activated, making them easier to dodge. There are currently no items implemented in the game, but could be included in the future. \\
+{\begin{table}[ht]
+\caption{Pick-Up Statistics}
+\centering
+\begin{tabular}{c c c c c}
+\hline\hline
+Pick-Up & Icon & Duration & Displayed in UI & Icon(UI/Game) \\ [0.5ex] 
+\hline
+\vspace{5pt}
+Speed Boost & \includegraphics[width=1cm]{TSpeedBoost.png} & 20 seconds & Yes & \includegraphics[width=1cm]{DoubleArrow.png}\\
+\vspace{5pt}
+Weapons & \includegraphics[width=1cm]{Tweapon1.png}  \includegraphics[width=1cm]{Tweapon2.png}  \includegraphics[width=1cm]{Tweapon3.png} & See Table \ref{table:Weapon} & See Table \ref{table:Weapon} & See Table \ref{table:Weapon}\\
+\vspace{5pt}
+Follower & \includegraphics[width=1cm]{PickIconFollower.png} & $\infty$ & No &  \includegraphics[width=1cm]{Follower4Table.png}\\
+\vspace{5pt}
+Health Boost & \includegraphics[width=1cm]{THealthBoost.png} & Instant +50 HP & No & N/A\\ [1ex]
+\hline
+\end{tabular}
+\label{table:PickUp}
+\end{table}
+
+	\newpage {\bf  Items:} Items are intended to either provide a permanent boost to the player attributes (such as speed or maximum health), or add an effect that the player can activate by pressing a button, such as a time bomb that would slow down enemies and asteroids when activated, making them easier to dodge. There are currently no items implemented in the game, but could be included in the future. \\
 
 	{\bf Asteroids:}  Asteroids will be obstacles that will fly across the screen, dealing damage to anything they collide with. This forces players to be more aware of their surroundings or risk dying and gives them another danger they must avoid. Asteroids have no set allegiance and can collide with each other and enemy ships. Asteroids will spawn in random locations outside the player view with a random initial velocity and direction. Asteroids will travel until they either collide with a ship, get shot by the player, or travel outside of the level boundaries.
 
@@ -427,7 +463,7 @@ Games are dynamic pieces of software that focus on delivering exciting experienc
 
 \begin{figure} [H]
 \centering
-\includegraphics[width=6.7 in]{NewPewPewStateDiagramFinal.png}
+\includegraphics[width=6.3 in]{NewPewPewStateDiagramFinal.png}
 \caption{State Diagram Showing In Game Menus} \label{PewState}
 \end{figure}
 

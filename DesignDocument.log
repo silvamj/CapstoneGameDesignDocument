@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  29 MAY 2015 11:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  29 MAY 2015 12:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -512,178 +512,242 @@ File: BossShooting.png Graphic file (type png)
 Package pdftex.def Info: BossShooting.png used on input line 375.
 (pdftex.def)             Requested size: 289.07999pt x 163.06795pt.
 
-<stats.png, id=80, 608.2725pt x 77.53969pt>
-File: stats.png Graphic file (type png)
- <use stats.png>
-Package pdftex.def Info: stats.png used on input line 385.
-(pdftex.def)             Requested size: 433.62pt x 55.27716pt.
+<OrangeTri.png, id=80, 75.28125pt x 66.2475pt>
+File: OrangeTri.png Graphic file (type png)
+ <use OrangeTri.png>
+Package pdftex.def Info: OrangeTri.png used on input line 395.
+(pdftex.def)             Requested size: 28.45274pt x 25.03885pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 392--393
+<GreenR.png, id=81, 68.255pt x 67.25125pt>
+File: GreenR.png Graphic file (type png)
+ <use GreenR.png>
+Package pdftex.def Info: GreenR.png used on input line 397.
+(pdftex.def)             Requested size: 28.45274pt x 28.03392pt.
 
- []
+<SilverBullet.png, id=82, 64.24pt x 62.2325pt>
+File: SilverBullet.png Graphic file (type png)
+ <use SilverBullet.png>
+Package pdftex.def Info: SilverBullet.png used on input line 399.
+(pdftex.def)             Requested size: 28.45274pt x 27.56375pt.
 
-[16 <./BossShooting.png> <./stats.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 398--399
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 400--401
-
- []
-
-[17] <minimapExample1.png, id=89, 262.73157pt x 144.54pt>
-File: minimapExample1.png Graphic file (type png)
-
-<use minimapExample1.png>
-Package pdftex.def Info: minimapExample1.png used on input line 410.
-(pdftex.def)             Requested size: 325.215pt x 178.92116pt.
- <radarExample2.png, id=90, 115.93312pt x 114.4275pt>
-File: radarExample2.png Graphic file (type png)
-
-<use radarExample2.png>
-Package pdftex.def Info: radarExample2.png used on input line 418.
-(pdftex.def)             Requested size: 144.54pt x 142.67607pt.
- [18 <./minimapExample1.png>]
-<HUDDiagram.png, id=94, 261.97874pt x 161.85469pt>
-File: HUDDiagram.png Graphic file (type png)
- <use HUDDiagram.png>
-Package pdftex.def Info: HUDDiagram.png used on input line 424.
-(pdftex.def)             Requested size: 216.81pt x 133.9516pt.
-
-<NewPewPewStateDiagramFinal.png, id=95, 578.16pt x 289.08pt>
-File: NewPewPewStateDiagramFinal.png Graphic file (type png)
-
-<use NewPewPewStateDiagramFinal.png>
-Package pdftex.def Info: NewPewPewStateDiagramFinal.png used on input line 430.
-
-(pdftex.def)             Requested size: 484.20877pt x 242.10213pt.
-
-Overfull \hbox (14.45378pt too wide) in paragraph at lines 430--431
+Overfull \hbox (18.38542pt too wide) in paragraph at lines 388--403
  [][] 
  []
 
-[19 <./radarExample2.png> <./HUDDiagram.png>]
+[16 <./BossShooting.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 408--409
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
+
+ []
+
+<TSpeedBoost.png, id=88, 73.27374pt x 75.28125pt>
+File: TSpeedBoost.png Graphic file (type png)
+ <use TSpeedBoost.png>
+Package pdftex.def Info: TSpeedBoost.png used on input line 424.
+(pdftex.def)             Requested size: 28.45274pt x 29.23206pt.
+
+<DoubleArrow.png, id=89, 39.14626pt x 34.1275pt>
+File: DoubleArrow.png Graphic file (type png)
+ <use DoubleArrow.png>
+Package pdftex.def Info: DoubleArrow.png used on input line 424.
+(pdftex.def)             Requested size: 28.45274pt x 24.80557pt.
+
+<Tweapon1.png, id=90, 70.2625pt x 73.27374pt>
+File: Tweapon1.png Graphic file (type png)
+ <use Tweapon1.png>
+Package pdftex.def Info: Tweapon1.png used on input line 426.
+(pdftex.def)             Requested size: 28.45274pt x 29.67233pt.
+
+<Tweapon2.png, id=91, 66.2475pt x 79.29625pt>
+File: Tweapon2.png Graphic file (type png)
+ <use Tweapon2.png>
+Package pdftex.def Info: Tweapon2.png used on input line 426.
+(pdftex.def)             Requested size: 28.45274pt x 34.05678pt.
+
+<Tweapon3.png, id=92, 66.2475pt x 76.285pt>
+File: Tweapon3.png Graphic file (type png)
+ <use Tweapon3.png>
+Package pdftex.def Info: Tweapon3.png used on input line 426.
+(pdftex.def)             Requested size: 28.45274pt x 32.76349pt.
+
+<PickIconFollower.png, id=93, 72.27pt x 73.27374pt>
+File: PickIconFollower.png Graphic file (type png)
+ <use PickIconFollower.png>
+Package pdftex.def Info: PickIconFollower.png used on input line 428.
+(pdftex.def)             Requested size: 28.45274pt x 28.8472pt.
+
+<Follower4Table.png, id=94, 42.1575pt x 53.19875pt>
+File: Follower4Table.png Graphic file (type png)
+ <use Follower4Table.png>
+Package pdftex.def Info: Follower4Table.png used on input line 428.
+(pdftex.def)             Requested size: 28.45274pt x 35.90515pt.
+
+<THealthBoost.png, id=95, 70.2625pt x 76.285pt>
+File: THealthBoost.png Graphic file (type png)
+ <use THealthBoost.png>
+Package pdftex.def Info: THealthBoost.png used on input line 430.
+(pdftex.def)             Requested size: 28.45274pt x 30.89175pt.
+ [17 <./OrangeTri.png> <./GreenR.png> <./SilverBullet.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 436--437
 
  []
 
+<minimapExample1.png, id=99, 262.73157pt x 144.54pt>
+File: minimapExample1.png Graphic file (type png)
+ <use minimapExample1.png>
+Package pdftex.def Info: minimapExample1.png used on input line 446.
+(pdftex.def)             Requested size: 325.215pt x 178.92116pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 438--439
+[18 <./TSpeedBoost.png> <./DoubleArrow.png> <./Tweapon1.png> <./Tweapon2.png> <
+./Tweapon3.png> <./PickIconFollower.png> <./Follower4Table.png> <./THealthBoost
+.png>] <radarExample2.png, id=103, 115.93312pt x 114.4275pt>
+File: radarExample2.png Graphic file (type png)
+
+<use radarExample2.png>
+Package pdftex.def Info: radarExample2.png used on input line 454.
+(pdftex.def)             Requested size: 144.54pt x 142.67607pt.
+ <HUDDiagram.png, id=104, 261.97874pt x 161.85469pt>
+File: HUDDiagram.png Graphic file (type png)
+
+<use HUDDiagram.png>
+Package pdftex.def Info: HUDDiagram.png used on input line 460.
+(pdftex.def)             Requested size: 216.81pt x 133.9516pt.
+ [19 <./minimapExample1.png> <./radarExample2.png>]
+<NewPewPewStateDiagramFinal.png, id=108, 578.16pt x 289.08pt>
+File: NewPewPewStateDiagramFinal.png Graphic file (type png)
+
+<use NewPewPewStateDiagramFinal.png>
+Package pdftex.def Info: NewPewPewStateDiagramFinal.png used on input line 466.
+
+(pdftex.def)             Requested size: 455.30121pt x 227.64728pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 472--473
 
  []
 
-[20 <./NewPewPewStateDiagramFinal.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 455.
+[20 <./HUDDiagram.png> <./NewPewPewStateDiagramFinal.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 474--475
 
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 491.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 455.
- [21]
-Underfull \hbox (badness 10000) in paragraph at lines 470--471
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 491.
+ [21] [22]
+Underfull \hbox (badness 10000) in paragraph at lines 506--507
 []\OT1/cmr/m/n/12 Aleksandr. Doc-u-men-ta-tion Unity Script-ing Lan-guages and 
 You.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 470--471
+Underfull \hbox (badness 10000) in paragraph at lines 506--507
 \OT1/cmr/m/n/12 Septem-ber 3, 2014. Re-trieved May 22, 2015 from Unity:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 470--471
+Underfull \hbox (badness 10000) in paragraph at lines 506--507
 \OT1/cmr/m/n/12 http://blogs.unity3d.com/2014/09/03/documentation-unity-scripti
 ng-languages-
  []
 
 
-Underfull \hbox (badness 7291) in paragraph at lines 472--473
+Underfull \hbox (badness 7291) in paragraph at lines 508--509
 []\OT1/cmr/m/n/12 Ringo, D. His-tory of Gam-ing: A Look at How It All Be-gan. P
 ub-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 472--473
+Underfull \hbox (badness 10000) in paragraph at lines 508--509
 \OT1/cmr/m/n/12 lic Brod-cast-ing Ser-vice, n.d. Re-trieved Oc-to-ber 20, 2014,
  from PBS:
  []
 
 
-Underfull \hbox (badness 2512) in paragraph at lines 474--475
+Underfull \hbox (badness 2512) in paragraph at lines 510--511
 []\OT1/cmr/m/n/12 Tutorials. Unity Tech-nolo-gies, n.d. Re-trieved Oc-to-ber 15
 , 2014, from Unity:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 482--483
+Underfull \hbox (badness 10000) in paragraph at lines 518--519
 []\OT1/cmr/m/n/12 Procedural Con-tent Gen-er-a-tion Wiki. Re-trieved De-cem-ber
  4, 2014 from:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 486--487
+Underfull \hbox (badness 10000) in paragraph at lines 522--523
 []\OT1/cmr/m/n/12 Elias, H. Per-lin Noise. Re-trieved De-cem-ber 6, 2014 from:
  []
 
 
-Underfull \hbox (badness 5924) in paragraph at lines 488--489
+Underfull \hbox (badness 5924) in paragraph at lines 524--525
 []\OT1/cmr/m/n/12 Moles, S. How Does Unity Use $\OML/cmm/m/it/12 C\OT1/cmr/m/n/
 12 #$ as a Script-ing Lan-guage? N.p.,
  []
 
 
-Underfull \hbox (badness 7685) in paragraph at lines 488--489
+Underfull \hbox (badness 7685) in paragraph at lines 524--525
 \OT1/cmr/m/n/12 n.d. Re-trived: Novem-ber 13, 2014 from Game De-vel-op-ment Sta
 ck Ex-
  []
 
 
-Underfull \hbox (badness 3769) in paragraph at lines 492--494
+Underfull \hbox (badness 3769) in paragraph at lines 528--530
 []\OT1/cmr/m/n/12 Stevens, P. and Ten-zer J. GUIDE: Games with UML for In-ter-a
 c-tive De-
  []
 
 
-Underfull \hbox (badness 5288) in paragraph at lines 492--494
+Underfull \hbox (badness 5288) in paragraph at lines 528--530
 \OT1/cmr/m/n/12 sign Ex-plo-ration.  \OT1/cmr/m/it/12 Lab-o-ra-tory for Foun-da
 -tions of Com-puter Sci-ence School
  []
 
 
-Underfull \hbox (badness 3930) in paragraph at lines 492--494
+Underfull \hbox (badness 3930) in paragraph at lines 528--530
 \OT1/cmr/m/it/12 of In-for-mat-ics\OT1/cmr/m/n/12 . Re-trived Novem-ber 16, 201
 4 from Uni-ver-sity of Ed-in-burgh:
  []
 
-[22] [23]
-Underfull \hbox (badness 10000) in paragraph at lines 509--524
+[23] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 545--560
 
  []
 
-[24] (./DesignDocument.aux) ) 
+[25] (./DesignDocument.aux) )
+(\end occurred inside a group at level 2)
+
+### simple group (level 2) entered at line 416 ({)
+### simple group (level 1) entered at line 385 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 3798 strings out of 493315
- 48683 string characters out of 6137904
- 122011 words of memory out of 5000000
- 7164 multiletter control sequences out of 15000+600000
+ 3851 strings out of 493315
+ 49664 string characters out of 6137904
+ 124019 words of memory out of 5000000
+ 7207 multiletter control sequences out of 15000+600000
  11157 words of font info for 42 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 37i,6n,43p,1379b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmti12.pfb>
-Output written on DesignDocument.pdf (27 pages, 3283362 bytes).
+ 37i,12n,43p,1379b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmcsc10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+i12.pfb>
+Output written on DesignDocument.pdf (28 pages, 3330708 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
+ 154 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

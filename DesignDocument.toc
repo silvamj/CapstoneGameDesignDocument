@@ -12,9 +12,9 @@
 \contentsline {subsection}{\numberline {4.3}Weapons}{16}
 \contentsline {subsection}{\numberline {4.4}Levels}{17}
 \contentsline {subsection}{\numberline {4.5}Objects}{17}
-\contentsline {subsection}{\numberline {4.6}User Interface}{17}
-\contentsline {subsection}{\numberline {4.7}Art}{20}
+\contentsline {subsection}{\numberline {4.6}User Interface}{18}
+\contentsline {subsection}{\numberline {4.7}Art}{21}
 \contentsline {section}{\numberline {5}Implementation}{21}
 \contentsline {subsection}{\numberline {5.1}Current Status}{21}
 \contentsline {subsection}{\numberline {5.2}Future Work}{21}
-\contentsline {section}{\numberline {6}Glossary}{24}
+\contentsline {section}{\numberline {6}Glossary}{25}
