@@ -87,9 +87,9 @@
 
 	Our game strives to follow the principles set out by previous roguelike games. The term roguelike is a broad term used to describe video games that use random elements to create a replayable game that restarts the player on each subsequent playthrough. The original game that spawned this categorization was the game Rogue. Rogue was programmed at UC Santa Cruz in the 1980’s, using ASCII characters to take players on an adventure through a subterranean dungeon for the Amulet of Yendor. Once the game was released to others outside the developer, it spread rapidly throughout the college and the surrounding communities. Rogue inspired many other hits in the video game industry, including Diablo II, Faster Than Light, and The Binding of Isaac. \cite{Rogue} \\
 
-	While developing unique and challenging non-player entities it is crucial to have artificial intelligence (AI). Without AI entities quickly become predictable and non- threatening, even simple enemy AI can make improvements to a game. One of the first steps in creating a basic AI is choosing a method of path finding, so that the enemy can intentionally find the player. An example of a basic but effective path finding algorithm is A*. Amit Patel defines A* as a combination of Dijkstra’s Algorithm and the Best-First-Search Algorithm. A* searches all vertices by favoring the ones in the direction of the goal, this helps it be more efficient like Best First Search but avoid obstacles more like Dijkstra’s. \cite{A} Since this game will not have very many stationary objects specifically there will not be any walls, it is not as necessary to use a path finding algorithms. If the enemy AI calculates a straight path to the player, the path will almost always be clear of obstacles.  The second major part of enemy AI is shooting, this adds another level of difficulty to the enemy. These two components give the enemy enough instructions to be able to find and kill the player. \\
+	While developing unique and challenging non-player entities it is crucial to have artificial intelligence (AI). Without AI entities quickly become predictable and non- threatening, even simple enemy AI can make improvements to a game. One of the first steps in creating a basic AI is choosing a method of path finding, so that the enemy can intentionally find the player. An example of a basic but effective path finding algorithm is A*. Amit Patel defines A* as a combination of Dijkstra’s Algorithm and the Best-First-Search Algorithm. A* searches all vertices by favoring the ones in the direction of the goal, this helps it be more efficient like Best First Search but avoid obstacles more like Dijkstra’s. \cite{A} A* is primarily used in games with large stationary objects like rivers and walls \cite{A}. Since this game will not have any stationary objects, it is not as necessary to use a path finding algorithms. If the enemy AI calculates a straight path to the player, the path will almost always be clear of obstacles.  The second major part of enemy AI is shooting, this adds another level of difficulty to the enemy. These two components give the enemy enough instructions to be able to find and kill the player. \\
 
-	Finally, procedurally generated content can be used in order to build satisfying and challenging areas for the player. Procedural content generation is the process of designing an algorithm that can generate content at runtime. This fits in well with this project. With a relatively small number of inputs, the game can generate numerous different levels where the enemies encountered are found in different combinations. It also embodies the core idea of a roguelike game, changing the game every playthrough to challenge the player differently. There are a multitude of content generation algorithms, one of the common ones being Perlin noise, which actually refers to two algorithms created by Ken Perlin. These algorithms use a sum of different functions with varying amplitudes and frequencies in order to generate what is called a noise function. It is this function that is used to define different points of intensity. As it pertains to this project, these functions could be used to generate nebulae or star maps, giving a different visual experience to our player every time. \cite{PCG} 
+	Finally, procedurally generated content can be used in order to build satisfying and challenging areas for the player. Procedural content generation is the process of designing an algorithm that can generate content at runtime. This fits in well with this project. With a relatively small number of inputs, the game can generate numerous different levels where the enemies encountered are found in different combinations. It also embodies the core idea of a roguelike game, changing the game every playthrough to challenge the player differently. There are a multitude of content generation algorithms, one of them is called Perlin noise, which actually refers to two algorithms created by Ken Perlin. These algorithms use a sum of different functions with varying amplitudes and frequencies in order to generate what is called a noise function. It is this function that is used to define different points of intensity. As it pertains to this project, these functions could be used to generate nebulae or star maps, giving a different visual experience to our player every time. \cite{PCG} 
 
 \subsection{Basic Unity Features} % Need to talk about prefabs and other Unity functionality: Layer, Camera, Scene, Hierarchy, Prefab
 
@@ -129,7 +129,7 @@ The Unity development platform contains a number of useful tools that a develope
 \hs The following use cases and diagrams describe how the game has been implemented in the Unity game engine. While Unity is set up to handle the View portion and some of the Controller portion of the MVC architecture, we had to supply part of the Controller and the Model portion in order to deliver our game.
 
 
-\subsection{Use Case Scenarios} 
+\subsection{Use Case Scenarios} \label{UseCaseScen}
 %%%
 Scenario Name: {\bf PlayerDeath} \\
 Participating Actor Instances:        \hspace{46pt} {\bf Player: PlayerEntity
@@ -142,7 +142,7 @@ Participating Actor Instances:        \hspace{46pt} {\bf Player: PlayerEntity
 Flow of Events: 
 \begin{enumerate} 
 \item {\bf Player }collides with {\bf DamageEntity}.
-       \item {\bf PlayerShield} decreases based on {\bf DamageEntity}. 
+       \item {\bf Shield} decreases based on {\bf DamageEntity}. 
        \item {\bf PlayerHP} decreases based on {\bf DamageEntity} and {\bf Shield}. 
                 \begin{enumerate}[a.]
                  \item {\bf PlayerHP} is greater than zero, continue as normal.
@@ -214,27 +214,27 @@ Flow of Events:
 
 %%%
 \begin{center} \line(1,0){350} \end{center} \newpage
-Scenario Name: {\bf SpawnAsteroids} \\
-Participating Actor Instances:        \hspace{46pt} {\bf Enemy: EnemyEntity
-
-						\hspace{2.6 in} Asteroid: AsteroidEntity
+\hspace{-20pt} Scenario Name: {\bf SpawnAsteroids} \\
+Participating Actor Instances:        \hspace{46pt} {\bf Asteroid: AsteroidEntity
 
 						\hspace{2.6 in}  GC: GameController}  \vspace{10pt}  \\ 
 Flow of Events: 
 \begin{enumerate} 
 \item {\bf GC} performs a check to see where an asteroid will spawn.
+\begin{enumerate}[a.]
 \item {\bf GC} puts the asteroid in the view of the player.
-	\begin{enumerate} [a.]
+	\begin{enumerate} [i.]
 	\item The {\bf Asteroid} is not spawned, and {\bf GC} attempts to spawn another.
 	\end{enumerate}
 \item {\bf GC} puts the asteroid out of view of the player.
-	\begin{enumerate} [a.]
+	\begin{enumerate} [i.]
 	\item An {\bf Asteroid} object is spawned with a random movement vector and rotation speed.
 	\item The {\bf Asteroid} careens through space until it hits something or goes outside of the level's absolute boundary.
-		\begin{enumerate} [i.]
+		\begin{enumerate} [1.]
 		\item The {\bf Asteroid} is then destroyed.
 		\end{enumerate}
 	\end{enumerate}
+\end{enumerate}
 \end{enumerate}
 
 %%%
@@ -262,7 +262,7 @@ Flow of Events:
 
 %%%
 \begin{center} \line(1,0){350} \end{center} \newpage
-Scenario Name: {\bf SpawnPickUp} \\
+\hspace{-20pt} Scenario Name: {\bf SpawnPickUp} \\
 Participating Actor Instances:        \hspace{46pt} {\bf Player: PlayerEntity
 	
 						\hspace{2.6 in} Enemy: EnemyEntity
@@ -272,7 +272,7 @@ Flow of Events:
 \begin{enumerate} 
 \item {\bf Player} destroys an {\bf Enemy} with its weapon.
 \item Before it dies, the {\bf Enemy} generates a random number to see if it drops anything.
-\item The generation succeeds and {\bf Enemy} drops a {\bf Pickup} based on the number that it rolled.
+\item The {\bf Enemy} drop check succeeds and {\bf Enemy} drops a {\bf Pickup} based on the number that it rolled.
 \item {\bf Player} touches the {\bf Pickup}, equipping it and gaining its contents.
 \end{enumerate}
 
@@ -320,7 +320,7 @@ The sequence diagram represented in Figure \ref{PlayerDeath}  corresponds to the
 \section{Gameplay Design} %GAMEPLAY DESIGN
 \label{sec:GPdesign}
 
-Games are dynamic pieces of software that focus on delivering exciting or interesting experiences to players, gameplay design is as important as backend design. What follows is the basic design for the aspects of the gameplay that the player will see for our current iteration of the game.
+Games are dynamic pieces of software that focus on delivering exciting experiences to players, gameplay design is as important as backend design. What follows is the basic design for the aspects of the gameplay that the player will see for our current iteration of the game.
 
 \subsection{Player} %Player
 
@@ -364,11 +364,11 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 \begin{figure} [H]\centering  \includegraphics[width=1.5in]{PurpleEnemy.png} \caption{Purple Enemy} \label{EnemyOne} \end{figure}
 
-	{\bf Enemy Two (Green Enemy):} The second type of enemy will follow the player more closely than the first type while also trying to get in front of the player as an obstacle to the players movement. To attempt to get in front of the player, the enemy uses the predictive shooting method to calculate a vector to intercept the player and then uses it as its movement vector. This enemy is still able to use standard shooting because it is always rotating toward the player even if it is moving in front of the player. Its projectiles do medium damage, firing less frequently than the first type. \\
+	{\bf Enemy Two (Green Enemy):} The second type of enemy will follow the player more closely than the first type while also trying to get in front of the player as an obstacle to the players movement. To attempt to get in front of the player, the enemy uses the predictive shooting method to calculate a vector to intercept the player and then uses it as its movement vector. This enemy is still able to use standard shooting because it is always rotating toward the player even if it is moving in front of the player. Its projectiles do medium damage, firing less frequently than Enemy One. \\
 
 \begin{figure} [H]\centering  \includegraphics[width=1.5in]{GreenEnemy.png} \caption{Green Enemy} \label{EnemyTwo} \end{figure} 
 
-	{\bf Patrolling:} Once an enemy is far enough away from the player, they will begin to patrol instead of track the player, ``far enough” is a constant variable called max distance. In order to patrol, the enemies will store their initial location as ``home''. When the enemy is farther than max distance to the player they will switch from tracking the player to tracking ``home”. This will cause the enemy to return to their initial location in the level and circle around it until the player comes back within the max distance. This is the main method for keeping the enemies spaced out around the map, creating a consistent level of difficulty though out the level. \\
+	{\bf Patrolling:} Once an enemy is far enough away from the player, they will begin to patrol instead of track the player, ``far enough" is a constant variable called max distance. Max distance is set so that the emeney will be just out side the players field of view when they stop tracking the player. In order to patrol, the enemies will store their initial location as ``home". When the enemy is farther than max distance to the player they will switch from tracking the player to tracking ``home". This will cause the enemy to return to their initial location in the level and circle around it until the player comes back within the max distance. This is the main method for keeping the enemies spaced out around the map, creating a consistent level of difficulty though out the level. \\
 
 	{\bf Boss:} The boss will give the player a final challenge before ultimately reaching the end of the game and winning. As seen in Figure \ref{BossImage} the boss is significantly larger than the player, this makes avoiding the boss much more challenging than avoiding other enemies. The boss will shoot large amounts of projectiles to make dodging difficult for the player. Additionally, the boss will have a predictive shooting projectile that will shoot periodically to increase the difficulty further. Finally, bosses will have a larger amount of health than the average enemy. Defeating a boss will end the game and display a win screen. \\
 
@@ -389,7 +389,7 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 \subsection{Levels} %levels
 
-	\hs {\bf Level design:} The level consists of a circular arena or playing field.There is a border around the playing field, represented by a thick blue circle. If the player crosses this border they will be shot, this can be seen in the {\bf LeavingFieldOfPlay} use case. Enemies spawn in waves inside the playing field but outside the player's view. Asteroids spawn in and around the arena. As the player destroys waves of enemies, new waves consisting of more enemies will spawn. After completing a set number of waves, the boss will spawn in the arena. \\
+	\hs {\bf Level design:} The level consists of a circular arena or playing field.There is a border around the playing field, represented by a thick blue circle. If the player crosses this border they will be shot, this can be seen in the {\bf LeavingFieldOfPlay} use case in Section \ref{UseCaseScen}. Enemies spawn in waves inside the playing field but outside the player's view. Asteroids spawn in and around the arena. As the player destroys waves of enemies, new waves consisting of more enemies will spawn. After completing a set number of waves, the boss will spawn in the arena. \\
 
 	{\bf Star Field and Background:} The background will be a two dimensional tile that can be replicated across the screen to create a smooth, endless field of stars. The star field layered on top of the background image is particle effect conisting of small drifting particles that will move across the screen. The multilayering will add a three-dimensionality to the background and keep the background from being static. 
 
@@ -403,7 +403,7 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 
 \subsection{User Interface} % UI
 
-	\hs {\bf Radar:} The radar shows the location of all enemies, pick-ups, and asteroids in relation to the location of the player. It will be displayed in the bottom left corner. In addition, it also represents the direction of all enemies not shown in the immediate area with a symbol on the edge of the radar, assisting the player with locating all enemies in a wave. The radar was implemented in two separate iterations. In the initial implementation, a camera is used to provide an overhead view of the in game entities. However, it was difficult to tell what was shown using this method, therefore it did not show the player very useful information. The following image depicts what this implementation looked like:
+	\hs {\bf Radar:} The radar shows the location of all enemies, pick-ups, and asteroids in relation to the location of the player. It will be displayed in the bottom left corner. In addition, it also represents the direction of all enemies not shown in the immediate area with a symbol on the edge of the radar, assisting the player with locating all enemies in a wave. The radar was implemented in two separate iterations. In the initial implementation, a camera is used to provide an overhead view of the in game entities. However, it was difficult to tell what was shown using this method, therefore it did not show the player very useful information. Image \ref{RadarOne} depicts what this implementation looked like.
 
 \begin{figure} [H]
 \centering
@@ -411,7 +411,7 @@ Games are dynamic pieces of software that focus on delivering exciting or intere
 \caption{Initial Implementation} \label{RadarOne}
 \end{figure}
 
-	The current implementation of radar uses the same basic concept as the first implementation. However, the major difference is that the latter implementation makes use of Unity's layer function. Layers in Unity determine what in game entities are rendered to which camera. By defining new layers, a camera was created that only renders icons that were attached to each enemy, pick-up, and asteroid prefab. In our implementation, two Hashtables keep track of all enemy positions in game as well as a list of icons that alternate between being rendered to the camera and being put in the invisible layer. The invisible layer is not rendered to any camera in the game, and effectively hides any models assigned to it. This is what accomplishes the goal of having enemy positions cling to the edge of the radar image. The following image depicts the second implementation:
+	The current implementation of radar uses the same basic concept as the first implementation. However, the major difference is that the latter implementation makes use of Unity's layer function. Layers in Unity determine what in game entities are rendered to which camera. By defining new layers, a camera was created that only renders icons that were attached to each enemy, pick-up, and asteroid prefab. In our implementation, two Hashtables keep track of all enemy positions in game as well as a list of icons that alternate between being rendered to the camera and being put in the invisible layer. The invisible layer is not rendered to any camera in the game, and effectively hides any models assigned to it. This is what accomplishes the goal of having enemy positions cling to the edge of the radar image. Image \ref{RadarTwo} depicts the second implementation.
 
 \begin{figure} [H]
 \centering
@@ -459,17 +459,6 @@ Since our project is in a complete state, anything added would be to expand or e
 	\item {\bf Radar:} The next step in implementing radar would be to render it to the Canvas with all the other elements of the HUD. This can be accomplished by either using scripts to render it to the Canvas, or by defining a target texture where the camera would render.
 \end{itemize}
 
-
-
-%\section{Timetable}
-%\label{sec:time}
-%Figure \ref{Time} describes the planned development cycles for creating the game.
-
-%\begin{figure} [H]
-%\centering
-%\includegraphics[width=4.3 in]{TimeTableDec.png}
-%\caption{Current Time Table} \label{Time}
-%\end{figure}
 
 
 \newpage
